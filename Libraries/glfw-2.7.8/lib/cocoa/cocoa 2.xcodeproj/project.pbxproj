@@ -1,0 +1,171 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		205718941731898800B8A558 /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
+		205718951731898800B8A558 /* cocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = cocoa.xcodeproj; sourceTree = "<group>"; };
+		205718981731898800B8A558 /* cocoa_enable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoa_enable.m; sourceTree = "<group>"; };
+		205718991731898800B8A558 /* cocoa_fullscreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoa_fullscreen.m; sourceTree = "<group>"; };
+		2057189A1731898800B8A558 /* cocoa_glext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoa_glext.m; sourceTree = "<group>"; };
+		2057189B1731898800B8A558 /* cocoa_init.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoa_init.m; sourceTree = "<group>"; };
+		2057189C1731898800B8A558 /* cocoa_joystick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoa_joystick.m; sourceTree = "<group>"; };
+		2057189D1731898800B8A558 /* cocoa_thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cocoa_thread.c; sourceTree = "<group>"; };
+		2057189E1731898800B8A558 /* cocoa_time.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoa_time.m; sourceTree = "<group>"; };
+		2057189F1731898800B8A558 /* cocoa_window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoa_window.m; sourceTree = "<group>"; };
+		205718A01731898800B8A558 /* libglfw.pc.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = libglfw.pc.in; sourceTree = "<group>"; };
+		205718A11731898800B8A558 /* Makefile.cocoa */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.cocoa; sourceTree = "<group>"; };
+		205718A21731898800B8A558 /* platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2057188E1731898800B8A558 = {
+			isa = PBXGroup;
+			children = (
+				205718941731898800B8A558 /* .DS_Store */,
+				205718951731898800B8A558 /* cocoa.xcodeproj */,
+				205718981731898800B8A558 /* cocoa_enable.m */,
+				205718991731898800B8A558 /* cocoa_fullscreen.m */,
+				2057189A1731898800B8A558 /* cocoa_glext.m */,
+				2057189B1731898800B8A558 /* cocoa_init.m */,
+				2057189C1731898800B8A558 /* cocoa_joystick.m */,
+				2057189D1731898800B8A558 /* cocoa_thread.c */,
+				2057189E1731898800B8A558 /* cocoa_time.m */,
+				2057189F1731898800B8A558 /* cocoa_window.m */,
+				205718A01731898800B8A558 /* libglfw.pc.in */,
+				205718A11731898800B8A558 /* Makefile.cocoa */,
+				205718A21731898800B8A558 /* platform.h */,
+			);
+			sourceTree = "<group>";
+		};
+		205718961731898800B8A558 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		205718931731898800B8A558 /* cocoa */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 205718A41731898800B8A558 /* Build configuration list for PBXLegacyTarget "cocoa" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/evan/Downloads/glfw-2.7.8/lib/cocoa";
+			dependencies = (
+			);
+			name = cocoa;
+			passBuildSettingsInEnvironment = 1;
+			productName = cocoa;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		2057188F1731898800B8A558 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 205718921731898800B8A558 /* Build configuration list for PBXProject "cocoa 2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2057188E1731898800B8A558;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 205718961731898800B8A558 /* Products */;
+					ProjectRef = 205718951731898800B8A558 /* cocoa.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				205718931731898800B8A558 /* cocoa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		205718901731898800B8A558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		205718911731898800B8A558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		205718A51731898800B8A558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = cocoa;
+			};
+			name = Debug;
+		};
+		205718A61731898800B8A558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = cocoa;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		205718921731898800B8A558 /* Build configuration list for PBXProject "cocoa 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205718901731898800B8A558 /* Debug */,
+				205718911731898800B8A558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205718A41731898800B8A558 /* Build configuration list for PBXLegacyTarget "cocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205718A51731898800B8A558 /* Debug */,
+				205718A61731898800B8A558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2057188F1731898800B8A558 /* Project object */;
+}
