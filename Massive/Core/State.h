@@ -10,5 +10,6 @@
 #define __Massive__State__
 
 #include <iostream>
+#include "State.h"
 
 #endif /* defined(__Massive__State__) */

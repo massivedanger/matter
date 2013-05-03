@@ -18,6 +18,7 @@
 		201EB25C1733530E0061138C /* HUDLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB25A1733530E0061138C /* HUDLayer.cpp */; };
 		201EB25F173355620061138C /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB25D173355620061138C /* Actor.cpp */; };
 		201EB262173355670061138C /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB260173355670061138C /* Light.cpp */; };
+		201EB26717341C790061138C /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB26517341C790061138C /* Message.cpp */; };
 		205553091732D9AF00F8B2E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 205553081732D9AF00F8B2E7 /* main.cpp */; };
 		2055530B1732D9AF00F8B2E7 /* Massive.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2055530A1732D9AF00F8B2E7 /* Massive.1 */; };
 		2055533A1732DC9F00F8B2E7 /* cocoa_enable.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553221732DC9F00F8B2E7 /* cocoa_enable.m */; };
@@ -89,6 +90,9 @@
 		201EB261173355670061138C /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
 		201EB263173355DA0061138C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		201EB264173356870061138C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		201EB26517341C790061138C /* Message.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Message.cpp; sourceTree = "<group>"; };
+		201EB26617341C790061138C /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		201EB2681734201D0061138C /* Massive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Massive.h; sourceTree = "<group>"; };
 		205553051732D9AF00F8B2E7 /* Massive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Massive; sourceTree = BUILT_PRODUCTS_DIR; };
 		205553081732D9AF00F8B2E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2055530A1732D9AF00F8B2E7 /* Massive.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Massive.1; sourceTree = "<group>"; };
@@ -161,8 +165,10 @@
 				201EB2511733509E0061138C /* Screen.h */,
 				201EB253173352A10061138C /* Signal.cpp */,
 				201EB254173352A10061138C /* Signal.h */,
+				201EB26517341C790061138C /* Message.cpp */,
+				201EB26617341C790061138C /* Message.h */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		201EB24517334BF80061138C /* Utilities */ = {
@@ -173,7 +179,7 @@
 				201EB24917334C2A0061138C /* Logger.cpp */,
 				201EB24A17334C2A0061138C /* Logger.h */,
 			);
-			name = Utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		201EB24C17334C2F0061138C /* Entities */ = {
@@ -186,7 +192,7 @@
 				201EB260173355670061138C /* Light.cpp */,
 				201EB261173355670061138C /* Light.h */,
 			);
-			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		201EB256173352F70061138C /* HUD */ = {
@@ -197,7 +203,7 @@
 				201EB25A1733530E0061138C /* HUDLayer.cpp */,
 				201EB25B1733530E0061138C /* HUDLayer.h */,
 			);
-			name = HUD;
+			path = HUD;
 			sourceTree = "<group>";
 		};
 		205552FC1732D9AF00F8B2E7 = {
@@ -230,6 +236,7 @@
 				201EB23E17334A4D0061138C /* Core */,
 				205553081732D9AF00F8B2E7 /* main.cpp */,
 				2055530A1732D9AF00F8B2E7 /* Massive.1 */,
+				201EB2681734201D0061138C /* Massive.h */,
 			);
 			path = Massive;
 			sourceTree = "<group>";
@@ -388,6 +395,7 @@
 				201EB25C1733530E0061138C /* HUDLayer.cpp in Sources */,
 				201EB25F173355620061138C /* Actor.cpp in Sources */,
 				201EB262173355670061138C /* Light.cpp in Sources */,
+				201EB26717341C790061138C /* Message.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
