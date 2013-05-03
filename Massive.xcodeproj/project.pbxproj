@@ -88,6 +88,7 @@
 		201EB260173355670061138C /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
 		201EB261173355670061138C /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
 		201EB263173355DA0061138C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		201EB264173356870061138C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		205553051732D9AF00F8B2E7 /* Massive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Massive; sourceTree = BUILT_PRODUCTS_DIR; };
 		205553081732D9AF00F8B2E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2055530A1732D9AF00F8B2E7 /* Massive.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Massive.1; sourceTree = "<group>"; };
@@ -206,6 +207,7 @@
 				205553111732DC6400F8B2E7 /* Libraries */,
 				2055535F1732DD3900F8B2E7 /* Frameworks */,
 				205553061732D9AF00F8B2E7 /* Products */,
+				201EB264173356870061138C /* LICENSE.txt */,
 				201EB263173355DA0061138C /* README.md */,
 			);
 			sourceTree = "<group>";
