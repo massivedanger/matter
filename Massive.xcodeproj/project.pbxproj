@@ -7,8 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201EB24117334A750061138C /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB23F17334A750061138C /* World.cpp */; };
+		201EB24417334B8C0061138C /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB24217334B8C0061138C /* State.cpp */; };
+		201EB24817334C170061138C /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB24617334C170061138C /* Preferences.cpp */; };
+		201EB24B17334C2A0061138C /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB24917334C2A0061138C /* Logger.cpp */; };
+		201EB24F17334C3E0061138C /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB24D17334C3E0061138C /* Entity.cpp */; };
+		201EB2521733509E0061138C /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB2501733509E0061138C /* Screen.cpp */; };
+		201EB255173352A10061138C /* Signal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB253173352A10061138C /* Signal.cpp */; };
+		201EB259173353020061138C /* HUD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB257173353020061138C /* HUD.cpp */; };
+		201EB25C1733530E0061138C /* HUDLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB25A1733530E0061138C /* HUDLayer.cpp */; };
+		201EB25F173355620061138C /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB25D173355620061138C /* Actor.cpp */; };
+		201EB262173355670061138C /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB260173355670061138C /* Light.cpp */; };
 		205553091732D9AF00F8B2E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 205553081732D9AF00F8B2E7 /* main.cpp */; };
 		2055530B1732D9AF00F8B2E7 /* Massive.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2055530A1732D9AF00F8B2E7 /* Massive.1 */; };
+		2055533A1732DC9F00F8B2E7 /* cocoa_enable.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553221732DC9F00F8B2E7 /* cocoa_enable.m */; };
+		2055533B1732DC9F00F8B2E7 /* cocoa_fullscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553231732DC9F00F8B2E7 /* cocoa_fullscreen.m */; };
+		2055533C1732DC9F00F8B2E7 /* cocoa_glext.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553241732DC9F00F8B2E7 /* cocoa_glext.m */; };
+		2055533D1732DC9F00F8B2E7 /* cocoa_init.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553251732DC9F00F8B2E7 /* cocoa_init.m */; };
+		2055533E1732DC9F00F8B2E7 /* cocoa_joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553261732DC9F00F8B2E7 /* cocoa_joystick.m */; };
+		2055533F1732DC9F00F8B2E7 /* cocoa_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553271732DC9F00F8B2E7 /* cocoa_thread.c */; };
+		205553401732DC9F00F8B2E7 /* cocoa_time.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553281732DC9F00F8B2E7 /* cocoa_time.m */; };
+		205553411732DC9F00F8B2E7 /* cocoa_window.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553291732DC9F00F8B2E7 /* cocoa_window.m */; };
+		205553421732DC9F00F8B2E7 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2055532C1732DC9F00F8B2E7 /* platform.h */; };
+		205553431732DC9F00F8B2E7 /* enable.c in Sources */ = {isa = PBXBuildFile; fileRef = 2055532D1732DC9F00F8B2E7 /* enable.c */; };
+		205553441732DC9F00F8B2E7 /* fullscreen.c in Sources */ = {isa = PBXBuildFile; fileRef = 2055532E1732DC9F00F8B2E7 /* fullscreen.c */; };
+		205553451732DC9F00F8B2E7 /* glext.c in Sources */ = {isa = PBXBuildFile; fileRef = 2055532F1732DC9F00F8B2E7 /* glext.c */; };
+		205553461732DC9F00F8B2E7 /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553301732DC9F00F8B2E7 /* image.c */; };
+		205553471732DC9F00F8B2E7 /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553311732DC9F00F8B2E7 /* init.c */; };
+		205553481732DC9F00F8B2E7 /* input.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553321732DC9F00F8B2E7 /* input.c */; };
+		205553491732DC9F00F8B2E7 /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 205553331732DC9F00F8B2E7 /* internal.h */; };
+		2055534A1732DC9F00F8B2E7 /* joystick.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553341732DC9F00F8B2E7 /* joystick.c */; };
+		2055534B1732DC9F00F8B2E7 /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553351732DC9F00F8B2E7 /* stream.c */; };
+		2055534C1732DC9F00F8B2E7 /* tga.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553361732DC9F00F8B2E7 /* tga.c */; };
+		2055534D1732DC9F00F8B2E7 /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553371732DC9F00F8B2E7 /* thread.c */; };
+		2055534E1732DC9F00F8B2E7 /* time.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553381732DC9F00F8B2E7 /* time.c */; };
+		2055534F1732DC9F00F8B2E7 /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 205553391732DC9F00F8B2E7 /* window.c */; };
+		2055535E1732DD3000F8B2E7 /* libGLFW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553161732DC8300F8B2E7 /* libGLFW.a */; };
+		2055536A1732DE6900F8B2E7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553561732DD1E00F8B2E7 /* OpenGL.framework */; };
+		2055536B1732DE6E00F8B2E7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055535C1732DD2D00F8B2E7 /* CoreFoundation.framework */; };
+		2055536C1732DE7100F8B2E7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553581732DD2300F8B2E7 /* IOKit.framework */; };
+		2055536D1732DE7900F8B2E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055535A1732DD2900F8B2E7 /* CoreGraphics.framework */; };
+		2055536F1732DE8300F8B2E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055536E1732DE8300F8B2E7 /* Foundation.framework */; };
+		205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553701732DE8A00F8B2E7 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,13 +65,80 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		201EB23F17334A750061138C /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
+		201EB24017334A750061138C /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		201EB24217334B8C0061138C /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		201EB24317334B8C0061138C /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		201EB24617334C170061138C /* Preferences.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Preferences.cpp; sourceTree = "<group>"; };
+		201EB24717334C170061138C /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		201EB24917334C2A0061138C /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
+		201EB24A17334C2A0061138C /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		201EB24D17334C3E0061138C /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		201EB24E17334C3E0061138C /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		201EB2501733509E0061138C /* Screen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Screen.cpp; sourceTree = "<group>"; };
+		201EB2511733509E0061138C /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
+		201EB253173352A10061138C /* Signal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Signal.cpp; sourceTree = "<group>"; };
+		201EB254173352A10061138C /* Signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
+		201EB257173353020061138C /* HUD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUD.cpp; sourceTree = "<group>"; };
+		201EB258173353020061138C /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
+		201EB25A1733530E0061138C /* HUDLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUDLayer.cpp; sourceTree = "<group>"; };
+		201EB25B1733530E0061138C /* HUDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDLayer.h; sourceTree = "<group>"; };
+		201EB25D173355620061138C /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		201EB25E173355620061138C /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		201EB260173355670061138C /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
+		201EB261173355670061138C /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
 		205553051732D9AF00F8B2E7 /* Massive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Massive; sourceTree = BUILT_PRODUCTS_DIR; };
 		205553081732D9AF00F8B2E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2055530A1732D9AF00F8B2E7 /* Massive.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Massive.1; sourceTree = "<group>"; };
+		205553161732DC8300F8B2E7 /* libGLFW.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGLFW.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		205553221732DC9F00F8B2E7 /* cocoa_enable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_enable.m; sourceTree = "<group>"; };
+		205553231732DC9F00F8B2E7 /* cocoa_fullscreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_fullscreen.m; sourceTree = "<group>"; };
+		205553241732DC9F00F8B2E7 /* cocoa_glext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_glext.m; sourceTree = "<group>"; };
+		205553251732DC9F00F8B2E7 /* cocoa_init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_init.m; sourceTree = "<group>"; };
+		205553261732DC9F00F8B2E7 /* cocoa_joystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_joystick.m; sourceTree = "<group>"; };
+		205553271732DC9F00F8B2E7 /* cocoa_thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cocoa_thread.c; sourceTree = "<group>"; };
+		205553281732DC9F00F8B2E7 /* cocoa_time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_time.m; sourceTree = "<group>"; };
+		205553291732DC9F00F8B2E7 /* cocoa_window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_window.m; sourceTree = "<group>"; };
+		2055532A1732DC9F00F8B2E7 /* libglfw.pc.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libglfw.pc.in; sourceTree = "<group>"; };
+		2055532B1732DC9F00F8B2E7 /* Makefile.cocoa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.cocoa; sourceTree = "<group>"; };
+		2055532C1732DC9F00F8B2E7 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		2055532D1732DC9F00F8B2E7 /* enable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = enable.c; path = "Libraries/glfw-2.7.8/lib/enable.c"; sourceTree = "<group>"; };
+		2055532E1732DC9F00F8B2E7 /* fullscreen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fullscreen.c; path = "Libraries/glfw-2.7.8/lib/fullscreen.c"; sourceTree = "<group>"; };
+		2055532F1732DC9F00F8B2E7 /* glext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glext.c; path = "Libraries/glfw-2.7.8/lib/glext.c"; sourceTree = "<group>"; };
+		205553301732DC9F00F8B2E7 /* image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = image.c; path = "Libraries/glfw-2.7.8/lib/image.c"; sourceTree = "<group>"; };
+		205553311732DC9F00F8B2E7 /* init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = init.c; path = "Libraries/glfw-2.7.8/lib/init.c"; sourceTree = "<group>"; };
+		205553321732DC9F00F8B2E7 /* input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = input.c; path = "Libraries/glfw-2.7.8/lib/input.c"; sourceTree = "<group>"; };
+		205553331732DC9F00F8B2E7 /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = internal.h; path = "Libraries/glfw-2.7.8/lib/internal.h"; sourceTree = "<group>"; };
+		205553341732DC9F00F8B2E7 /* joystick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = joystick.c; path = "Libraries/glfw-2.7.8/lib/joystick.c"; sourceTree = "<group>"; };
+		205553351732DC9F00F8B2E7 /* stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stream.c; path = "Libraries/glfw-2.7.8/lib/stream.c"; sourceTree = "<group>"; };
+		205553361732DC9F00F8B2E7 /* tga.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tga.c; path = "Libraries/glfw-2.7.8/lib/tga.c"; sourceTree = "<group>"; };
+		205553371732DC9F00F8B2E7 /* thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = thread.c; path = "Libraries/glfw-2.7.8/lib/thread.c"; sourceTree = "<group>"; };
+		205553381732DC9F00F8B2E7 /* time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = time.c; path = "Libraries/glfw-2.7.8/lib/time.c"; sourceTree = "<group>"; };
+		205553391732DC9F00F8B2E7 /* window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = window.c; path = "Libraries/glfw-2.7.8/lib/window.c"; sourceTree = "<group>"; };
+		205553561732DD1E00F8B2E7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		205553581732DD2300F8B2E7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		2055535A1732DD2900F8B2E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2055535C1732DD2D00F8B2E7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		2055536E1732DE8300F8B2E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		205553701732DE8A00F8B2E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		205553021732D9AF00F8B2E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */,
+				2055536F1732DE8300F8B2E7 /* Foundation.framework in Frameworks */,
+				2055536D1732DE7900F8B2E7 /* CoreGraphics.framework in Frameworks */,
+				2055536C1732DE7100F8B2E7 /* IOKit.framework in Frameworks */,
+				2055536B1732DE6E00F8B2E7 /* CoreFoundation.framework in Frameworks */,
+				2055536A1732DE6900F8B2E7 /* OpenGL.framework in Frameworks */,
+				2055535E1732DD3000F8B2E7 /* libGLFW.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205553131732DC8300F8B2E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,10 +148,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		201EB23E17334A4D0061138C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				201EB23F17334A750061138C /* World.cpp */,
+				201EB24017334A750061138C /* World.h */,
+				201EB24217334B8C0061138C /* State.cpp */,
+				201EB24317334B8C0061138C /* State.h */,
+				201EB2501733509E0061138C /* Screen.cpp */,
+				201EB2511733509E0061138C /* Screen.h */,
+				201EB253173352A10061138C /* Signal.cpp */,
+				201EB254173352A10061138C /* Signal.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		201EB24517334BF80061138C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				201EB24617334C170061138C /* Preferences.cpp */,
+				201EB24717334C170061138C /* Preferences.h */,
+				201EB24917334C2A0061138C /* Logger.cpp */,
+				201EB24A17334C2A0061138C /* Logger.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		201EB24C17334C2F0061138C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				201EB24D17334C3E0061138C /* Entity.cpp */,
+				201EB24E17334C3E0061138C /* Entity.h */,
+				201EB25D173355620061138C /* Actor.cpp */,
+				201EB25E173355620061138C /* Actor.h */,
+				201EB260173355670061138C /* Light.cpp */,
+				201EB261173355670061138C /* Light.h */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		201EB256173352F70061138C /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				201EB257173353020061138C /* HUD.cpp */,
+				201EB258173353020061138C /* HUD.h */,
+				201EB25A1733530E0061138C /* HUDLayer.cpp */,
+				201EB25B1733530E0061138C /* HUDLayer.h */,
+			);
+			name = HUD;
+			sourceTree = "<group>";
+		};
 		205552FC1732D9AF00F8B2E7 = {
 			isa = PBXGroup;
 			children = (
 				205553071732D9AF00F8B2E7 /* Massive */,
+				205553111732DC6400F8B2E7 /* Libraries */,
+				2055535F1732DD3900F8B2E7 /* Frameworks */,
 				205553061732D9AF00F8B2E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				205553051732D9AF00F8B2E7 /* Massive */,
+				205553161732DC8300F8B2E7 /* libGLFW.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,21 +220,98 @@
 		205553071732D9AF00F8B2E7 /* Massive */ = {
 			isa = PBXGroup;
 			children = (
+				201EB256173352F70061138C /* HUD */,
+				201EB24C17334C2F0061138C /* Entities */,
+				201EB24517334BF80061138C /* Utilities */,
+				201EB23E17334A4D0061138C /* Core */,
 				205553081732D9AF00F8B2E7 /* main.cpp */,
 				2055530A1732D9AF00F8B2E7 /* Massive.1 */,
 			);
 			path = Massive;
 			sourceTree = "<group>";
 		};
+		205553111732DC6400F8B2E7 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				205553521732DCA200F8B2E7 /* GLFW */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		2055531A1732DC9F00F8B2E7 /* cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				205553221732DC9F00F8B2E7 /* cocoa_enable.m */,
+				205553231732DC9F00F8B2E7 /* cocoa_fullscreen.m */,
+				205553241732DC9F00F8B2E7 /* cocoa_glext.m */,
+				205553251732DC9F00F8B2E7 /* cocoa_init.m */,
+				205553261732DC9F00F8B2E7 /* cocoa_joystick.m */,
+				205553271732DC9F00F8B2E7 /* cocoa_thread.c */,
+				205553281732DC9F00F8B2E7 /* cocoa_time.m */,
+				205553291732DC9F00F8B2E7 /* cocoa_window.m */,
+				2055532A1732DC9F00F8B2E7 /* libglfw.pc.in */,
+				2055532B1732DC9F00F8B2E7 /* Makefile.cocoa */,
+				2055532C1732DC9F00F8B2E7 /* platform.h */,
+			);
+			name = cocoa;
+			path = "Libraries/glfw-2.7.8/lib/cocoa";
+			sourceTree = "<group>";
+		};
+		205553521732DCA200F8B2E7 /* GLFW */ = {
+			isa = PBXGroup;
+			children = (
+				2055531A1732DC9F00F8B2E7 /* cocoa */,
+				2055532D1732DC9F00F8B2E7 /* enable.c */,
+				2055532E1732DC9F00F8B2E7 /* fullscreen.c */,
+				2055532F1732DC9F00F8B2E7 /* glext.c */,
+				205553301732DC9F00F8B2E7 /* image.c */,
+				205553311732DC9F00F8B2E7 /* init.c */,
+				205553321732DC9F00F8B2E7 /* input.c */,
+				205553331732DC9F00F8B2E7 /* internal.h */,
+				205553341732DC9F00F8B2E7 /* joystick.c */,
+				205553351732DC9F00F8B2E7 /* stream.c */,
+				205553361732DC9F00F8B2E7 /* tga.c */,
+				205553371732DC9F00F8B2E7 /* thread.c */,
+				205553381732DC9F00F8B2E7 /* time.c */,
+				205553391732DC9F00F8B2E7 /* window.c */,
+			);
+			name = GLFW;
+			sourceTree = "<group>";
+		};
+		2055535F1732DD3900F8B2E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				205553701732DE8A00F8B2E7 /* AppKit.framework */,
+				2055536E1732DE8300F8B2E7 /* Foundation.framework */,
+				2055535C1732DD2D00F8B2E7 /* CoreFoundation.framework */,
+				2055535A1732DD2900F8B2E7 /* CoreGraphics.framework */,
+				205553581732DD2300F8B2E7 /* IOKit.framework */,
+				205553561732DD1E00F8B2E7 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		205553141732DC8300F8B2E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205553421732DC9F00F8B2E7 /* platform.h in Headers */,
+				205553491732DC9F00F8B2E7 /* internal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		205553041732D9AF00F8B2E7 /* Massive */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2055530E1732D9AF00F8B2E7 /* Build configuration list for PBXNativeTarget "Massive" */;
 			buildPhases = (
-				205553011732D9AF00F8B2E7 /* Sources */,
 				205553021732D9AF00F8B2E7 /* Frameworks */,
+				205553011732D9AF00F8B2E7 /* Sources */,
 				205553031732D9AF00F8B2E7 /* CopyFiles */,
 			);
 			buildRules = (
@@ -85,6 +322,23 @@
 			productName = Massive;
 			productReference = 205553051732D9AF00F8B2E7 /* Massive */;
 			productType = "com.apple.product-type.tool";
+		};
+		205553151732DC8300F8B2E7 /* GLFW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 205553171732DC8300F8B2E7 /* Build configuration list for PBXNativeTarget "GLFW" */;
+			buildPhases = (
+				205553141732DC8300F8B2E7 /* Headers */,
+				205553121732DC8300F8B2E7 /* Sources */,
+				205553131732DC8300F8B2E7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLFW;
+			productName = GLFW;
+			productReference = 205553161732DC8300F8B2E7 /* libGLFW.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -108,6 +362,7 @@
 			projectRoot = "";
 			targets = (
 				205553041732D9AF00F8B2E7 /* Massive */,
+				205553151732DC8300F8B2E7 /* GLFW */,
 			);
 		};
 /* End PBXProject section */
@@ -118,6 +373,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				205553091732D9AF00F8B2E7 /* main.cpp in Sources */,
+				201EB24117334A750061138C /* World.cpp in Sources */,
+				201EB24417334B8C0061138C /* State.cpp in Sources */,
+				201EB24817334C170061138C /* Preferences.cpp in Sources */,
+				201EB24B17334C2A0061138C /* Logger.cpp in Sources */,
+				201EB24F17334C3E0061138C /* Entity.cpp in Sources */,
+				201EB2521733509E0061138C /* Screen.cpp in Sources */,
+				201EB255173352A10061138C /* Signal.cpp in Sources */,
+				201EB259173353020061138C /* HUD.cpp in Sources */,
+				201EB25C1733530E0061138C /* HUDLayer.cpp in Sources */,
+				201EB25F173355620061138C /* Actor.cpp in Sources */,
+				201EB262173355670061138C /* Light.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205553121732DC8300F8B2E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2055533A1732DC9F00F8B2E7 /* cocoa_enable.m in Sources */,
+				2055533B1732DC9F00F8B2E7 /* cocoa_fullscreen.m in Sources */,
+				2055533C1732DC9F00F8B2E7 /* cocoa_glext.m in Sources */,
+				2055533D1732DC9F00F8B2E7 /* cocoa_init.m in Sources */,
+				2055533E1732DC9F00F8B2E7 /* cocoa_joystick.m in Sources */,
+				2055533F1732DC9F00F8B2E7 /* cocoa_thread.c in Sources */,
+				205553401732DC9F00F8B2E7 /* cocoa_time.m in Sources */,
+				205553411732DC9F00F8B2E7 /* cocoa_window.m in Sources */,
+				205553431732DC9F00F8B2E7 /* enable.c in Sources */,
+				205553441732DC9F00F8B2E7 /* fullscreen.c in Sources */,
+				205553451732DC9F00F8B2E7 /* glext.c in Sources */,
+				205553461732DC9F00F8B2E7 /* image.c in Sources */,
+				205553471732DC9F00F8B2E7 /* init.c in Sources */,
+				205553481732DC9F00F8B2E7 /* input.c in Sources */,
+				2055534A1732DC9F00F8B2E7 /* joystick.c in Sources */,
+				2055534B1732DC9F00F8B2E7 /* stream.c in Sources */,
+				2055534C1732DC9F00F8B2E7 /* tga.c in Sources */,
+				2055534D1732DC9F00F8B2E7 /* thread.c in Sources */,
+				2055534E1732DC9F00F8B2E7 /* time.c in Sources */,
+				2055534F1732DC9F00F8B2E7 /* window.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +477,15 @@
 		2055530F1732D9AF00F8B2E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"\"$(PROJECT_DIR)/Libraries/glfw-2.7.8/include\"",
+					"\"$(PROJECT_DIR)/Libraries/CEGUI-0.7.9/cegui/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/glfw-2.7.8/lib\"",
+					"\"$(SRCROOT)/Libraries/CEGUI-0.7.9/cegui/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -191,7 +493,34 @@
 		205553101732D9AF00F8B2E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"\"$(PROJECT_DIR)/Libraries/glfw-2.7.8/include\"",
+					"\"$(PROJECT_DIR)/Libraries/CEGUI-0.7.9/cegui/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/glfw-2.7.8/lib\"",
+					"\"$(SRCROOT)/Libraries/CEGUI-0.7.9/cegui/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		205553181732DC8300F8B2E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		205553191732DC8300F8B2E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -214,6 +543,16 @@
 				205553101732D9AF00F8B2E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205553171732DC8300F8B2E7 /* Build configuration list for PBXNativeTarget "GLFW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205553181732DC8300F8B2E7 /* Debug */,
+				205553191732DC8300F8B2E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
