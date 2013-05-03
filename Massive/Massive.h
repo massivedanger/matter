@@ -9,8 +9,8 @@
 #ifndef Massive_Massive_h
 #define Massive_Massive_h
 
-#include "World.h"
-#include "State.h"
-#include "Signal.h"
+#include "Core/World.h"
+#include "Core/State.h"
+#include "Core/Signal.h"
 
 #endif

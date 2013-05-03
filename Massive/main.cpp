@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "Massive.h"
 
 #include <GL/glfw.h>
 

@@ -92,7 +92,7 @@
 		201EB264173356870061138C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		201EB26517341C790061138C /* Message.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Message.cpp; sourceTree = "<group>"; };
 		201EB26617341C790061138C /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		201EB2681734201D0061138C /* Massive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Massive.h; sourceTree = "<group>"; };
+		201EB2681734201D0061138C /* Massive.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Massive.h; sourceTree = "<group>"; };
 		205553051732D9AF00F8B2E7 /* Massive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Massive; sourceTree = BUILT_PRODUCTS_DIR; };
 		205553081732D9AF00F8B2E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2055530A1732D9AF00F8B2E7 /* Massive.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Massive.1; sourceTree = "<group>"; };
@@ -489,14 +489,10 @@
 		2055530F1732D9AF00F8B2E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"\"$(PROJECT_DIR)/Libraries/glfw-2.7.8/include\"",
-					"\"$(PROJECT_DIR)/Libraries/CEGUI-0.7.9/cegui/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/glfw-2.7.8/include\"";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/glfw-2.7.8/lib\"",
-					"\"$(SRCROOT)/Libraries/CEGUI-0.7.9/cegui/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -505,14 +501,10 @@
 		205553101732D9AF00F8B2E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"\"$(PROJECT_DIR)/Libraries/glfw-2.7.8/include\"",
-					"\"$(PROJECT_DIR)/Libraries/CEGUI-0.7.9/cegui/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/glfw-2.7.8/include\"";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/glfw-2.7.8/lib\"",
-					"\"$(SRCROOT)/Libraries/CEGUI-0.7.9/cegui/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
