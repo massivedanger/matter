@@ -13,14 +13,13 @@
 		201EB24B17334C2A0061138C /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB24917334C2A0061138C /* Logger.cpp */; };
 		201EB24F17334C3E0061138C /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB24D17334C3E0061138C /* Entity.cpp */; };
 		201EB2521733509E0061138C /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB2501733509E0061138C /* Screen.cpp */; };
-		201EB255173352A10061138C /* Signal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB253173352A10061138C /* Signal.cpp */; };
+		201EB255173352A10061138C /* Observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB253173352A10061138C /* Observer.cpp */; };
 		201EB259173353020061138C /* HUD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB257173353020061138C /* HUD.cpp */; };
 		201EB25C1733530E0061138C /* HUDLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB25A1733530E0061138C /* HUDLayer.cpp */; };
 		201EB25F173355620061138C /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB25D173355620061138C /* Actor.cpp */; };
 		201EB262173355670061138C /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB260173355670061138C /* Light.cpp */; };
 		201EB26717341C790061138C /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB26517341C790061138C /* Message.cpp */; };
 		205553091732D9AF00F8B2E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 205553081732D9AF00F8B2E7 /* main.cpp */; };
-		2055530B1732D9AF00F8B2E7 /* Massive.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2055530A1732D9AF00F8B2E7 /* Massive.1 */; };
 		2055533A1732DC9F00F8B2E7 /* cocoa_enable.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553221732DC9F00F8B2E7 /* cocoa_enable.m */; };
 		2055533B1732DC9F00F8B2E7 /* cocoa_fullscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553231732DC9F00F8B2E7 /* cocoa_fullscreen.m */; };
 		2055533C1732DC9F00F8B2E7 /* cocoa_glext.m in Sources */ = {isa = PBXBuildFile; fileRef = 205553241732DC9F00F8B2E7 /* cocoa_glext.m */; };
@@ -52,19 +51,6 @@
 		205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553701732DE8A00F8B2E7 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		205553031732D9AF00F8B2E7 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-				2055530B1732D9AF00F8B2E7 /* Massive.1 in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		201EB23F17334A750061138C /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		201EB24017334A750061138C /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
@@ -78,8 +64,8 @@
 		201EB24E17334C3E0061138C /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		201EB2501733509E0061138C /* Screen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Screen.cpp; sourceTree = "<group>"; };
 		201EB2511733509E0061138C /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
-		201EB253173352A10061138C /* Signal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Signal.cpp; sourceTree = "<group>"; };
-		201EB254173352A10061138C /* Signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
+		201EB253173352A10061138C /* Observer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Observer.cpp; sourceTree = "<group>"; };
+		201EB254173352A10061138C /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
 		201EB257173353020061138C /* HUD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUD.cpp; sourceTree = "<group>"; };
 		201EB258173353020061138C /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
 		201EB25A1733530E0061138C /* HUDLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUDLayer.cpp; sourceTree = "<group>"; };
@@ -95,7 +81,6 @@
 		201EB2681734201D0061138C /* Massive.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Massive.h; sourceTree = "<group>"; };
 		205553051732D9AF00F8B2E7 /* Massive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Massive; sourceTree = BUILT_PRODUCTS_DIR; };
 		205553081732D9AF00F8B2E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		2055530A1732D9AF00F8B2E7 /* Massive.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Massive.1; sourceTree = "<group>"; };
 		205553161732DC8300F8B2E7 /* libGLFW.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGLFW.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		205553221732DC9F00F8B2E7 /* cocoa_enable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_enable.m; sourceTree = "<group>"; };
 		205553231732DC9F00F8B2E7 /* cocoa_fullscreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_fullscreen.m; sourceTree = "<group>"; };
@@ -127,6 +112,7 @@
 		2055535C1732DD2D00F8B2E7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		2055536E1732DE8300F8B2E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		205553701732DE8A00F8B2E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		20E951E517356CB500A388F0 /* Common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,10 +149,6 @@
 				201EB24317334B8C0061138C /* State.h */,
 				201EB2501733509E0061138C /* Screen.cpp */,
 				201EB2511733509E0061138C /* Screen.h */,
-				201EB253173352A10061138C /* Signal.cpp */,
-				201EB254173352A10061138C /* Signal.h */,
-				201EB26517341C790061138C /* Message.cpp */,
-				201EB26617341C790061138C /* Message.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -178,6 +160,7 @@
 				201EB24717334C170061138C /* Preferences.h */,
 				201EB24917334C2A0061138C /* Logger.cpp */,
 				201EB24A17334C2A0061138C /* Logger.h */,
+				20E951E517356CB500A388F0 /* Common.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -233,9 +216,9 @@
 				201EB256173352F70061138C /* HUD */,
 				201EB24C17334C2F0061138C /* Entities */,
 				201EB24517334BF80061138C /* Utilities */,
+				20E951E6173574BD00A388F0 /* Messaging */,
 				201EB23E17334A4D0061138C /* Core */,
 				205553081732D9AF00F8B2E7 /* main.cpp */,
-				2055530A1732D9AF00F8B2E7 /* Massive.1 */,
 				201EB2681734201D0061138C /* Massive.h */,
 			);
 			path = Massive;
@@ -302,6 +285,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		20E951E6173574BD00A388F0 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				201EB253173352A10061138C /* Observer.cpp */,
+				201EB254173352A10061138C /* Observer.h */,
+				201EB26517341C790061138C /* Message.cpp */,
+				201EB26617341C790061138C /* Message.h */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -323,7 +317,6 @@
 			buildPhases = (
 				205553021732D9AF00F8B2E7 /* Frameworks */,
 				205553011732D9AF00F8B2E7 /* Sources */,
-				205553031732D9AF00F8B2E7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -390,7 +383,7 @@
 				201EB24B17334C2A0061138C /* Logger.cpp in Sources */,
 				201EB24F17334C3E0061138C /* Entity.cpp in Sources */,
 				201EB2521733509E0061138C /* Screen.cpp in Sources */,
-				201EB255173352A10061138C /* Signal.cpp in Sources */,
+				201EB255173352A10061138C /* Observer.cpp in Sources */,
 				201EB259173353020061138C /* HUD.cpp in Sources */,
 				201EB25C1733530E0061138C /* HUDLayer.cpp in Sources */,
 				201EB25F173355620061138C /* Actor.cpp in Sources */,
@@ -489,6 +482,10 @@
 		2055530F1732D9AF00F8B2E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_PEDANTIC = NO;
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/glfw-2.7.8/include\"";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,6 +498,10 @@
 		205553101732D9AF00F8B2E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_PEDANTIC = NO;
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/glfw-2.7.8/include\"";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

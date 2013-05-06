@@ -7,3 +7,8 @@
 //
 
 #include "State.h"
+
+void State::Update(float dt)
+{
+    
+}

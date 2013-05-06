@@ -12,4 +12,13 @@
 #include <iostream>
 #include "Screen.h"
 
+class State {
+    
+public:
+    State();
+    ~State();
+    void Update(float dt);
+    
+};
+
 #endif /* defined(__Massive__State__) */

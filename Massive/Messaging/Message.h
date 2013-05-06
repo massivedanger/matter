@@ -9,12 +9,22 @@
 #ifndef __Massive__Message__
 #define __Massive__Message__
 
-#include <iostream>
+#include "../Utilities/Common.h"
+
+class Listener;
 
 class Message {
     
 public:
     Message();
+    Message(const String& messageName, Listener *sender = NULL);
+    
+    virtual const String& GetName();
+    Listener* const GetSender();
+    
+protected:
+    String _messageName;
+    Listener *_sender;
 };
 
 class Listener {

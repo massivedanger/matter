@@ -9,8 +9,13 @@
 #ifndef Massive_Massive_h
 #define Massive_Massive_h
 
+#include "Utilities/Common.h"
+#include "Utilities/Preferences.h"
+#include "Utilities/Logger.h"
+
 #include "Core/World.h"
-#include "Core/State.h"
-#include "Core/Signal.h"
+#include "Messaging/Observer.h"
+#include "HUD/HUD.h"
+#include "Entities/Entity.h"
 
 #endif

@@ -9,6 +9,10 @@
 #ifndef __Massive__HUDLayer__
 #define __Massive__HUDLayer__
 
-#include <iostream>
+class HUDLayer {
+    
+public:
+    HUDLayer();
+};
 
 #endif /* defined(__Massive__HUDLayer__) */
