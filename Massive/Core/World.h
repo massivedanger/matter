@@ -29,7 +29,8 @@ public:
     void Start();
     void Stop();
     
-    const float GetDelta();
+    const float GetDT();
+    const float GetFPS();
     void TickAndRender();
     void Tick();
     void Render();
@@ -48,7 +49,8 @@ public:
 protected:
     World();
     static World *s_World;
-    float CalculateNewDT();
+    void UpdateFPS();
+    float UpdateDT();
     void UpdateEntities(float frameDT);
     void CleanupEntities();
     
@@ -70,7 +72,12 @@ private:
     bool _initialized;
     float _lastTime;
     float _currentTime;
+    
     float _dt;
+    
+    float _fps;
+    float _lastFPS;
+    float _lastFPSTime;
 };
 
 

@@ -59,14 +59,15 @@ void World::Destroy() {
 
 void World::Start() {
     _running = true;
+    _lastFPSTime = glfwGetTime();
     
-    while (_running) {
+    while (_running && glfwGetWindowParam(GLFW_OPENED)) {
         TickAndRender();
     }
 }
 
 void World::Stop() {
-    
+    _running = false;
 }
 
 void World::TickAndRender() {
@@ -75,14 +76,18 @@ void World::TickAndRender() {
 }
 
 void World::Tick() {
-    float frameDT = CalculateNewDT();
+    float frameDT = UpdateDT();
+    UpdateFPS();
+    
     if (_state) {
         _state->Update(frameDT);
     }
+    
+    printf("Last FPS: %f\n", _lastFPS);
 }
 
 void World::Render() {
-    // TODO: actually...draw...something?   
+    // TODO: actually...draw...something?
     
     // clear the buffer
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -91,16 +96,30 @@ void World::Render() {
     glfwSwapBuffers();
 }
 
-const float World::GetDelta() {
+const float World::GetDT() {
     return _dt;
 }
 
-float World::CalculateNewDT() {
+const float World::GetFPS() {
+    return _lastFPS;
+}
+
+float World::UpdateDT() {
     _currentTime = glfwGetTime();
     _dt = _currentTime - _lastTime;
     _lastTime = _currentTime;
     
     return _dt;
+}
+
+void World::UpdateFPS() {
+    if (_currentTime - _lastFPSTime > 1) {
+        _lastFPS = _fps;
+        _fps = 0;
+        _lastFPSTime = _currentTime;
+    }
+    
+    _fps++;
 }
 
 void World::ReceiveMessage(Message *message) {
