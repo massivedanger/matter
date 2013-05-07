@@ -8,7 +8,6 @@
 
 #include "State.h"
 
-void State::Update(float dt)
-{
+void State::Update(float dt) {
     
 }

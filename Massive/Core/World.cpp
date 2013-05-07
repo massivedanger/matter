@@ -6,15 +6,18 @@
 //  Copyright (c) 2013 Massive Danger. All rights reserved.
 //
 
-#include "World.h"
 #include <GL/glfw.h>
+#include "World.h"
 
 World *World::s_World;
 
-World::World()
-{
+World::World() {
     _running = false;
     _initialized = false;
+}
+
+World::~World() {
+    Listener::~Listener();
 }
 
 World &World::GetInstance() {
@@ -25,8 +28,7 @@ World &World::GetInstance() {
     return *s_World;
 }
 
-bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen)
-{
+bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen) {
     /* Initialize the library */
     if (!glfwInit())
         return false;
@@ -51,60 +53,56 @@ bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String win
     return _initialized;
 }
 
-void World::Destroy()
-{
+void World::Destroy() {
     
 }
 
-void World::Start()
-{
+void World::Start() {
     _running = true;
-    while (glfwGetWindowParam(GLFW_OPENED))
-    {
+    
+    while (_running) {
         TickAndRender();
-        
-        // clear the buffer
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        
-        // swap back and front buffers
-        glfwSwapBuffers();
     }
 }
 
-void World::Stop()
-{
+void World::Stop() {
     
 }
 
-void World::TickAndRender()
-{
+void World::TickAndRender() {
     Tick();
     Render();
 }
 
-void World::Tick()
-{
+void World::Tick() {
     float frameDT = CalculateNewDT();
     if (_state) {
         _state->Update(frameDT);
     }
 }
 
-void World::Render()
-{
+void World::Render() {
+    // TODO: actually...draw...something?   
     
+    // clear the buffer
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    // swap back and front buffers
+    glfwSwapBuffers();
 }
 
-const float World::GetDelta()
-{
+const float World::GetDelta() {
     return _dt;
 }
 
-float World::CalculateNewDT()
-{
+float World::CalculateNewDT() {
     _currentTime = glfwGetTime();
     _dt = _currentTime - _lastTime;
     _lastTime = _currentTime;
     
     return _dt;
+}
+
+void World::ReceiveMessage(Message *message) {
+    
 }

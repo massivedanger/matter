@@ -53,6 +53,8 @@ protected:
     void CleanupEntities();
     
 private:
+    ~World();
+    
     struct EntityLayerPair
     {
         Entity *entity;
@@ -69,8 +71,6 @@ private:
     float _lastTime;
     float _currentTime;
     float _dt;
-    
-    ~World();
 };
 
 
