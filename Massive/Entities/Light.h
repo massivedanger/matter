@@ -9,6 +9,13 @@
 #ifndef __Massive__Light__
 #define __Massive__Light__
 
-#include <iostream>
+#include "../Utilities/Common.h"
+#include "Entity.h"
+
+class Light : public Entity {
+    
+public:
+    
+};
 
 #endif /* defined(__Massive__Light__) */

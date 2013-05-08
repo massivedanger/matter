@@ -14,8 +14,13 @@
 #include "Utilities/Logger.h"
 
 #include "Core/World.h"
+
 #include "Messaging/Observer.h"
+
 #include "HUD/HUD.h"
-#include "Entities/Entity.h"
+
+#include "Entities/Actor.h"
+#include "Entities/Light.h"
+#include "Entities/Text.h"
 
 #endif

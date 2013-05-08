@@ -9,6 +9,13 @@
 #ifndef __Massive__Actor__
 #define __Massive__Actor__
 
-#include <iostream>
+#include "../Utilities/Common.h"
+#include "Entity.h"
+
+class Actor : public Entity {
+    
+public:
+    
+};
 
 #endif /* defined(__Massive__Actor__) */

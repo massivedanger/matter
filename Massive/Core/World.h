@@ -42,6 +42,7 @@ public:
     void GetLayerByName(const String &name);
     EntityLayers& GetLayers() { return _layers; }
     
+    void SetState(State *state) { _state = state; }
     State* GetCurrentState() { return _state; }
     
     virtual void ReceiveMessage(Message *message);

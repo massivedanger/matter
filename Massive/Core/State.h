@@ -9,7 +9,7 @@
 #ifndef __Massive__State__
 #define __Massive__State__
 
-#include <iostream>
+#include "../Utilities/Common.h"
 #include "Screen.h"
 
 class State {
@@ -17,6 +17,7 @@ class State {
 public:
     State();
     ~State();
+    void Draw();
     void Update(float dt);
     
 };

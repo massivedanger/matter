@@ -7,6 +7,15 @@
 //
 
 #include "State.h"
+#include "World.h"
+
+State::State() {
+    
+}
+
+void State::Draw() {
+    
+}
 
 void State::Update(float dt) {
     

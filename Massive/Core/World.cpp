@@ -60,6 +60,7 @@ void World::Destroy() {
 void World::Start() {
     _running = true;
     _lastFPSTime = glfwGetTime();
+    this->SetState(new State());
     
     while (_running && glfwGetWindowParam(GLFW_OPENED)) {
         TickAndRender();
@@ -82,12 +83,13 @@ void World::Tick() {
     if (_state) {
         _state->Update(frameDT);
     }
-    
-    printf("Last FPS: %f\n", _lastFPS);
 }
 
 void World::Render() {
     // TODO: actually...draw...something?
+    if (_state) {
+        _state->Draw();
+    }
     
     // clear the buffer
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
