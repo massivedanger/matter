@@ -86,7 +86,6 @@ void World::Tick() {
 }
 
 void World::Render() {
-    // TODO: actually...draw...something?
     if (_state) {
         _state->Draw();
     }
