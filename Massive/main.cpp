@@ -6,9 +6,6 @@
 //  Copyright (c) 2013 Massive Danger. All rights reserved.
 //
 
-#include <iostream>
-#include <string>
-#include <sstream>
 #include "Massive.h"
 
 int main(int argc, const char * argv[])
