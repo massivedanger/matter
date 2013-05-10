@@ -23,7 +23,7 @@ class World : public Listener {
 public:
     static World &GetInstance();
     
-    bool Init(unsigned int windowWidth = 960, unsigned int windowHeight = 600, String windowTitle = "Massive Game", bool fullscreen = false);
+    bool Init(unsigned int windowWidth = 960, unsigned int windowHeight = 600, String windowTitle = "Massive Game", bool fullscreen = false, bool antialias = true);
     void Destroy();
     
     void Start();
@@ -71,6 +71,7 @@ private:
     
     bool _running;
     bool _initialized;
+    bool _antialiased;
     float _lastTime;
     float _currentTime;
     

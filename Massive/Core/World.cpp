@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Massive Danger. All rights reserved.
 //
 
+#define GLEW_STATIC
+#include <GL/glew.h>
 #include <GL/glfw.h>
 #include "World.h"
 
@@ -28,26 +30,39 @@ World &World::GetInstance() {
     return *s_World;
 }
 
-bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen) {
-    /* Initialize the library */
+bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen, bool antialias) {
     if (!glfwInit())
         return false;
     
-    /* Create a windowed mode window and its OpenGL context */
-    if (!glfwOpenWindow(windowWidth, windowHeight, 8, 8, 8, 0, 24, 0, GLFW_WINDOW))
+    if (antialias) {
+        glfwOpenWindowHint(GLFW_FSAA_SAMPLES, 4);
+        _antialiased = true;
+    }
+    
+    int screenMode = fullscreen ? GLFW_FULLSCREEN : GLFW_WINDOW;
+    if (!glfwOpenWindow(windowWidth, windowHeight, 8, 8, 8, 0, 24, 0, screenMode))
         return false;
     
+    
+    // Center window
+    GLFWvidmode vidMode;
+    glfwGetDesktopMode(&vidMode);
+    int screenHeight = vidMode.Height;
+    int screenWidth = vidMode.Width;
+    
+    glfwSetWindowPos((screenWidth / 2) - (windowWidth / 2), (screenHeight / 2) - (windowHeight / 2));
     glfwSetWindowTitle(windowTitle.c_str());
+    glfwSwapInterval(0);
     
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    float aspectRatio = ((float)windowHeight) / windowWidth;
-    glFrustum(.5, -.5, -.5 * aspectRatio, .5 * aspectRatio, 1, 50);
+    
+//    float aspectRatio = ((float)windowHeight) / windowWidth;
+//    glFrustum(.5, -.5, -.5 * aspectRatio, .5 * aspectRatio, 1, 50);
+    
     glMatrixMode(GL_MODELVIEW);
-    glfwSwapInterval(0); // Turn off vsync
     
     _lastTime = glfwGetTime();
-    
     _initialized = true;
     
     return _initialized;
@@ -86,14 +101,21 @@ void World::Tick() {
 }
 
 void World::Render() {
+    // clear the buffer
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
     if (_state) {
         _state->Draw();
     }
     
-    // clear the buffer
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glBegin(GL_QUADS);
+        glVertex3f(0.0f, 0.0f, 0.0f);
+        glVertex3f(1.0f, 0.0f, 0.0f);
+        glVertex3f(1.0f, 1.0f, 0.0f);
+        glVertex3f(0.0f, 1.0f, 0.0f);
+	glEnd();
     
-    // swap back and front buffers
     glfwSwapBuffers();
 }
 
