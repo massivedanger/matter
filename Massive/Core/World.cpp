@@ -7,7 +7,6 @@
 //
 
 #define GLEW_STATIC
-#include <GL/glew.h>
 #include <GL/glfw.h>
 #include "World.h"
 
@@ -101,20 +100,11 @@ void World::Tick() {
 }
 
 void World::Render() {
-    // clear the buffer
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     if (_state) {
         _state->Draw();
     }
-    
-    glBegin(GL_QUADS);
-        glVertex3f(0.0f, 0.0f, 0.0f);
-        glVertex3f(1.0f, 0.0f, 0.0f);
-        glVertex3f(1.0f, 1.0f, 0.0f);
-        glVertex3f(0.0f, 1.0f, 0.0f);
-	glEnd();
     
     glfwSwapBuffers();
 }

@@ -9,6 +9,15 @@
 #ifndef __Massive__Screen__
 #define __Massive__Screen__
 
-#include <iostream>
+#include "../Utilities/Common.h"
+
+class Screen {
+    
+public:
+    Screen();
+    ~Screen();
+    virtual void Draw() {}
+    virtual void Update(float dt) {}
+};
 
 #endif /* defined(__Massive__Screen__) */

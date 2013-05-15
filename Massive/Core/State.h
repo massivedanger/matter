@@ -17,8 +17,8 @@ class State {
 public:
     State();
     ~State();
-    void Draw();
-    void Update(float dt);
+    virtual void Draw() {}
+    virtual void Update(float dt) {}
     
 };
 
