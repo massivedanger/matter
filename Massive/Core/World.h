@@ -31,16 +31,9 @@ public:
     
     const float GetDT();
     const float GetFPS();
-    void TickAndRender();
+    void TickAndDraw();
     void Tick();
-    void Render();
-    
-    void Add(Entity *entity, const String &layer);
-    void Remove(Entity *entity);
-    
-    void NameLayer(const String &name, int layerNumber);
-    void GetLayerByName(const String &name);
-    EntityLayers& GetLayers() { return _layers; }
+    void Draw();
     
     void SetState(State *state) { _state = state; }
     State* GetCurrentState() { return _state; }
@@ -52,22 +45,11 @@ protected:
     static World *s_World;
     void UpdateFPS();
     float UpdateDT();
-    void UpdateEntities(float frameDT);
-    void CleanupEntities();
     
 private:
     ~World();
     
-    struct EntityLayerPair
-    {
-        Entity *entity;
-        int _layer;
-    };
-    
-    EntityLayers _layers;
     State *_state;
-
-    std::map<String, int> _layerNames;
     
     bool _running;
     bool _initialized;

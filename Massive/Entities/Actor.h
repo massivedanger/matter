@@ -15,7 +15,10 @@
 class Actor : public Entity {
     
 public:
-    
+    Actor();
+    virtual void Update(float dt);
+    virtual void Draw();
+
 };
 
 #endif /* defined(__Massive__Actor__) */

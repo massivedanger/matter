@@ -13,6 +13,10 @@ int main(int argc, const char * argv[])
     
     theWorld.Init();
     theWorld.Start();
+    
+    State *state = new State();
+    theWorld.SetState(state);
+    
     theWorld.Stop();
     
     return 0;

@@ -15,9 +15,12 @@ class Entity {
     friend class World;
     
 public:
-    virtual ~Entity();
+    Entity();
+    ~Entity();
     virtual void Update(float dt) {}
-    virtual void Render() {}
+    virtual void Draw() {}
+    
+    void SetLayer(int layer) { _layer = layer; }
     int GetLayer() { return _layer; }
     
 protected:

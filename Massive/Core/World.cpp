@@ -77,7 +77,7 @@ void World::Start() {
     this->SetState(new State());
     
     while (_running && glfwGetWindowParam(GLFW_OPENED)) {
-        TickAndRender();
+        TickAndDraw();
     }
 }
 
@@ -85,9 +85,9 @@ void World::Stop() {
     _running = false;
 }
 
-void World::TickAndRender() {
+void World::TickAndDraw() {
     Tick();
-    Render();
+    Draw();
 }
 
 void World::Tick() {
@@ -99,7 +99,7 @@ void World::Tick() {
     }
 }
 
-void World::Render() {
+void World::Draw() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     if (_state) {

@@ -17,8 +17,15 @@ class State {
 public:
     State();
     ~State();
-    virtual void Draw() {}
-    virtual void Update(float dt) {}
+    virtual void Draw();
+    virtual void Update(float dt);
+    
+    void AddScreen(Screen *screen);
+    void RemoveScreen(Screen *screen);
+    
+private:
+    std::set<Screen *> _screens;
+    
     
 };
 
