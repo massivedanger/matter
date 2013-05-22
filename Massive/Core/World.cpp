@@ -55,10 +55,6 @@ bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String win
     
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    
-//    float aspectRatio = ((float)windowHeight) / windowWidth;
-//    glFrustum(.5, -.5, -.5 * aspectRatio, .5 * aspectRatio, 1, 50);
-    
     glMatrixMode(GL_MODELVIEW);
     
     _lastTime = glfwGetTime();
