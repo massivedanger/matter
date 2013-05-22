@@ -17,7 +17,7 @@ void Screen::Update(float dt) {
 }
 
 void Screen::Draw() {
-
+    DrawEntities();
 }
 
 void Screen::AddEntity(Entity *entity, int layer) {

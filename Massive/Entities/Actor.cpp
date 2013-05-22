@@ -13,9 +13,9 @@ Actor::Actor() {
 }
 
 void Actor::Update(float dt) {
-    printf("The actor says the delta is %f\n", dt);
+    
 }
 
 void Actor::Draw() {
-    printf("The actor is being drawn");
+    
 }
