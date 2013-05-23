@@ -14,7 +14,9 @@
 #include "../Entities/Entity.h"
 #include "State.h"
 
-class Entity;
+#include <SFML/Window.hpp>
+#include <SFML/System/Clock.hpp>
+
 class HUD;
 
 #define theWorld World::GetInstance()
@@ -51,6 +53,8 @@ private:
     
     State *_state;
     
+    sf::Window _window;
+    sf::Clock _clock;
     bool _running;
     bool _initialized;
     bool _antialiased;

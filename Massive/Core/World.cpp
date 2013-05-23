@@ -7,7 +7,6 @@
 //
 
 #define GLEW_STATIC
-#include <GL/glfw.h>
 #include "World.h"
 
 World *World::s_World;
@@ -30,34 +29,10 @@ World &World::GetInstance() {
 }
 
 bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen, bool antialias) {
-    if (!glfwInit())
-        return false;
+    _lastTime = _clock.getElapsedTime().asSeconds();
     
-    if (antialias) {
-        glfwOpenWindowHint(GLFW_FSAA_SAMPLES, 4);
-        _antialiased = true;
-    }
+    _window.create(sf::VideoMode(windowWidth, windowHeight), windowTitle);
     
-    int screenMode = fullscreen ? GLFW_FULLSCREEN : GLFW_WINDOW;
-    if (!glfwOpenWindow(windowWidth, windowHeight, 8, 8, 8, 0, 24, 0, screenMode))
-        return false;
-    
-    
-    // Center window
-    GLFWvidmode vidMode;
-    glfwGetDesktopMode(&vidMode);
-    int screenHeight = vidMode.Height;
-    int screenWidth = vidMode.Width;
-    
-    glfwSetWindowPos((screenWidth / 2) - (windowWidth / 2), (screenHeight / 2) - (windowHeight / 2));
-    glfwSetWindowTitle(windowTitle.c_str());
-    glfwSwapInterval(0);
-    
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glMatrixMode(GL_MODELVIEW);
-    
-    _lastTime = glfwGetTime();
     _initialized = true;
     
     return _initialized;
@@ -69,10 +44,20 @@ void World::Destroy() {
 
 void World::Start() {
     _running = true;
-    _lastFPSTime = glfwGetTime();
+    _lastFPSTime = _clock.getElapsedTime().asSeconds();
     this->SetState(new State());
     
-    while (_running && glfwGetWindowParam(GLFW_OPENED)) {
+    while (_running && _window.isOpen())
+    {
+        // check all the window's events that were triggered since the last iteration of the loop
+        sf::Event event;
+        while (_window.pollEvent(event))
+        {
+            // "close requested" event: we close the window
+            if (event.type == sf::Event::Closed)
+                _window.close();
+        }
+        
         TickAndDraw();
     }
 }
@@ -96,13 +81,9 @@ void World::Tick() {
 }
 
 void World::Draw() {
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    
     if (_state) {
         _state->Draw();
     }
-    
-    glfwSwapBuffers();
 }
 
 const float World::GetDT() {
@@ -114,7 +95,7 @@ const float World::GetFPS() {
 }
 
 float World::UpdateDT() {
-    _currentTime = glfwGetTime();
+    _currentTime = _clock.getElapsedTime().asSeconds();
     _dt = _currentTime - _lastTime;
     _lastTime = _currentTime;
     
