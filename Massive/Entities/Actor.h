@@ -16,6 +16,7 @@ class Actor : public Entity {
     
 public:
     Actor();
+    ~Actor();
     virtual void Update(float dt);
     virtual void Draw();
 

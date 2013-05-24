@@ -9,14 +9,16 @@
 #include "State.h"
 #include "World.h"
 #include "../Entities/Actor.h"
+#include "../Entities/Text.h"
 
 State::State() {
     Screen *screen = new Screen();
-    Actor *actor = new Actor();
-    Actor *actor2 = new Actor();
     
+    Actor *actor = new Actor();
     screen->AddEntity(actor, 0);
-    screen->AddEntity(actor2, 1);
+    Text *textActor = new Text("Hello, world.");
+    screen->AddEntity(textActor, 0);
+    
     this->AddScreen(screen);
 }
 

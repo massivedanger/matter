@@ -7,7 +7,12 @@
 //
 
 #include "Entity.h"
+#include "../Core/World.h"
 
 Entity::Entity() {
+    
+}
+
+Entity::~Entity() {
     
 }

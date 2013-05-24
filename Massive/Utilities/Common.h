@@ -13,8 +13,21 @@
 #include <set>
 #include <map>
 #include <vector>
+#include <sstream>
 
 typedef std::string			String;
 typedef std::set<String>	StringSet;
+
+#define M Utility
+
+class Utility {
+    
+public:
+    static String floatToString(float number) {
+        std::ostringstream stream;
+        stream << number;
+        return stream.str();
+    }
+};
 
 #endif

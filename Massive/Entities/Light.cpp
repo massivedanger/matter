@@ -7,3 +7,4 @@
 //
 
 #include "Light.h"
+#include "../Core/World.h"

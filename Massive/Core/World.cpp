@@ -31,7 +31,8 @@ World &World::GetInstance() {
 bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen, bool antialias) {
     _lastTime = _clock.getElapsedTime().asSeconds();
     
-    _window.create(sf::VideoMode(windowWidth, windowHeight), windowTitle);
+    _contextSettings.antialiasingLevel = 8;
+    _window.create(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Default, _contextSettings);
     
     _initialized = true;
     
@@ -47,18 +48,16 @@ void World::Start() {
     _lastFPSTime = _clock.getElapsedTime().asSeconds();
     this->SetState(new State());
     
-    while (_running && _window.isOpen())
-    {
-        // check all the window's events that were triggered since the last iteration of the loop
+    while (_running && _window.isOpen()) {
         sf::Event event;
-        while (_window.pollEvent(event))
-        {
-            // "close requested" event: we close the window
+        while (_window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 _window.close();
         }
         
+        _window.clear(sf::Color::White);
         TickAndDraw();
+        _window.display();
     }
 }
 
@@ -92,6 +91,10 @@ const float World::GetDT() {
 
 const float World::GetFPS() {
     return _lastFPS;
+}
+
+const String World::GetFPSString() {
+    return M::floatToString(GetFPS());
 }
 
 float World::UpdateDT() {

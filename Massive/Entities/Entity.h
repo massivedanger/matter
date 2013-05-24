@@ -10,6 +10,7 @@
 #define __Massive__Entity__
 
 #include "../Utilities/Common.h"
+#include <SFML/Graphics.hpp>
 
 class Entity {
     friend class World;
@@ -22,6 +23,21 @@ public:
     
     void SetLayer(int layer) { _layer = layer; }
     int GetLayer() { return _layer; }
+    
+    virtual void SetPosition(int x, int y) {}
+    virtual void MovePosition(int x, int y) {}
+    virtual sf::Vector2f GetPosition() { return sf::Vector2f(0.0f, 0.0f); }
+    
+    virtual void SetRotation(float rotation) {}
+    virtual void Rotate(float rotation) {}
+    virtual float GetRotation() { return 0.f; }
+    
+    virtual void SetScale(float scaleX, float scaleY) {}
+    virtual void Scale(float scaleX, float scaleY) {}
+    virtual sf::Vector2f GetScale() { return sf::Vector2f(0.0f, 0.0f); }
+    
+    virtual void SetOrigin(int x, int y) {}
+    virtual sf::Vector2f GetOrigin() { return sf::Vector2f(0.0f, 0.0f); }
     
 protected:
     int _layer;

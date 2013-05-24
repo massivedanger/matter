@@ -15,6 +15,7 @@
 #include "State.h"
 
 #include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
 #include <SFML/System/Clock.hpp>
 
 class HUD;
@@ -33,12 +34,16 @@ public:
     
     const float GetDT();
     const float GetFPS();
+    const String GetFPSString();
     void TickAndDraw();
     void Tick();
     void Draw();
     
     void SetState(State *state) { _state = state; }
     State* GetCurrentState() { return _state; }
+    
+    sf::RenderWindow &GetWindow() { return _window; }
+    sf::ContextSettings &GetContextSettings() { return _contextSettings; }
     
     virtual void ReceiveMessage(Message *message);
     
@@ -53,8 +58,10 @@ private:
     
     State *_state;
     
-    sf::Window _window;
+    sf::RenderWindow _window;
     sf::Clock _clock;
+    sf::ContextSettings _contextSettings;
+    
     bool _running;
     bool _initialized;
     bool _antialiased;
