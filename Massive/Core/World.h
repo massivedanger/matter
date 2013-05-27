@@ -32,8 +32,8 @@ public:
     void Start();
     void Stop();
     
-    const float GetDT();
-    const float GetFPS();
+    const float GetDT() { return _dt; }
+    const float GetFPS() { return _lastFPS; }
     const String GetFPSString();
     void TickAndDraw();
     void Tick();

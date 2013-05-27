@@ -85,14 +85,6 @@ void World::Draw() {
     }
 }
 
-const float World::GetDT() {
-    return _dt;
-}
-
-const float World::GetFPS() {
-    return _lastFPS;
-}
-
 const String World::GetFPSString() {
     return M::floatToString(GetFPS());
 }

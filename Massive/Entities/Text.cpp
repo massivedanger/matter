@@ -22,7 +22,7 @@ Text::Text(String string, String fontPath, int size) {
 }
 
 void Text::Update(float dt) {
-    _drawable.setString("FPS: " + theWorld.GetFPSString());
+    
 }
 
 void Text::Draw() {
