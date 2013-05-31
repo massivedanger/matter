@@ -21,13 +21,13 @@
 		201EB26717341C790061138C /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201EB26517341C790061138C /* Message.cpp */; };
 		2048BA0D174E880B000E0DE5 /* libfreetype.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048BA0B174E8808000E0DE5 /* libfreetype.6.dylib */; };
 		2048BA0F174E88B5000E0DE5 /* libsndfile.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048BA0E174E88B5000E0DE5 /* libsndfile.1.dylib */; };
-		205553091732D9AF00F8B2E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 205553081732D9AF00F8B2E7 /* main.cpp */; };
 		2055536A1732DE6900F8B2E7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553561732DD1E00F8B2E7 /* OpenGL.framework */; };
 		2055536B1732DE6E00F8B2E7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055535C1732DD2D00F8B2E7 /* CoreFoundation.framework */; };
 		2055536C1732DE7100F8B2E7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553581732DD2300F8B2E7 /* IOKit.framework */; };
 		2055536D1732DE7900F8B2E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055535A1732DD2900F8B2E7 /* CoreGraphics.framework */; };
 		2055536F1732DE8300F8B2E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055536E1732DE8300F8B2E7 /* Foundation.framework */; };
 		205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553701732DE8A00F8B2E7 /* AppKit.framework */; };
+		20815F301758465000019233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055536E1732DE8300F8B2E7 /* Foundation.framework */; };
 		209E8AD5174E59E90043E609 /* Export.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C1174E59E90043E609 /* Export.hpp */; };
 		209E8AD6174E59E90043E609 /* Listener.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C2174E59E90043E609 /* Listener.hpp */; };
 		209E8AD7174E59E90043E609 /* Music.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C3174E59E90043E609 /* Music.hpp */; };
@@ -294,7 +294,6 @@
 		2048BA0B174E8808000E0DE5 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.6.dylib; path = "Libraries/SFML-2.0/extlibs/libs-osx/lib/libfreetype.6.dylib"; sourceTree = "<group>"; };
 		2048BA0E174E88B5000E0DE5 /* libsndfile.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsndfile.1.dylib; path = "Libraries/SFML-2.0/extlibs/libs-osx/lib/libsndfile.1.dylib"; sourceTree = "<group>"; };
 		205553051732D9AF00F8B2E7 /* Massive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Massive; sourceTree = BUILT_PRODUCTS_DIR; };
-		205553081732D9AF00F8B2E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		205553221732DC9F00F8B2E7 /* cocoa_enable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_enable.m; sourceTree = "<group>"; };
 		205553231732DC9F00F8B2E7 /* cocoa_fullscreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_fullscreen.m; sourceTree = "<group>"; };
 		205553241732DC9F00F8B2E7 /* cocoa_glext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_glext.m; sourceTree = "<group>"; };
@@ -325,6 +324,7 @@
 		2055535C1732DD2D00F8B2E7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		2055536E1732DE8300F8B2E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		205553701732DE8A00F8B2E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		20815F2F1758465000019233 /* TestGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091BBDF173D63AF008D6FC3 /* glew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
 		2091BBE0173D63AF008D6FC3 /* glxew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
 		2091BBE1173D63AF008D6FC3 /* wglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
@@ -662,6 +662,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		20815F2C1758465000019233 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20815F301758465000019233 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		209E89B7174E59C20043E609 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -760,6 +768,7 @@
 			children = (
 				205553051732D9AF00F8B2E7 /* Massive */,
 				209E89BA174E59C20043E609 /* libSFML.dylib */,
+				20815F2F1758465000019233 /* TestGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -772,7 +781,6 @@
 				201EB24517334BF80061138C /* Utilities */,
 				20E951E6173574BD00A388F0 /* Messaging */,
 				201EB23E17334A4D0061138C /* Core */,
-				205553081732D9AF00F8B2E7 /* main.cpp */,
 				201EB2681734201D0061138C /* Massive.h */,
 			);
 			path = Massive;
@@ -1572,7 +1580,25 @@
 			name = Massive;
 			productName = Massive;
 			productReference = 205553051732D9AF00F8B2E7 /* Massive */;
-			productType = "com.apple.product-type.tool";
+			productType = "com.apple.product-type.library.static";
+		};
+		20815F2E1758465000019233 /* TestGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20815F3E1758465000019233 /* Build configuration list for PBXNativeTarget "TestGame" */;
+			buildPhases = (
+				20815F2A1758465000019233 /* ShellScript */,
+				20815F2B1758465000019233 /* Sources */,
+				20815F2C1758465000019233 /* Frameworks */,
+				20815F2D1758465000019233 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestGame;
+			productName = TestGame;
+			productReference = 20815F2F1758465000019233 /* TestGame.app */;
+			productType = "com.apple.product-type.application";
 		};
 		209E89B9174E59C20043E609 /* SFML */ = {
 			isa = PBXNativeTarget;
@@ -1614,16 +1640,42 @@
 			targets = (
 				205553041732D9AF00F8B2E7 /* Massive */,
 				209E89B9174E59C20043E609 /* SFML */,
+				20815F2E1758465000019233 /* TestGame */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20815F2D1758465000019233 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20815F2A1758465000019233 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required sfml dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# Are we building a project that uses framework or dylibs ?\nif [ $SFML_LINK_PREFIX = $SFML_LINK_FRAMEWORKS_PREFIX ]\nthen\n    frameworks=1\nelse\n    frameworks=0\nfi\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Frameworks\n    \n    if [ -z $1 ]\n    then\n        echo \"no parameter! ERROR!\"\n        exit\n    else\n        # clean potentially old stuff\n        rm -f $dest/libsfml-$1.2.dylib\n        rm -f $dest/libsfml-$1-d.2.dylib\n        rm -fr $dest/sfml-$1.framework\n    \n        # copy SFML libraries\n        if [ $frameworks ]\n        then\n            ditto \"/Library/Frameworks/sfml-$1.framework\" \"$dest/sfml-$1.framework\"\n        elif [ $CONFIGURATION = \"Debug\" ]\n        then\n            ditto \"/usr/local/lib/libsfml-$1-d.2.dylib\" \"$dest/libsfml-$1-d.2.dylib\"\n        else\n            ditto \"/usr/local/lib/libsfml-$1.2.dylib\" \"$dest/libsfml-$1.2.dylib\"\n        fi\n        \n        if [ $1 = \"audio\" ]\n        then\n            # copy sndfile framework too\n            ditto \"/Library/Frameworks/sndfile.framework\" \"$dest/sndfile.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\t\t\t\t\t";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		205553011732D9AF00F8B2E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				205553091732D9AF00F8B2E7 /* main.cpp in Sources */,
 				201EB24117334A750061138C /* World.cpp in Sources */,
 				201EB24417334B8C0061138C /* State.cpp in Sources */,
 				201EB24817334C170061138C /* Preferences.cpp in Sources */,
@@ -1637,6 +1689,13 @@
 				201EB262173355670061138C /* Light.cpp in Sources */,
 				201EB26717341C790061138C /* Message.cpp in Sources */,
 				20A3F45C173ABEC400811687 /* Text.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20815F2B1758465000019233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1814,11 +1873,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_PEDANTIC = NO;
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/SFML-2.0/include\"";
+				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/SFML-2.0/extlibs/libs-osx/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
 			};
 			name = Debug;
 		};
@@ -1834,11 +1896,87 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_PEDANTIC = NO;
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/SFML-2.0/include\"";
+				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/SFML-2.0/extlibs/libs-osx/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
+			};
+			name = Release;
+		};
+		20815F3C1758465000019233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					/usr/local/include/,
+				);
+				INFOPLIST_FILE = "TestGame/TestGame-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SFML_AUDIO = "";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "-d";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework ";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_DYLIBS_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_DYLIBS_SUFFIX)";
+				SFML_NETWORK = "";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX)sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		20815F3D1758465000019233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					/usr/local/include/,
+				);
+				INFOPLIST_FILE = "TestGame/TestGame-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SFML_AUDIO = "";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework ";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_DYLIBS_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_DYLIBS_SUFFIX)";
+				SFML_NETWORK = "";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX)sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -1848,6 +1986,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1873,6 +2012,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1909,6 +2049,15 @@
 			buildConfigurations = (
 				2055530F1732D9AF00F8B2E7 /* Debug */,
 				205553101732D9AF00F8B2E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20815F3E1758465000019233 /* Build configuration list for PBXNativeTarget "TestGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20815F3C1758465000019233 /* Debug */,
+				20815F3D1758465000019233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
