@@ -12,14 +12,7 @@
 #include "../Entities/Text.h"
 
 State::State() {
-    Screen *screen = new Screen();
-    
-    Actor *actor = new Actor();
-    screen->AddEntity(actor, 0);
-    Text *textActor = new Text("Hello, world.");
-    screen->AddEntity(textActor, 0);
-    
-    this->AddScreen(screen);
+
 }
 
 void State::Draw() {
