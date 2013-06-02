@@ -32,18 +32,18 @@ public:
     void Start();
     void Stop();
     
-    const float GetDT() { return _dt; }
-    const float GetFPS() { return _lastFPS; }
+    const float GetDT() { return _dt; } //! Get the current frame's Delta-Time
+    const float GetFPS() { return _lastFPS; } //! Get the current second's stored FPS
     const String GetFPSString();
     void TickAndDraw();
     void Tick();
     void Draw();
     
-    void SetState(State *state) { _state = state; }
-    State* GetCurrentState() { return _state; }
+    void SetState(State *state) { _state = state; } //! Set active State
+    State* GetCurrentState() { return _state; } //! Get active State
     
-    sf::RenderWindow &GetWindow() { return _window; }
-    sf::ContextSettings &GetContextSettings() { return _contextSettings; }
+    sf::RenderWindow &GetWindow() { return _window; } //! Get SFML RenderWindow
+    sf::ContextSettings &GetContextSettings() { return _contextSettings; } //! Get SFML ContextSettings
     
     virtual void ReceiveMessage(Message *message);
     

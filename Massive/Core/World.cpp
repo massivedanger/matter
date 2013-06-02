@@ -77,15 +77,25 @@ void World::Start() {
     }
 }
 
+/*!
+ *  Stops the game and calls World::Destroy() to perform cleanup
+ */
 void World::Stop() {
     _running = false;
+    World::Destroy();
 }
 
+//! Convenience function that calls World::Tick() and World::Draw()
 void World::TickAndDraw() {
     Tick();
     Draw();
 }
 
+/*!
+ *  Updates the Delta-Time (DT) for each frame (used for framerate indepence)
+ *  Also, if a State is set, propogates new DT to the current state, which 
+ *  sends it down the stack
+ */
 void World::Tick() {
     float frameDT = UpdateDT();
     UpdateFPS();
@@ -95,16 +105,23 @@ void World::Tick() {
     }
 }
 
+/*!
+ *  If a State is set, calls State::Draw() on that State
+ */
 void World::Draw() {
     if (_state) {
         _state->Draw();
     }
 }
 
+//! Convenience function for getting current FPS as a String
 const String World::GetFPSString() {
     return M::floatToString(GetFPS());
 }
 
+/*!
+ *  Updates the stored Delta-Time float
+ */
 float World::UpdateDT() {
     _currentTime = _clock.getElapsedTime().asSeconds();
     _dt = _currentTime - _lastTime;
@@ -113,6 +130,9 @@ float World::UpdateDT() {
     return _dt;
 }
 
+/*!
+ *  Updates the stored FPS float once per second
+ */
 void World::UpdateFPS() {
     if (_currentTime - _lastFPSTime > 1) {
         _lastFPS = _fps;
@@ -123,6 +143,9 @@ void World::UpdateFPS() {
     _fps++;
 }
 
+/*!
+ *  Called when the World receives a message
+ */
 void World::ReceiveMessage(Message *message) {
     
 }
