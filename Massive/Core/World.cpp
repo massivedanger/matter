@@ -11,15 +11,20 @@
 
 World *World::s_World;
 
+//! Constructor
 World::World() {
     _running = false;
     _initialized = false;
 }
 
+//! Destructor
 World::~World() {
     Listener::~Listener();
 }
 
+/*!
+ *  Get the singleton instance of World for the game
+ */
 World &World::GetInstance() {
     if (s_World == NULL) {
         s_World = new World();
@@ -28,6 +33,10 @@ World &World::GetInstance() {
     return *s_World;
 }
 
+/*!
+ *  Initialize the World with configuration
+ *  Call before World::Start()
+ */
 bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen, bool antialias) {
     _lastTime = _clock.getElapsedTime().asSeconds();
     
@@ -39,14 +48,21 @@ bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String win
     return _initialized;
 }
 
+/*!
+ *  Handle cleanup of all World-related data
+ *  Called right before the game exits
+ */
 void World::Destroy() {
     
 }
 
+/*!
+ *  Start the game by displaying the window and polling for events
+ *  Calls World::TickAndDraw();
+ */
 void World::Start() {
     _running = true;
     _lastFPSTime = _clock.getElapsedTime().asSeconds();
-    this->SetState(new State());
     
     while (_running && _window.isOpen()) {
         sf::Event event;
