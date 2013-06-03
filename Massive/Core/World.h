@@ -10,6 +10,7 @@
 #define __Massive__World__
 
 #include "../Utilities/Common.h"
+#include "../Utilities/Logger.h"
 #include "../Messaging/Message.h"
 #include "../Entities/Entity.h"
 #include "State.h"

@@ -1,0 +1,159 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		200741B4175BCA8F001FE36B /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		200741B5175BCA8F001FE36B /* sqstdaux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdaux.cpp; sourceTree = "<group>"; };
+		200741B6175BCA8F001FE36B /* sqstdblob.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdblob.cpp; sourceTree = "<group>"; };
+		200741B7175BCA8F001FE36B /* sqstdblobimpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sqstdblobimpl.h; sourceTree = "<group>"; };
+		200741B8175BCA8F001FE36B /* sqstdio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdio.cpp; sourceTree = "<group>"; };
+		200741B9175BCA8F001FE36B /* sqstdlib.dsp */ = {isa = PBXFileReference; lastKnownFileType = text; path = sqstdlib.dsp; sourceTree = "<group>"; };
+		200741BA175BCA8F001FE36B /* sqstdmath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdmath.cpp; sourceTree = "<group>"; };
+		200741BB175BCA8F001FE36B /* sqstdrex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdrex.cpp; sourceTree = "<group>"; };
+		200741BC175BCA8F001FE36B /* sqstdstream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdstream.cpp; sourceTree = "<group>"; };
+		200741BD175BCA8F001FE36B /* sqstdstream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sqstdstream.h; sourceTree = "<group>"; };
+		200741BE175BCA8F001FE36B /* sqstdstring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdstring.cpp; sourceTree = "<group>"; };
+		200741BF175BCA8F001FE36B /* sqstdsystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdsystem.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		200741AE175BCA8F001FE36B = {
+			isa = PBXGroup;
+			children = (
+				200741B4175BCA8F001FE36B /* Makefile */,
+				200741B5175BCA8F001FE36B /* sqstdaux.cpp */,
+				200741B6175BCA8F001FE36B /* sqstdblob.cpp */,
+				200741B7175BCA8F001FE36B /* sqstdblobimpl.h */,
+				200741B8175BCA8F001FE36B /* sqstdio.cpp */,
+				200741B9175BCA8F001FE36B /* sqstdlib.dsp */,
+				200741BA175BCA8F001FE36B /* sqstdmath.cpp */,
+				200741BB175BCA8F001FE36B /* sqstdrex.cpp */,
+				200741BC175BCA8F001FE36B /* sqstdstream.cpp */,
+				200741BD175BCA8F001FE36B /* sqstdstream.h */,
+				200741BE175BCA8F001FE36B /* sqstdstring.cpp */,
+				200741BF175BCA8F001FE36B /* sqstdsystem.cpp */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		200741B3175BCA8F001FE36B /* sqstdlib */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 200741C0175BCA8F001FE36B /* Build configuration list for PBXLegacyTarget "sqstdlib" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/evan/code/massive/Massive/Libraries/squirrel-3.0.4/sqstdlib";
+			dependencies = (
+			);
+			name = sqstdlib;
+			passBuildSettingsInEnvironment = 1;
+			productName = sqstdlib;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		200741AF175BCA8F001FE36B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 200741B2175BCA8F001FE36B /* Build configuration list for PBXProject "sqstdlib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 200741AE175BCA8F001FE36B;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				200741B3175BCA8F001FE36B /* sqstdlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		200741B0175BCA8F001FE36B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		200741B1175BCA8F001FE36B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		200741C1175BCA8F001FE36B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = sqstdlib;
+			};
+			name = Debug;
+		};
+		200741C2175BCA8F001FE36B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = sqstdlib;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		200741B2175BCA8F001FE36B /* Build configuration list for PBXProject "sqstdlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				200741B0175BCA8F001FE36B /* Debug */,
+				200741B1175BCA8F001FE36B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		200741C0175BCA8F001FE36B /* Build configuration list for PBXLegacyTarget "sqstdlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				200741C1175BCA8F001FE36B /* Debug */,
+				200741C2175BCA8F001FE36B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 200741AF175BCA8F001FE36B /* Project object */;
+}
