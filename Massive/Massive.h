@@ -9,6 +9,9 @@
 #ifndef Massive_Massive_h
 #define Massive_Massive_h
 
+#include <squirrel.h>
+#include <sqrat.h>
+
 #include "Utilities/Common.h"
 #include "Utilities/Preferences.h"
 #include "Utilities/Logger.h"
