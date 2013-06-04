@@ -18,6 +18,7 @@
 #include <squirrel.h>
 #include <sqstdio.h>
 #include <sqstdaux.h>
+#include <sqrat.h>
 
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
