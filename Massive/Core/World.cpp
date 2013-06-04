@@ -15,11 +15,6 @@ World *World::s_World;
 World::World() {
     _running = false;
     _initialized = false;
-    _squirrelVM = sq_open(1024);
-    
-    sqstd_seterrorhandlers(_squirrelVM);
-    sq_setprintfunc(_squirrelVM, sq_print, NULL);
-    sq_pushroottable(_squirrelVM);
 }
 
 //! Destructor
@@ -47,6 +42,12 @@ bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String win
     
     _contextSettings.antialiasingLevel = 8;
     _window.create(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Default, _contextSettings);
+
+    // Setup Squirrel
+    _squirrelVM = sq_open(1024);
+    sqstd_seterrorhandlers(_squirrelVM);
+    sq_setprintfunc(_squirrelVM, SquirrelPrint, NULL);
+    sq_pushroottable(_squirrelVM);
     
     _initialized = true;
     
@@ -69,6 +70,11 @@ void World::Start() {
     _running = true;
     _lastFPSTime = _clock.getElapsedTime().asSeconds();
     
+    Logger::BindSquirrel(_squirrelVM);
+    Sqrat::Script mainScript(_squirrelVM);
+    
+    mainScript.CompileFile("/Users/evan/code/massive/MassiveGame/MassiveGame/Scripts/main.nut");
+    mainScript.Run();
     while (_running && _window.isOpen()) {
         sf::Event event;
         while (_window.pollEvent(event)) {
@@ -155,6 +161,32 @@ void World::ReceiveMessage(Message *message) {
     
 }
 
-void World::sq_print(HSQUIRRELVM vm, const SQChar *string, ...) {
-    
+void World::SquirrelPrint(HSQUIRRELVM vm, const SQChar *string, ...) {
+    va_list args;
+    va_start(args, string);
+    vprintf(string, args);
+    va_end(args);
+}
+
+void World::BindSquirrel(HSQUIRRELVM vm) {
+//    using namespace Sqrat;
+//    
+//    Class<World> sqWorld(vm);
+//    
+//    sqWorld.Func("GetInstance", &World::GetInstance);
+//    sqWorld.Func("Init", &World::Init);
+//    sqWorld.Func("Destroy", &World::Destroy);
+//    sqWorld.Func("Start", &World::Start);
+//    sqWorld.Func("Stop", &World::Stop);
+//    sqWorld.Func("GetDT", &World::GetDT);
+//    sqWorld.Func("GetFPS", &World::GetFPS);
+//    sqWorld.Func("GetFPSString", &World::GetFPSString);
+//    sqWorld.Func("TickAndDraw", &World::TickAndDraw);
+//    sqWorld.Func("Tick", &World::Tick);
+//    sqWorld.Func("Draw", &World::Draw);
+//    sqWorld.Func("SetState", &World::SetState);
+//    sqWorld.Func("GetCurrentState", &World::GetCurrentState);
+//    sqWorld.Func("ReceiveMessage", &World::ReceiveMessage);
+//    
+//    RootTable(vm).Bind("World", sqWorld);
 }

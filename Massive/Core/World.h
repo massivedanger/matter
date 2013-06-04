@@ -30,6 +30,8 @@ class HUD;
 
 class World : public Listener {
 public:
+    World();
+    ~World();
     static World &GetInstance();
     
     bool Init(unsigned int windowWidth = 960, unsigned int windowHeight = 600, String windowTitle = "Massive Game", bool fullscreen = false, bool antialias = true);
@@ -56,14 +58,13 @@ public:
     HSQUIRRELVM GetSquirrelVM() { return _squirrelVM; };
     
 protected:
-    World();
     static World *s_World;
     void UpdateFPS();
     float UpdateDT();
     
 private:
-    ~World();
-    static void sq_print(HSQUIRRELVM vm, const SQChar *string, ...);
+    static void SquirrelPrint(HSQUIRRELVM vm, const SQChar *string, ...);
+    static void BindSquirrel(HSQUIRRELVM vm);
     
     State *_state;
     

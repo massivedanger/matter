@@ -10,6 +10,8 @@
 #define __Massive__Logger__
 
 #include "Common.h"
+#include <squirrel.h>
+#include <sqrat.h>
 
 #define log Logger::GetInstance()
 
@@ -26,6 +28,8 @@ public:
     
     void SetPrefix(String prefix) { _prefix = prefix; }
     String GetPrefix() { return _prefix; }
+    
+    static void BindSquirrel(HSQUIRRELVM vm);
     
 protected:
     static Logger *s_Logger;

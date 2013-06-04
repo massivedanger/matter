@@ -28,7 +28,7 @@ Logger &Logger::GetInstance() {
 }
 
 void Logger::PrintToConsole(String string) {
-    printf("%s %s", Logger::GetTimestamp().c_str(), Logger::PrefixedString(string).c_str());
+    printf("%s %s\n", Logger::GetTimestamp().c_str(), Logger::PrefixedString(string).c_str());
 }
 
 void Logger::PrintToFile(String string) {
@@ -57,4 +57,18 @@ String Logger::PrefixedString(String string) {
     else {
         return string;
     }
+}
+
+void Logger::BindSquirrel(HSQUIRRELVM vm) {
+    using namespace Sqrat;
+    Table massiveTable(vm);
+    
+    massiveTable.Bind("Logger", Class<Logger>(vm)
+                      .Func("SetPrefix", &Logger::SetPrefix)
+                      .Func("PrintToConsole", &Logger::PrintToConsole)
+                      .Func("GetTimestamp", &Logger::GetTimestamp)
+                      .StaticFunc("GetInstance", &Logger::GetInstance)
+                      );
+    
+    RootTable(vm).Bind("Massive", massiveTable);
 }
