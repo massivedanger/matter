@@ -15,6 +15,11 @@ World *World::s_World;
 World::World() {
     _running = false;
     _initialized = false;
+    _squirrelVM = sq_open(1024);
+    
+    sqstd_seterrorhandlers(_squirrelVM);
+    sq_setprintfunc(_squirrelVM, sq_print, NULL);
+    sq_pushroottable(_squirrelVM);
 }
 
 //! Destructor
@@ -147,5 +152,9 @@ void World::UpdateFPS() {
  *  Called when the World receives a message
  */
 void World::ReceiveMessage(Message *message) {
+    
+}
+
+void World::sq_print(HSQUIRRELVM vm, const SQChar *string, ...) {
     
 }

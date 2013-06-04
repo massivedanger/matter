@@ -57,6 +57,15 @@
 		20341F3C175D839B001FA9A3 /* squtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F14175D839B001FA9A3 /* squtils.h */; };
 		20341F3D175D839B001FA9A3 /* sqvm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20341F15175D839B001FA9A3 /* sqvm.cpp */; };
 		20341F3E175D839B001FA9A3 /* sqvm.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F16175D839B001FA9A3 /* sqvm.h */; };
+		20341F54175D85A2001FA9A3 /* sqstdaux.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F4D175D85A2001FA9A3 /* sqstdaux.h */; };
+		20341F55175D85A2001FA9A3 /* sqstdblob.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F4E175D85A2001FA9A3 /* sqstdblob.h */; };
+		20341F56175D85A2001FA9A3 /* sqstdio.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F4F175D85A2001FA9A3 /* sqstdio.h */; };
+		20341F57175D85A2001FA9A3 /* sqstdmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F50175D85A2001FA9A3 /* sqstdmath.h */; };
+		20341F58175D85A2001FA9A3 /* sqstdstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F51175D85A2001FA9A3 /* sqstdstring.h */; };
+		20341F59175D85A2001FA9A3 /* sqstdsystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F52175D85A2001FA9A3 /* sqstdsystem.h */; };
+		20341F5A175D85A2001FA9A3 /* squirrel.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F53175D85A2001FA9A3 /* squirrel.h */; };
+		20341F5F175D85CB001FA9A3 /* libSquirrel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20341EE1175D8387001FA9A3 /* libSquirrel.a */; };
+		20341F65175D86BB001FA9A3 /* libSquirrel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20341EE1175D8387001FA9A3 /* libSquirrel.a */; };
 		2048BA0D174E880B000E0DE5 /* libfreetype.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048BA0B174E8808000E0DE5 /* libfreetype.6.dylib */; };
 		2048BA0F174E88B5000E0DE5 /* libsndfile.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048BA0E174E88B5000E0DE5 /* libsndfile.1.dylib */; };
 		2055536A1732DE6900F8B2E7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553561732DD1E00F8B2E7 /* OpenGL.framework */; };
@@ -290,6 +299,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		20341F41175D8402001FA9A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 205552FD1732D9AF00F8B2E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20341EE0175D8387001FA9A3;
+			remoteInfo = Squirrel;
+		};
+		20341F5B175D85B7001FA9A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 205552FD1732D9AF00F8B2E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20341EE0175D8387001FA9A3;
+			remoteInfo = Squirrel;
+		};
+		20341F5D175D85BD001FA9A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 205552FD1732D9AF00F8B2E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20341F46175D8580001FA9A3;
+			remoteInfo = Sqrat;
+		};
 		209E8BC7174E5A2E0043E609 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 205552FD1732D9AF00F8B2E7 /* Project object */;
@@ -373,6 +403,14 @@
 		20341F14175D839B001FA9A3 /* squtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = squtils.h; sourceTree = "<group>"; };
 		20341F15175D839B001FA9A3 /* sqvm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqvm.cpp; sourceTree = "<group>"; };
 		20341F16175D839B001FA9A3 /* sqvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqvm.h; sourceTree = "<group>"; };
+		20341F47175D8580001FA9A3 /* libSqrat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSqrat.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		20341F4D175D85A2001FA9A3 /* sqstdaux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdaux.h; sourceTree = "<group>"; };
+		20341F4E175D85A2001FA9A3 /* sqstdblob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdblob.h; sourceTree = "<group>"; };
+		20341F4F175D85A2001FA9A3 /* sqstdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdio.h; sourceTree = "<group>"; };
+		20341F50175D85A2001FA9A3 /* sqstdmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdmath.h; sourceTree = "<group>"; };
+		20341F51175D85A2001FA9A3 /* sqstdstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdstring.h; sourceTree = "<group>"; };
+		20341F52175D85A2001FA9A3 /* sqstdsystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdsystem.h; sourceTree = "<group>"; };
+		20341F53175D85A2001FA9A3 /* squirrel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = squirrel.h; sourceTree = "<group>"; };
 		2048BA0B174E8808000E0DE5 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.6.dylib; path = "Libraries/SFML-2.0/extlibs/libs-osx/lib/libfreetype.6.dylib"; sourceTree = "<group>"; };
 		2048BA0E174E88B5000E0DE5 /* libsndfile.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsndfile.1.dylib; path = "Libraries/SFML-2.0/extlibs/libs-osx/lib/libsndfile.1.dylib"; sourceTree = "<group>"; };
 		205553051732D9AF00F8B2E7 /* libMassive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMassive.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -662,10 +700,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		20341F44175D8580001FA9A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20341F65175D86BB001FA9A3 /* libSquirrel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		205553021732D9AF00F8B2E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20341F5F175D85CB001FA9A3 /* libSquirrel.a in Frameworks */,
 				209E8BD7174E5C550043E609 /* libSFML.dylib in Frameworks */,
 				205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */,
 				2055536F1732DE8300F8B2E7 /* Foundation.framework in Frameworks */,
@@ -841,6 +888,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		20341F4B175D8595001FA9A3 /* sqrat */ = {
+			isa = PBXGroup;
+			children = (
+				20341F4C175D85A2001FA9A3 /* include */,
+			);
+			name = sqrat;
+			sourceTree = "<group>";
+		};
+		20341F4C175D85A2001FA9A3 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				20341F4D175D85A2001FA9A3 /* sqstdaux.h */,
+				20341F4E175D85A2001FA9A3 /* sqstdblob.h */,
+				20341F4F175D85A2001FA9A3 /* sqstdio.h */,
+				20341F50175D85A2001FA9A3 /* sqstdmath.h */,
+				20341F51175D85A2001FA9A3 /* sqstdstring.h */,
+				20341F52175D85A2001FA9A3 /* sqstdsystem.h */,
+				20341F53175D85A2001FA9A3 /* squirrel.h */,
+			);
+			name = include;
+			path = "Libraries/squirrel-3.0.4/include";
+			sourceTree = "<group>";
+		};
 		205552FC1732D9AF00F8B2E7 = {
 			isa = PBXGroup;
 			children = (
@@ -859,6 +929,7 @@
 				205553051732D9AF00F8B2E7 /* libMassive.a */,
 				209E89BA174E59C20043E609 /* libSFML.dylib */,
 				20341EE1175D8387001FA9A3 /* libSquirrel.a */,
+				20341F47175D8580001FA9A3 /* libSqrat.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -879,6 +950,7 @@
 		205553111732DC6400F8B2E7 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				20341F4B175D8595001FA9A3 /* sqrat */,
 				20341EDC175D8346001FA9A3 /* squirrel */,
 				202629F8174D754200FC67E2 /* SFML */,
 				2091BBC5173D6378008D6FC3 /* GLEW */,
@@ -1432,6 +1504,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		20341F45175D8580001FA9A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20341F54175D85A2001FA9A3 /* sqstdaux.h in Headers */,
+				20341F55175D85A2001FA9A3 /* sqstdblob.h in Headers */,
+				20341F56175D85A2001FA9A3 /* sqstdio.h in Headers */,
+				20341F57175D85A2001FA9A3 /* sqstdmath.h in Headers */,
+				20341F58175D85A2001FA9A3 /* sqstdstring.h in Headers */,
+				20341F59175D85A2001FA9A3 /* sqstdsystem.h in Headers */,
+				20341F5A175D85A2001FA9A3 /* squirrel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		209E89B8174E59C20043E609 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1582,6 +1668,24 @@
 			productReference = 20341EE1175D8387001FA9A3 /* libSquirrel.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		20341F46175D8580001FA9A3 /* Sqrat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20341F48175D8580001FA9A3 /* Build configuration list for PBXNativeTarget "Sqrat" */;
+			buildPhases = (
+				20341F44175D8580001FA9A3 /* Frameworks */,
+				20341F45175D8580001FA9A3 /* Headers */,
+				20341F43175D8580001FA9A3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20341F5C175D85B7001FA9A3 /* PBXTargetDependency */,
+			);
+			name = Sqrat;
+			productName = Sqrat;
+			productReference = 20341F47175D8580001FA9A3 /* libSqrat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		205553041732D9AF00F8B2E7 /* Massive */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2055530E1732D9AF00F8B2E7 /* Build configuration list for PBXNativeTarget "Massive" */;
@@ -1592,6 +1696,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				20341F5E175D85BD001FA9A3 /* PBXTargetDependency */,
+				20341F42175D8402001FA9A3 /* PBXTargetDependency */,
 				209E8BC8174E5A2E0043E609 /* PBXTargetDependency */,
 			);
 			name = Massive;
@@ -1650,6 +1756,7 @@
 				205553041732D9AF00F8B2E7 /* Massive */,
 				209E89B9174E59C20043E609 /* SFML */,
 				20341EE0175D8387001FA9A3 /* Squirrel */,
+				20341F46175D8580001FA9A3 /* Sqrat */,
 			);
 		};
 /* End PBXProject section */
@@ -1679,6 +1786,13 @@
 				20341F36175D839B001FA9A3 /* sqstate.cpp in Sources */,
 				20341F39175D839B001FA9A3 /* sqtable.cpp in Sources */,
 				20341F3D175D839B001FA9A3 /* sqvm.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20341F43175D8580001FA9A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1799,6 +1913,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		20341F42175D8402001FA9A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20341EE0175D8387001FA9A3 /* Squirrel */;
+			targetProxy = 20341F41175D8402001FA9A3 /* PBXContainerItemProxy */;
+		};
+		20341F5C175D85B7001FA9A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20341EE0175D8387001FA9A3 /* Squirrel */;
+			targetProxy = 20341F5B175D85B7001FA9A3 /* PBXContainerItemProxy */;
+		};
+		20341F5E175D85BD001FA9A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20341F46175D8580001FA9A3 /* Sqrat */;
+			targetProxy = 20341F5D175D85BD001FA9A3 /* PBXContainerItemProxy */;
+		};
 		209E8BC8174E5A2E0043E609 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 209E89B9174E59C20043E609 /* SFML */;
@@ -1823,6 +1952,26 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				EXECUTABLE_PREFIX = lib;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/squirrel-3.0.4/include\"";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		20341F49175D8580001FA9A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/squirrel-3.0.4/include\"";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		20341F4A175D8580001FA9A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/squirrel-3.0.4/include\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1904,7 +2053,6 @@
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Libraries/squirrel-3.0.4/lib\"",
 					"\"$(SRCROOT)/Libraries/SFML-2.0/extlibs/libs-osx/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1933,7 +2081,6 @@
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Libraries/squirrel-3.0.4/lib\"",
 					"\"$(SRCROOT)/Libraries/SFML-2.0/extlibs/libs-osx/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2002,6 +2149,14 @@
 			buildConfigurations = (
 				20341EE3175D8387001FA9A3 /* Debug */,
 				20341EE4175D8387001FA9A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		20341F48175D8580001FA9A3 /* Build configuration list for PBXNativeTarget "Sqrat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20341F49175D8580001FA9A3 /* Debug */,
+				20341F4A175D8580001FA9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

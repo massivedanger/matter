@@ -15,6 +15,10 @@
 #include "../Entities/Entity.h"
 #include "State.h"
 
+#include <squirrel.h>
+#include <sqstdio.h>
+#include <sqstdaux.h>
+
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/System/Clock.hpp>
@@ -48,6 +52,8 @@ public:
     
     virtual void ReceiveMessage(Message *message);
     
+    HSQUIRRELVM GetSquirrelVM() { return _squirrelVM; };
+    
 protected:
     World();
     static World *s_World;
@@ -56,8 +62,11 @@ protected:
     
 private:
     ~World();
+    static void sq_print(HSQUIRRELVM vm, const SQChar *string, ...);
     
     State *_state;
+    
+    HSQUIRRELVM _squirrelVM;
     
     sf::RenderWindow _window;
     sf::Clock _clock;
