@@ -74,6 +74,7 @@
 		2055536D1732DE7900F8B2E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055535A1732DD2900F8B2E7 /* CoreGraphics.framework */; };
 		2055536F1732DE8300F8B2E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055536E1732DE8300F8B2E7 /* Foundation.framework */; };
 		205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553701732DE8A00F8B2E7 /* AppKit.framework */; };
+		20592519175E67BC00554A81 /* SquirrelBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20592517175E67BC00554A81 /* SquirrelBridge.cpp */; };
 		209E8AD5174E59E90043E609 /* Export.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C1174E59E90043E609 /* Export.hpp */; };
 		209E8AD6174E59E90043E609 /* Listener.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C2174E59E90043E609 /* Listener.hpp */; };
 		209E8AD7174E59E90043E609 /* Music.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C3174E59E90043E609 /* Music.hpp */; };
@@ -420,6 +421,8 @@
 		2055535C1732DD2D00F8B2E7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		2055536E1732DE8300F8B2E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		205553701732DE8A00F8B2E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		20592517175E67BC00554A81 /* SquirrelBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SquirrelBridge.cpp; sourceTree = "<group>"; };
+		20592518175E67BC00554A81 /* SquirrelBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquirrelBridge.h; sourceTree = "<group>"; };
 		2091BBDF173D63AF008D6FC3 /* glew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
 		2091BBE0173D63AF008D6FC3 /* glxew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
 		2091BBE1173D63AF008D6FC3 /* wglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
@@ -942,6 +945,7 @@
 				201EB24517334BF80061138C /* Utilities */,
 				20E951E6173574BD00A388F0 /* Messaging */,
 				201EB23E17334A4D0061138C /* Core */,
+				20592514175E677A00554A81 /* Scripting */,
 				201EB2681734201D0061138C /* Massive.h */,
 			);
 			path = Massive;
@@ -977,6 +981,15 @@
 				205553561732DD1E00F8B2E7 /* OpenGL.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20592514175E677A00554A81 /* Scripting */ = {
+			isa = PBXGroup;
+			children = (
+				20592517175E67BC00554A81 /* SquirrelBridge.cpp */,
+				20592518175E67BC00554A81 /* SquirrelBridge.h */,
+			);
+			path = Scripting;
 			sourceTree = "<group>";
 		};
 		2091BBC5173D6378008D6FC3 /* GLEW */ = {
@@ -1813,6 +1826,7 @@
 				201EB262173355670061138C /* Light.cpp in Sources */,
 				201EB26717341C790061138C /* Message.cpp in Sources */,
 				20A3F45C173ABEC400811687 /* Text.cpp in Sources */,
+				20592519175E67BC00554A81 /* SquirrelBridge.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2151,6 +2165,7 @@
 				20341EE4175D8387001FA9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20341F48175D8580001FA9A3 /* Build configuration list for PBXNativeTarget "Sqrat" */ = {
 			isa = XCConfigurationList;
@@ -2159,6 +2174,7 @@
 				20341F4A175D8580001FA9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		205553001732D9AF00F8B2E7 /* Build configuration list for PBXProject "Massive" */ = {
 			isa = XCConfigurationList;

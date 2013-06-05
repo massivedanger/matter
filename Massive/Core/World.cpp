@@ -13,6 +13,10 @@ World *World::s_World;
 
 //! Constructor
 World::World() {
+    _contextSettings = new sf::ContextSettings();
+    _window = new sf::RenderWindow();
+    _state = new State();
+    
     _running = false;
     _initialized = false;
 }
@@ -40,14 +44,11 @@ World &World::GetInstance() {
 bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen, bool antialias) {
     _lastTime = _clock.getElapsedTime().asSeconds();
     
-    _contextSettings.antialiasingLevel = 8;
-    _window.create(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Default, _contextSettings);
-
-    // Setup Squirrel
-    _squirrelVM = sq_open(1024);
-    sqstd_seterrorhandlers(_squirrelVM);
-    sq_setprintfunc(_squirrelVM, SquirrelPrint, NULL);
-    sq_pushroottable(_squirrelVM);
+    if (antialias) {
+        _contextSettings->antialiasingLevel = 8;
+    }
+    
+    _window->create(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Default, *_contextSettings);
     
     _initialized = true;
     
@@ -70,21 +71,16 @@ void World::Start() {
     _running = true;
     _lastFPSTime = _clock.getElapsedTime().asSeconds();
     
-    Logger::BindSquirrel(_squirrelVM);
-    Sqrat::Script mainScript(_squirrelVM);
-    
-    mainScript.CompileFile("/Users/evan/code/massive/MassiveGame/MassiveGame/Scripts/main.nut");
-    mainScript.Run();
-    while (_running && _window.isOpen()) {
+    while (_running && _window->isOpen()) {
         sf::Event event;
-        while (_window.pollEvent(event)) {
+        while (_window->pollEvent(event)) {
             if (event.type == sf::Event::Closed)
-                _window.close();
+                _window->close();
         }
         
-        _window.clear(sf::Color::White);
+        _window->clear(sf::Color::White);
         TickAndDraw();
-        _window.display();
+        _window->display();
     }
 }
 
@@ -159,34 +155,4 @@ void World::UpdateFPS() {
  */
 void World::ReceiveMessage(Message *message) {
     
-}
-
-void World::SquirrelPrint(HSQUIRRELVM vm, const SQChar *string, ...) {
-    va_list args;
-    va_start(args, string);
-    vprintf(string, args);
-    va_end(args);
-}
-
-void World::BindSquirrel(HSQUIRRELVM vm) {
-//    using namespace Sqrat;
-//    
-//    Class<World> sqWorld(vm);
-//    
-//    sqWorld.Func("GetInstance", &World::GetInstance);
-//    sqWorld.Func("Init", &World::Init);
-//    sqWorld.Func("Destroy", &World::Destroy);
-//    sqWorld.Func("Start", &World::Start);
-//    sqWorld.Func("Stop", &World::Stop);
-//    sqWorld.Func("GetDT", &World::GetDT);
-//    sqWorld.Func("GetFPS", &World::GetFPS);
-//    sqWorld.Func("GetFPSString", &World::GetFPSString);
-//    sqWorld.Func("TickAndDraw", &World::TickAndDraw);
-//    sqWorld.Func("Tick", &World::Tick);
-//    sqWorld.Func("Draw", &World::Draw);
-//    sqWorld.Func("SetState", &World::SetState);
-//    sqWorld.Func("GetCurrentState", &World::GetCurrentState);
-//    sqWorld.Func("ReceiveMessage", &World::ReceiveMessage);
-//    
-//    RootTable(vm).Bind("World", sqWorld);
 }

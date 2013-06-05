@@ -29,6 +29,7 @@ class HUD;
 #define theWorld World::GetInstance()
 
 class World : public Listener {
+    
 public:
     World();
     ~World();
@@ -50,12 +51,10 @@ public:
     void SetState(State *state) { _state = state; } //! Set active State
     State* GetCurrentState() { return _state; } //! Get active State
     
-    sf::RenderWindow &GetWindow() { return _window; } //! Get SFML RenderWindow
-    sf::ContextSettings &GetContextSettings() { return _contextSettings; } //! Get SFML ContextSettings
+    sf::RenderWindow &GetWindow() { return *_window; } //! Get SFML RenderWindow
+    sf::ContextSettings &GetContextSettings() { return *_contextSettings; } //! Get SFML ContextSettings
     
     virtual void ReceiveMessage(Message *message);
-    
-    HSQUIRRELVM GetSquirrelVM() { return _squirrelVM; };
     
 protected:
     static World *s_World;
@@ -63,16 +62,11 @@ protected:
     float UpdateDT();
     
 private:
-    static void SquirrelPrint(HSQUIRRELVM vm, const SQChar *string, ...);
-    static void BindSquirrel(HSQUIRRELVM vm);
-    
     State *_state;
     
-    HSQUIRRELVM _squirrelVM;
-    
-    sf::RenderWindow _window;
+    sf::RenderWindow *_window;
     sf::Clock _clock;
-    sf::ContextSettings _contextSettings;
+    sf::ContextSettings *_contextSettings;
     
     bool _running;
     bool _initialized;

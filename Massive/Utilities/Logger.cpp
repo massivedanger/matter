@@ -7,19 +7,20 @@
 //
 
 #include "Logger.h"
+#include "../Scripting/SquirrelBridge.h"
 #include <iomanip>
 
 Logger *Logger::s_Logger;
 
 Logger::Logger() {
-    _prefix = "[INFO]";
+    prefix = "[INFO]";
 }
 
 Logger::~Logger() {
     
 }
 
-Logger &Logger::GetInstance() {
+Logger &Logger::getInstance() {
     if (s_Logger == NULL) {
         s_Logger = new Logger();
     }
@@ -27,15 +28,15 @@ Logger &Logger::GetInstance() {
     return *s_Logger;
 }
 
-void Logger::PrintToConsole(String string) {
-    printf("%s %s\n", Logger::GetTimestamp().c_str(), Logger::PrefixedString(string).c_str());
+void Logger::printToConsole(String string) {
+    printf("%s %s\n", Logger::getTimestamp().c_str(), Logger::prefixedString(string).c_str());
 }
 
-void Logger::PrintToFile(String string) {
+void Logger::printToFile(String string) {
     
 }
 
-String Logger::GetTimestamp() {
+String Logger::getTimestamp() {
     time_t timer = time(NULL);
     struct tm *timestamp = localtime(&timer);
     std::ostringstream stream;
@@ -50,25 +51,11 @@ String Logger::GetTimestamp() {
     return stream.str();
 }
 
-String Logger::PrefixedString(String string) {
-    if (_prefix != "") {
-        return _prefix + " " + string;
+String Logger::prefixedString(String string) {
+    if (prefix != "") {
+        return prefix + " " + string;
     }
     else {
         return string;
     }
-}
-
-void Logger::BindSquirrel(HSQUIRRELVM vm) {
-    using namespace Sqrat;
-    Table massiveTable(vm);
-    
-    massiveTable.Bind("Logger", Class<Logger>(vm)
-                      .Func("SetPrefix", &Logger::SetPrefix)
-                      .Func("PrintToConsole", &Logger::PrintToConsole)
-                      .Func("GetTimestamp", &Logger::GetTimestamp)
-                      .StaticFunc("GetInstance", &Logger::GetInstance)
-                      );
-    
-    RootTable(vm).Bind("Massive", massiveTable);
 }

@@ -10,35 +10,32 @@
 #define __Massive__Logger__
 
 #include "Common.h"
-#include <squirrel.h>
-#include <sqrat.h>
 
 #define log Logger::GetInstance()
 
+class SquirrelBridge;
+
 class Logger {
+    
+    friend SquirrelBridge;
     
 public:
     Logger();
     ~Logger();
     
-    static Logger &GetInstance();
+    static Logger &getInstance();
     
-    void PrintToConsole(String string);
-    void PrintToFile(String string);
+    void printToConsole(String string);
+    void printToFile(String string);
     
-    void SetPrefix(String prefix) { _prefix = prefix; }
-    String GetPrefix() { return _prefix; }
-    
-    static void BindSquirrel(HSQUIRRELVM vm);
+    String prefix;
     
 protected:
     static Logger *s_Logger;
-    String GetTimestamp();
+    String getTimestamp();
     
 private:
-    String PrefixedString(String string);
-    
-    String _prefix;
+    String prefixedString(String string);
 };
 
 #endif /* defined(__Massive__Logger__) */
