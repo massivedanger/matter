@@ -28,6 +28,10 @@ public:
     void printToConsole(String string);
     void printToFile(String string);
     
+    void debug(String string);
+    void info(String string);
+    void error(String string);
+    
     String prefix;
     
 protected:

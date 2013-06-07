@@ -9,16 +9,20 @@
 #include "Text.h"
 #include "../Core/World.h"
 
-Text::Text(String string, String fontPath, int size) {
-    _string = string;
-    _fontPath = fontPath;
+Text::Text() {
+    string = "";
+    fontPath = MASSIVE_DEFAULT_FONT;
     
-    _font.loadFromFile(_fontPath);
+    font.loadFromFile(fontPath);
     
-    _drawable.setString(_string);
-    _drawable.setCharacterSize(size);
+    _drawable.setString(string);
+    _drawable.setCharacterSize(16);
     _drawable.setColor(sf::Color::Black);
-    _drawable.setFont(_font);
+    _drawable.setFont(font);
+}
+
+Text::~Text() {
+    
 }
 
 void Text::Update(float dt) {
@@ -27,11 +31,6 @@ void Text::Update(float dt) {
 
 void Text::Draw() {
     theWorld.GetWindow().draw(_drawable);
-}
-
-void Text::SetString(String string) {
-    _string = string;
-    _drawable.setString(_string);
 }
 
 void Text::SetPosition(int x, int y) {
@@ -76,8 +75,4 @@ void Text::SetOrigin(int x, int y) {
 
 sf::Vector2f Text::GetOrigin() {
     return _drawable.getOrigin();
-}
-
-Text::~Text() {
-    
 }

@@ -19,21 +19,17 @@
 class Text : public Actor {
     
 public:
-    Text(
-         String string = "",
-         String fontPath = MASSIVE_DEFAULT_FONT,
-         int size = 16
-        );
+    Text();
     ~Text();
     
     virtual void Update(float dt);
     virtual void Draw();
     
-    String GetString() { return _string; }
-    void SetString(String string);
+    String string;
+    String fontPath;
+    sf::Font font;
     
-    sf::Font GetFont() { return _font; }
-    void SetFont(sf::Font font);
+    float rotation;
     
     virtual void SetPosition(int x, int y);
     virtual void MovePosition(int x, int y);
@@ -51,9 +47,6 @@ public:
     virtual sf::Vector2f GetOrigin();
     
 private:
-    String _string;
-    String _fontPath;
-    sf::Font _font;
     sf::Text _drawable;
 };
 

@@ -36,6 +36,23 @@ void Logger::printToFile(String string) {
     
 }
 
+void Logger::debug(String string) {
+    prefix = "[DEBUG]";
+    printToConsole(string);
+}
+
+void Logger::info(String string) {
+    prefix = "[INFO]";
+    printToConsole(string);
+}
+
+void Logger::error(String string) {
+    prefix = "[ERROR]";
+    printToConsole(string);
+}
+
+#pragma mark - Protected
+
 String Logger::getTimestamp() {
     time_t timer = time(NULL);
     struct tm *timestamp = localtime(&timer);
@@ -50,6 +67,8 @@ String Logger::getTimestamp() {
     
     return stream.str();
 }
+
+#pragma mark - Private
 
 String Logger::prefixedString(String string) {
     if (prefix != "") {

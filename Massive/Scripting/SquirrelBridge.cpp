@@ -57,26 +57,36 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
     Table gTable(vm);
     
     gTable.Bind("Logger", Class<Logger>(vm)
-                        .Var("prefix", &Logger::prefix)
-                        .Func("printToConsole", &Logger::printToConsole)
-                        .StaticFunc("getInstance", &Logger::getInstance)
-                        );
+                .Var("prefix", &Logger::prefix)
+                .Func("printToConsole", &Logger::printToConsole)
+                .StaticFunc("getInstance", &Logger::getInstance)
+                .Func("debug", &Logger::debug)
+                .Func("info", &Logger::info)
+                .Func("error", &Logger::error));
     
     gTable.Bind("World", Class<World>(vm)
-                        .StaticFunc("getInstance", &World::GetInstance)
-                        .Func("init", &World::Init)
-                        .Func("destroy", &World::Destroy)
-                        .Func("start", &World::Start)
-                        .Func("stop", &World::Stop)
-                        .Func("getDT", &World::GetDT)
-                        .Func("getFPS", &World::GetFPS)
-                        .Func("getFPSString", &World::GetFPSString)
-                        .Func("tickAndDraw", &World::TickAndDraw)
-                        .Func("tick", &World::Tick)
-                        .Func("draw", &World::Draw)
-                        .Prop("state", &World::GetCurrentState, &World::SetState)
-                        .Func("receiveMessage", &World::ReceiveMessage)
-                        );
+                .StaticFunc("getInstance", &World::GetInstance)
+                .Func("init", &World::Init)
+                .Func("destroy", &World::Destroy)
+                .Func("start", &World::Start)
+                .Func("stop", &World::Stop)
+                .Func("getDT", &World::GetDT)
+                .Func("getFPS", &World::GetFPS)
+                .Func("getFPSString", &World::GetFPSString)
+                .Func("tickAndDraw", &World::TickAndDraw)
+                .Func("tick", &World::Tick)
+                .Func("draw", &World::Draw)
+                .Prop("state", &World::GetCurrentState, &World::SetState)
+                .Func("receiveMessage", &World::ReceiveMessage));
+    
+    gTable.Bind("Text", Class<Text>(vm)
+                .Func("draw", &Text::Draw)
+                .Func("update", &Text::Update)
+                .Var("string", &Text::string)
+                .Var("fontPath", &Text::fontPath));
+    
+    gTable.Bind("Constants", ConstTable(vm)
+                .Const("DefaultFont", MASSIVE_DEFAULT_FONT));
     
     Sqrat::RootTable(vm).Bind("Massive", gTable);
 }
