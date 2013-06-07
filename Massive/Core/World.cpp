@@ -96,6 +96,18 @@ void World::start() {
                 case sf::Event::MouseButtonReleased:
                     theInput.mouseButtonReleased(event.mouseButton.button, event.mouseButton.x, event.mouseButton.y);
                     break;
+                case sf::Event::LostFocus:
+                    // TODO: Handle losing focus
+                    log.debug("Lost focus");
+                    break;
+                case sf::Event::GainedFocus:
+                    // TODO: Handle gaining focus
+                    log.debug("Gained focus");
+                    break;
+                case sf::Event::Resized:
+                    // TODO: Handle resizing
+                    log.debug("Resized!");
+                    break;
                 default:
                     break;
             }
