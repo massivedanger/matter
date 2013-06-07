@@ -15,23 +15,23 @@
 #include "../Utilities/Common.h"
 #include "Message.h"
 
-#define theObserver Observer::GetInstance()
+#define theObserver Observer::getInstance()
 
 typedef std::set<Listener *> ListenerSet;
 typedef std::queue<Message *> MessageQueue; 
 
 class Observer {
 public:
-    static Observer &GetInstance();
+    static Observer &getInstance();
     
-    void Broadcast(Message *message);
-    const bool Subscribe(Listener *listener, const String &messageName);
-    const bool Unsubscribe(Listener *listener, const String &messageName);
+    void broadcast(Message *message);
+    const bool subscribe(Listener *listener, const String &messageName);
+    const bool unsubscribe(Listener *listener, const String &messageName);
     
-    const ListenerSet GetSubscribersFor(const String &messageName);
-    const StringSet GetSubscriptionsFor(Listener *listener);
+    const ListenerSet getSubscribersFor(const String &messageName);
+    const StringSet getSubscriptionsFor(Listener *listener);
     
-    void SendAll();
+    void sendAll();
     
 protected:
     Observer();

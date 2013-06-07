@@ -14,16 +14,16 @@ Message::Message() {
     _sender = 0;
 }
 
-const String& Message::GetName() {
+const String& Message::getName() {
 	return _messageName;
 }
 
-Listener* const Message::GetSender() {
+Listener* const Message::getSender() {
 	return _sender;
 }
 
 Listener::~Listener() {
-	StringSet subs = theObserver.GetSubscriptionsFor(this);
+	StringSet subs = theObserver.getSubscriptionsFor(this);
 	StringSet::iterator it = subs.begin();
 	while (it != subs.end()) {
 		++it;

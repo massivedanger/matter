@@ -11,7 +11,7 @@
 
 #include "Common.h"
 
-#define log Logger::GetInstance()
+#define log Logger::getInstance()
 
 class SquirrelBridge;
 

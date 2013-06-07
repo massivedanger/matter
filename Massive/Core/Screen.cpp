@@ -26,7 +26,7 @@ void Screen::AddEntity(Entity *entity, int layer) {
         return;
     }
     
-    entity->SetLayer(layer);
+    entity->layer = layer;
     _layers[layer].push_back(entity);
 }
 
@@ -39,7 +39,7 @@ void Screen::UpdateEntities(float dt) {
     while (layersIt != _layers.end()) {
         std::vector<Entity *> entities = layersIt->second;
         for (Entity *e : entities) {
-            e->Update(dt);
+            e->update(dt);
         }
         layersIt++;
     }
@@ -50,7 +50,7 @@ void Screen::DrawEntities() {
     while (layersIt != _layers.end()) {
         std::vector<Entity *> entities = layersIt->second;
         for (Entity *e : entities) {
-            e->Draw();
+            e->draw();
         }
         layersIt++;
     }

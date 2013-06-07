@@ -22,8 +22,8 @@ public:
     Text();
     ~Text();
     
-    virtual void Update(float dt);
-    virtual void Draw();
+    virtual void update(float dt);
+    virtual void draw();
     
     String string;
     String fontPath;
@@ -31,20 +31,20 @@ public:
     
     float rotation;
     
-    virtual void SetPosition(int x, int y);
-    virtual void MovePosition(int x, int y);
-    virtual sf::Vector2f GetPosition();
+    virtual void setPosition(int x, int y);
+    virtual void movePosition(int x, int y);
+    virtual sf::Vector2f getPosition();
     
-    virtual void SetRotation(float rotation);
-    virtual void Rotate(float rotation);
-    virtual float GetRotation();
+    virtual void setRotation(float rotation);
+    virtual void rotate(float rotation);
+    virtual float getRotation();
     
-    virtual void SetScale(float scaleX, float scaleY);
-    virtual void Scale(float scaleX, float scaleY);
-    virtual sf::Vector2f GetScale();
+    virtual void setScale(float scaleX, float scaleY);
+    virtual void scale(float scaleX, float scaleY);
+    virtual sf::Vector2f getScale();
     
-    virtual void SetOrigin(int x, int y);
-    virtual sf::Vector2f GetOrigin();
+    virtual void setOrigin(int x, int y);
+    virtual sf::Vector2f getOrigin();
     
 private:
     sf::Text _drawable;

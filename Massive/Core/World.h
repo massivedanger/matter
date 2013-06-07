@@ -12,6 +12,7 @@
 #include "../Utilities/Common.h"
 #include "../Utilities/Logger.h"
 #include "../Messaging/Message.h"
+#include "../Messaging/InputManager.h"
 #include "../Entities/Entity.h"
 #include "State.h"
 
@@ -26,40 +27,40 @@
 
 class HUD;
 
-#define theWorld World::GetInstance()
+#define theWorld World::getInstance()
 
 class World : public Listener {
     
 public:
     World();
     ~World();
-    static World &GetInstance();
+    static World &getInstance();
     
-    bool Init(unsigned int windowWidth = 960, unsigned int windowHeight = 600, String windowTitle = "Massive Game", bool fullscreen = false, bool antialias = true);
-    void Destroy();
+    bool init(unsigned int windowWidth = 960, unsigned int windowHeight = 600, String windowTitle = "Massive Game", bool fullscreen = false, bool antialias = true);
+    void destroy();
     
-    void Start();
-    void Stop();
+    void start();
+    void stop();
     
-    const float GetDT() { return _dt; } //! Get the current frame's Delta-Time
-    const float GetFPS() { return _lastFPS; } //! Get the current second's stored FPS
-    const String GetFPSString();
-    void TickAndDraw();
-    void Tick();
-    void Draw();
+    const float getDT() { return _dt; } //! Get the current frame's Delta-Time
+    const float getFPS() { return _lastFPS; } //! Get the current second's stored FPS
+    const String getFPSString();
+    void tickAndDraw();
+    void tick();
+    void draw();
     
-    void SetState(State *state) { _state = state; } //! Set active State
-    State* GetCurrentState() { return _state; } //! Get active State
+    void setState(State *state) { _state = state; } //! Set active State
+    State* getCurrentState() { return _state; } //! Get active State
     
-    sf::RenderWindow &GetWindow() { return *_window; } //! Get SFML RenderWindow
-    sf::ContextSettings &GetContextSettings() { return *_contextSettings; } //! Get SFML ContextSettings
+    sf::RenderWindow &getWindow() { return *_window; } //! Get SFML RenderWindow
+    sf::ContextSettings &getContextSettings() { return *_contextSettings; } //! Get SFML ContextSettings
     
-    virtual void ReceiveMessage(Message *message);
+    virtual void receiveMessage(Message *message);
     
 protected:
     static World *s_World;
-    void UpdateFPS();
-    float UpdateDT();
+    void updateFPS();
+    float updateDT();
     
 private:
     State *_state;

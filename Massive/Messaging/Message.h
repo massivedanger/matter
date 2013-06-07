@@ -19,8 +19,8 @@ public:
     Message();
     Message(const String& messageName, Listener *sender = NULL);
     
-    virtual const String& GetName();
-    Listener* const GetSender();
+    virtual const String& getName();
+    Listener* const getSender();
     
 protected:
     String _messageName;
@@ -31,8 +31,7 @@ class Listener {
     
 public:
     virtual ~Listener();
-    
-    virtual void ReceiveMessage(Message *message) = 0;
+    virtual void receiveMessage(Message *message) {};
 };
 
 #endif /* defined(__Massive__Message__) */

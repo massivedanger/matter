@@ -65,23 +65,23 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .Func("error", &Logger::error));
     
     gTable.Bind("World", Class<World>(vm)
-                .StaticFunc("getInstance", &World::GetInstance)
-                .Func("init", &World::Init)
-                .Func("destroy", &World::Destroy)
-                .Func("start", &World::Start)
-                .Func("stop", &World::Stop)
-                .Func("getDT", &World::GetDT)
-                .Func("getFPS", &World::GetFPS)
-                .Func("getFPSString", &World::GetFPSString)
-                .Func("tickAndDraw", &World::TickAndDraw)
-                .Func("tick", &World::Tick)
-                .Func("draw", &World::Draw)
-                .Prop("state", &World::GetCurrentState, &World::SetState)
-                .Func("receiveMessage", &World::ReceiveMessage));
+                .StaticFunc("getInstance", &World::getInstance)
+                .Func("init", &World::init)
+                .Func("destroy", &World::destroy)
+                .Func("start", &World::start)
+                .Func("stop", &World::stop)
+                .Func("getDT", &World::getDT)
+                .Func("getFPS", &World::getFPS)
+                .Func("getFPSString", &World::getFPSString)
+                .Func("tickAndDraw", &World::tickAndDraw)
+                .Func("tick", &World::tick)
+                .Func("draw", &World::draw)
+                .Prop("state", &World::getCurrentState, &World::setState)
+                .Func("receiveMessage", &World::receiveMessage));
     
     gTable.Bind("Text", Class<Text>(vm)
-                .Func("draw", &Text::Draw)
-                .Func("update", &Text::Update)
+                .Func("draw", &Text::draw)
+                .Func("update", &Text::update)
                 .Var("string", &Text::string)
                 .Var("fontPath", &Text::fontPath));
     

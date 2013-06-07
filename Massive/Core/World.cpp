@@ -29,7 +29,7 @@ World::~World() {
 /*!
  *  Get the singleton instance of World for the game
  */
-World &World::GetInstance() {
+World &World::getInstance() {
     if (s_World == NULL) {
         s_World = new World();
     }
@@ -41,7 +41,7 @@ World &World::GetInstance() {
  *  Initialize the World with configuration
  *  Call before World::Start()
  */
-bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen, bool antialias) {
+bool World::init(unsigned int windowWidth, unsigned int windowHeight, String windowTitle, bool fullscreen, bool antialias) {
     _lastTime = _clock.getElapsedTime().asSeconds();
     
     if (antialias) {
@@ -59,7 +59,7 @@ bool World::Init(unsigned int windowWidth, unsigned int windowHeight, String win
  *  Handle cleanup of all World-related data
  *  Called right before the game exits
  */
-void World::Destroy() {
+void World::destroy() {
     
 }
 
@@ -67,19 +67,42 @@ void World::Destroy() {
  *  Start the game by displaying the window and polling for events
  *  Calls World::TickAndDraw();
  */
-void World::Start() {
+void World::start() {
     _running = true;
     _lastFPSTime = _clock.getElapsedTime().asSeconds();
     
     while (_running && _window->isOpen()) {
         sf::Event event;
         while (_window->pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                _window->close();
+            switch (event.type) {
+                case sf::Event::Closed:
+                    _window->close();
+                    break;
+                case sf::Event::KeyPressed:
+                    theInput.keyPressed(event.key);
+                    break;
+                case sf::Event::KeyReleased:
+                    theInput.keyReleased(event.key);
+                    break;
+                case sf::Event::MouseMoved:
+                    theInput.mouseMoved(event.mouseMove.x, event.mouseMove.y);
+                    break;
+                case sf::Event::MouseWheelMoved:
+                    theInput.mouseWheelMoved(event.mouseWheel.delta, event.mouseWheel.x, event.mouseWheel.y);
+                    break;
+                case sf::Event::MouseButtonPressed:
+                    theInput.mouseButtonPressed(event.mouseButton.button, event.mouseButton.x, event.mouseButton.y);
+                    break;
+                case sf::Event::MouseButtonReleased:
+                    theInput.mouseButtonReleased(event.mouseButton.button, event.mouseButton.x, event.mouseButton.y);
+                    break;
+                default:
+                    break;
+            }
         }
         
         _window->clear(sf::Color::White);
-        TickAndDraw();
+        tickAndDraw();
         _window->display();
     }
 }
@@ -87,15 +110,15 @@ void World::Start() {
 /*!
  *  Stops the game and calls World::Destroy() to perform cleanup
  */
-void World::Stop() {
+void World::stop() {
     _running = false;
-    World::Destroy();
+    World::destroy();
 }
 
 //! Convenience function that calls World::Tick() and World::Draw()
-void World::TickAndDraw() {
-    Tick();
-    Draw();
+void World::tickAndDraw() {
+    tick();
+    draw();
 }
 
 /*!
@@ -103,9 +126,9 @@ void World::TickAndDraw() {
  *  Also, if a State is set, propogates new DT to the current state, which 
  *  sends it down the stack
  */
-void World::Tick() {
-    float frameDT = UpdateDT();
-    UpdateFPS();
+void World::tick() {
+    float frameDT = updateDT();
+    updateFPS();
     
     if (_state) {
         _state->Update(frameDT);
@@ -115,21 +138,21 @@ void World::Tick() {
 /*!
  *  If a State is set, calls State::Draw() on that State
  */
-void World::Draw() {
+void World::draw() {
     if (_state) {
         _state->Draw();
     }
 }
 
 //! Convenience function for getting current FPS as a String
-const String World::GetFPSString() {
-    return M::floatToString(GetFPS());
+const String World::getFPSString() {
+    return M::floatToString(getFPS());
 }
 
 /*!
  *  Updates the stored Delta-Time float
  */
-float World::UpdateDT() {
+float World::updateDT() {
     _currentTime = _clock.getElapsedTime().asSeconds();
     _dt = _currentTime - _lastTime;
     _lastTime = _currentTime;
@@ -140,7 +163,7 @@ float World::UpdateDT() {
 /*!
  *  Updates the stored FPS float once per second
  */
-void World::UpdateFPS() {
+void World::updateFPS() {
     if (_currentTime - _lastFPSTime > 1) {
         _lastFPS = _fps;
         _fps = 0;
@@ -153,6 +176,6 @@ void World::UpdateFPS() {
 /*!
  *  Called when the World receives a message
  */
-void World::ReceiveMessage(Message *message) {
+void World::receiveMessage(Message *message) {
     
 }

@@ -9,9 +9,5 @@
 #include "HUD.h"
 
 HUD::HUD() {
-    _layers = HUDLayerSet();
-}
-
-HUDLayerSet HUD::GetLayers() {
-    return _layers;
+    layers = HUDLayerSet();
 }

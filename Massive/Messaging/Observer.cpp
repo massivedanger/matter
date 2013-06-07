@@ -14,7 +14,7 @@ Observer::Observer() {
     _paused = false;
 }
 
-Observer &Observer::GetInstance() {
+Observer &Observer::getInstance() {
     if (s_Observer == NULL) {
         s_Observer = new Observer();
     }
@@ -22,18 +22,18 @@ Observer &Observer::GetInstance() {
     return *s_Observer;
 }
 
-void Observer::Broadcast(Message *message) {
+void Observer::broadcast(Message *message) {
     _messages.push(message);
 }
 
-const bool Observer::Subscribe(Listener *listener, const String &messageName) {
+const bool Observer::subscribe(Listener *listener, const String &messageName) {
     _subscriptions[listener].insert(messageName);
     std::pair<ListenerSet::iterator, bool> insertResult = _subscribers[messageName].insert(listener);
     
 	return insertResult.second;
 }
 
-const bool Observer::Unsubscribe(Listener *listener, const String &messageName) {
+const bool Observer::unsubscribe(Listener *listener, const String &messageName) {
     if (_subscribers.find(messageName) == _subscribers.end()) {
         return false;
     }
@@ -51,7 +51,7 @@ const bool Observer::Unsubscribe(Listener *listener, const String &messageName) 
     }
 }
 
-const ListenerSet Observer::GetSubscribersFor(const String& messageName) {
+const ListenerSet Observer::getSubscribersFor(const String& messageName) {
     if (_subscribers.find(messageName) == _subscribers.end()) {
         return ListenerSet();
     }
@@ -60,7 +60,7 @@ const ListenerSet Observer::GetSubscribersFor(const String& messageName) {
     }
 }
 
-const StringSet Observer::GetSubscriptionsFor(Listener *listener) {
+const StringSet Observer::getSubscriptionsFor(Listener *listener) {
     if (_subscriptions.find(listener) == _subscriptions.end()) {
         return StringSet();
     }
@@ -69,14 +69,14 @@ const StringSet Observer::GetSubscriptionsFor(Listener *listener) {
     }
 }
 
-void Observer::SendAll() {
+void Observer::sendAll() {
     while (!_messages.empty()) {
-        String frontMessageName = _messages.front()->GetName();
+        String frontMessageName = _messages.front()->getName();
         
         if (_subscribers.find(frontMessageName) != _subscribers.end()) {
             std::set<Listener*>::iterator listenIt = _subscribers[frontMessageName].begin();
 			while (listenIt != _subscribers[frontMessageName].end()) {
-				(*listenIt)->ReceiveMessage(_messages.front());
+				(*listenIt)->receiveMessage(_messages.front());
 				listenIt++;
 			}
         }

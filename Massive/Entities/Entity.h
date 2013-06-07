@@ -18,29 +18,26 @@ class Entity {
 public:
     Entity();
     ~Entity();
-    virtual void Update(float dt) {}
-    virtual void Draw() {}
     
-    void SetLayer(int layer) { _layer = layer; }
-    int GetLayer() { return _layer; }
+    int layer;
     
-    virtual void SetPosition(int x, int y) {}
-    virtual void MovePosition(int x, int y) {}
-    virtual sf::Vector2f GetPosition() { return sf::Vector2f(0.0f, 0.0f); }
+    virtual void update(float dt) {}
+    virtual void draw() {}
     
-    virtual void SetRotation(float rotation) {}
-    virtual void Rotate(float rotation) {}
-    virtual float GetRotation() { return 0.f; }
+    virtual void setPosition(int x, int y) {}
+    virtual void movePosition(int x, int y) {}
+    virtual sf::Vector2f getPosition() { return sf::Vector2f(0.0f, 0.0f); }
     
-    virtual void SetScale(float scaleX, float scaleY) {}
-    virtual void Scale(float scaleX, float scaleY) {}
-    virtual sf::Vector2f GetScale() { return sf::Vector2f(0.0f, 0.0f); }
+    virtual void setRotation(float rotation) {}
+    virtual void rotate(float rotation) {}
+    virtual float getRotation() { return 0.f; }
     
-    virtual void SetOrigin(int x, int y) {}
-    virtual sf::Vector2f GetOrigin() { return sf::Vector2f(0.0f, 0.0f); }
+    virtual void setScale(float scaleX, float scaleY) {}
+    virtual void scale(float scaleX, float scaleY) {}
+    virtual sf::Vector2f getScale() { return sf::Vector2f(0.0f, 0.0f); }
     
-protected:
-    int _layer;
+    virtual void setOrigin(int x, int y) {}
+    virtual sf::Vector2f getOrigin() { return sf::Vector2f(0.0f, 0.0f); }
 };
 
 typedef std::vector<Entity*>        EntityList;

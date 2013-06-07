@@ -26,9 +26,11 @@ class Utility {
 public:
     //! Get String representation of a float
     static String floatToString(float number) {
-        std::ostringstream stream;
-        stream << number;
-        return stream.str();
+        return std::to_string(number);
+    }
+    
+    static String intToString(int number) {
+        return std::to_string(number);
     }
 };
 

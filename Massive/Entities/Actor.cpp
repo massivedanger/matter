@@ -12,15 +12,15 @@
 Actor::Actor() {
 
 }
-void Actor::Update(float dt) {
+void Actor::update(float dt) {
     
 }
 
-void Actor::Draw() {
-    sf::CircleShape circle(theWorld.GetFPS());
+void Actor::draw() {
+    sf::CircleShape circle(theWorld.getFPS());
     circle.setFillColor( sf::Color(0, 0, 0) );
     
-    theWorld.GetWindow().draw(circle);
+    theWorld.getWindow().draw(circle);
 }
 
 Actor::~Actor() {

@@ -18,14 +18,12 @@ class HUD {
     
 public:
     HUD();
-    HUDLayerSet GetLayers();
-    bool PushLayer(HUDLayer *layer);
-    bool UnshiftLayer(HUDLayer *layer);
-    HUDLayer PopLayer();
-    HUDLayer ShiftLayer();
-    
-private:
-    std::set<HUDLayer *> _layers;
+    HUDLayerSet layers;
+    bool pushLayer(HUDLayer *layer);
+    bool unshiftLayer(HUDLayer *layer);
+    HUDLayer popLayer();
+    HUDLayer shiftLayer();
+
 };
 
 #endif /* defined(__Massive__HUD__) */

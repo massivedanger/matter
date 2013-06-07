@@ -25,54 +25,54 @@ Text::~Text() {
     
 }
 
-void Text::Update(float dt) {
+void Text::update(float dt) {
     
 }
 
-void Text::Draw() {
-    theWorld.GetWindow().draw(_drawable);
+void Text::draw() {
+    theWorld.getWindow().draw(_drawable);
 }
 
-void Text::SetPosition(int x, int y) {
+void Text::setPosition(int x, int y) {
     _drawable.setPosition(x, y);
 }
 
-void Text::MovePosition(int x, int y) {
+void Text::movePosition(int x, int y) {
     _drawable.move(x, x);
 }
 
-sf::Vector2f Text::GetPosition() {
+sf::Vector2f Text::getPosition() {
     return _drawable.getPosition();
 }
 
-void Text::SetRotation(float rotation) {
+void Text::setRotation(float rotation) {
     _drawable.setRotation(rotation);
 }
 
-void Text::Rotate(float rotation) {
+void Text::rotate(float rotation) {
     _drawable.rotate(rotation);
 }
 
-float Text::GetRotation() {
+float Text::getRotation() {
     return _drawable.getRotation();
 }
 
-void Text::SetScale(float scaleX, float scaleY) {
+void Text::setScale(float scaleX, float scaleY) {
     _drawable.setScale(scaleX, scaleY);
 }
 
-void Text::Scale(float scaleX, float scaleY) {
+void Text::scale(float scaleX, float scaleY) {
     _drawable.scale(scaleX, scaleY);
 }
 
-sf::Vector2f Text::GetScale() {
+sf::Vector2f Text::getScale() {
     return _drawable.getScale();
 }
 
-void Text::SetOrigin(int x, int y) {
+void Text::setOrigin(int x, int y) {
     _drawable.setOrigin(x, y);
 }
 
-sf::Vector2f Text::GetOrigin() {
+sf::Vector2f Text::getOrigin() {
     return _drawable.getOrigin();
 }
