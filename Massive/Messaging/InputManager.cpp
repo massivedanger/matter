@@ -30,13 +30,15 @@ InputManager &InputManager::getInstance() {
 }
 
 void InputManager::keyPressed(sf::Event::KeyEvent event) {
-    Message *mouseMessage = new Message("massive:key:pressed");
-    theObserver.broadcast(mouseMessage);
+    log.debug("Key pressed: " + std::to_string(event.code));
+    Message *keyMessage = new Message("massive:key:pressed");
+    theObserver.broadcast(keyMessage);
 }
 
 void InputManager::keyReleased(sf::Event::KeyEvent event) {
-    Message *mouseMessage = new Message("massive:key:released");
-    theObserver.broadcast(mouseMessage);
+    log.debug("Key released: " + std::to_string(event.code));
+    Message *keyMessage = new Message("massive:key:released");
+    theObserver.broadcast(keyMessage);
 }
 
 void InputManager::mouseMoved(int x, int y) {
@@ -45,16 +47,19 @@ void InputManager::mouseMoved(int x, int y) {
 }
 
 void InputManager::mouseWheelMoved(int delta, int x, int y) {
+    log.debug("Mouse wheel moved by " + std::to_string(delta));
     Message *mouseMessage = new Message("massive:mouse:wheel-moved");
     theObserver.broadcast(mouseMessage);
 }
 
 void InputManager::mouseButtonPressed(sf::Mouse::Button button, int x, int y) {
+    log.debug("Mouse button pressed: " + std::to_string((int)button));
     Message *mouseMessage = new Message("massive:mouse:pressed");
     theObserver.broadcast(mouseMessage);
 }
 
 void InputManager::mouseButtonReleased(sf::Mouse::Button button, int x, int y) {
+    log.debug("Mouse button released: " + std::to_string((int)button));
     Message *mouseMessage = new Message("massive:mouse:released");
     theObserver.broadcast(mouseMessage);
 }
