@@ -18,12 +18,11 @@ class Message {
 public:
     Message();
     Message(const String& messageName, Listener *sender = NULL);
-    
-    virtual const String& getName();
     Listener* const getSender();
     
+    String name;
+    
 protected:
-    String _messageName;
     Listener *_sender;
 };
 

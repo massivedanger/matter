@@ -10,12 +10,13 @@
 #include "Observer.h"
 
 Message::Message() {
-    _messageName = "NewMessage";
+    name = "NewMessage";
     _sender = 0;
 }
 
-const String& Message::getName() {
-	return _messageName;
+Message::Message(const String& messageName, Listener *sender) {
+    name = messageName;
+    _sender = sender;
 }
 
 Listener* const Message::getSender() {

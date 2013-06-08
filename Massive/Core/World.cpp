@@ -97,16 +97,13 @@ void World::start() {
                     theInput.mouseButtonReleased(event.mouseButton.button, event.mouseButton.x, event.mouseButton.y);
                     break;
                 case sf::Event::LostFocus:
-                    // TODO: Handle losing focus
-                    log.debug("Lost focus");
+                    lostFocus();
                     break;
                 case sf::Event::GainedFocus:
-                    // TODO: Handle gaining focus
-                    log.debug("Gained focus");
+                    gainedFocus();
                     break;
                 case sf::Event::Resized:
-                    // TODO: Handle resizing
-                    log.debug("Resized!");
+                    resized();
                     break;
                 default:
                     break;
@@ -142,8 +139,10 @@ void World::tick() {
     float frameDT = updateDT();
     updateFPS();
     
+    theObserver.sendAll();
+    
     if (_state) {
-        _state->Update(frameDT);
+        _state->update(frameDT);
     }
 }
 
@@ -152,7 +151,7 @@ void World::tick() {
  */
 void World::draw() {
     if (_state) {
-        _state->Draw();
+        _state->draw();
     }
 }
 
@@ -183,6 +182,18 @@ void World::updateFPS() {
     }
     
     _fps++;
+}
+
+void World::lostFocus() {
+    theObserver.broadcast(new Message("massive:event:lost-focus", this));
+}
+
+void World::gainedFocus() {
+    theObserver.broadcast(new Message("massive:event:gained-focus", this));
+}
+
+void World::resized() {
+    theObserver.broadcast(new Message("massive:event:resized", this));
 }
 
 /*!

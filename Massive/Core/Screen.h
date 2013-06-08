@@ -17,21 +17,21 @@ class Screen {
 public:
     Screen();
     ~Screen();
-    virtual void Draw();
-    virtual void Update(float dt);
+    virtual void draw();
+    virtual void update(float dt);
     
-    void AddEntity(Entity *entity, int layer);
-    void AddEntity(Entity *entity, const String &layer);
-    void RemoveEntity(Entity *entity);
+    void addEntity(Entity *entity, int layer);
+    void addEntity(Entity *entity, const String &layer);
+    void removeEntity(Entity *entity);
     
-    void NameLayer(const String &name, int layerNumber);
-    const int GetLayerByName(const String &name);
-    EntityLayers& GetLayers() { return _layers; }
+    void nameLayer(const String &name, int layerNumber);
+    const int getLayerByName(const String &name);
+    EntityLayers& getLayers() { return _layers; }
     
 protected:
-    void UpdateEntities(float dt);
-    void DrawEntities();
-    void CleanupEntities();
+    void updateEntities(float dt);
+    void drawEntities();
+    void cleanupEntities();
     
 private:
     std::map<String, int> _layerNames;

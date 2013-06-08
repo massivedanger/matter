@@ -25,7 +25,7 @@ public:
     static Observer &getInstance();
     
     void broadcast(Message *message);
-    const bool subscribe(Listener *listener, const String &messageName);
+    const bool subscribe(Listener *listener, const String &messageName, ...);
     const bool unsubscribe(Listener *listener, const String &messageName);
     
     const ListenerSet getSubscribersFor(const String &messageName);

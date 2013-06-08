@@ -10,6 +10,8 @@
 #define __Massive__State__
 
 #include "../Utilities/Common.h"
+#include "../Messaging/Observer.h"
+#include "../Messaging/Message.h"
 #include "Screen.h"
 
 class State {
@@ -17,11 +19,11 @@ class State {
 public:
     State();
     ~State();
-    virtual void Draw();
-    virtual void Update(float dt);
+    virtual void draw();
+    virtual void update(float dt);
     
-    void AddScreen(Screen *screen);
-    void RemoveScreen(Screen *screen);
+    void addScreen(Screen *screen);
+    void removeScreen(Screen *screen);
     
 private:
     std::set<Screen *> _screens;

@@ -12,15 +12,15 @@ Screen::Screen() {
     
 }
 
-void Screen::Update(float dt) {
-    UpdateEntities(dt);
+void Screen::update(float dt) {
+    updateEntities(dt);
 }
 
-void Screen::Draw() {
-    DrawEntities();
+void Screen::draw() {
+    drawEntities();
 }
 
-void Screen::AddEntity(Entity *entity, int layer) {
+void Screen::addEntity(Entity *entity, int layer) {
     if (entity == NULL) {
         // TODO: log error
         return;
@@ -30,11 +30,11 @@ void Screen::AddEntity(Entity *entity, int layer) {
     _layers[layer].push_back(entity);
 }
 
-void Screen::AddEntity(Entity *entity, const String &layer) {
-    AddEntity(entity, GetLayerByName(layer));
+void Screen::addEntity(Entity *entity, const String &layer) {
+    addEntity(entity, getLayerByName(layer));
 }
 
-void Screen::UpdateEntities(float dt) {
+void Screen::updateEntities(float dt) {
     std::map<int, EntityList>::iterator layersIt = _layers.begin();
     while (layersIt != _layers.end()) {
         std::vector<Entity *> entities = layersIt->second;
@@ -45,7 +45,7 @@ void Screen::UpdateEntities(float dt) {
     }
 }
 
-void Screen::DrawEntities() {
+void Screen::drawEntities() {
     std::map<int, EntityList>::iterator layersIt = _layers.begin();
     while (layersIt != _layers.end()) {
         std::vector<Entity *> entities = layersIt->second;
@@ -56,7 +56,7 @@ void Screen::DrawEntities() {
     }
 }
 
-const int Screen::GetLayerByName(const String& name) {
+const int Screen::getLayerByName(const String& name) {
 	std::map<String,int>::iterator it = _layerNames.find(name);
 	if (it != _layerNames.end()) {
 		return it->second;

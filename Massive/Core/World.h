@@ -11,6 +11,7 @@
 
 #include "../Utilities/Common.h"
 #include "../Utilities/Logger.h"
+#include "../Messaging/Observer.h"
 #include "../Messaging/Message.h"
 #include "../Messaging/InputManager.h"
 #include "../Entities/Entity.h"
@@ -54,6 +55,10 @@ public:
     
     sf::RenderWindow &getWindow() { return *_window; } //! Get SFML RenderWindow
     sf::ContextSettings &getContextSettings() { return *_contextSettings; } //! Get SFML ContextSettings
+    
+    void lostFocus();
+    void gainedFocus();
+    void resized();
     
     virtual void receiveMessage(Message *message);
     

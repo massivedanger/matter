@@ -12,29 +12,29 @@
 #include "../Entities/Text.h"
 
 State::State() {
-
+    
 }
 
-void State::Draw() {
+void State::draw() {
     std::set<Screen *>::iterator screenIt = _screens.begin();
     while (screenIt != _screens.end()) {
-        (*screenIt)->Draw();
+        (*screenIt)->draw();
         screenIt++;
     }
 }
 
-void State::Update(float dt) {
+void State::update(float dt) {
     std::set<Screen *>::iterator screenIt = _screens.begin();
     while (screenIt != _screens.end()) {
-        (*screenIt)->Update(dt);
+        (*screenIt)->update(dt);
         screenIt++;
     }
 }
 
-void State::AddScreen(Screen *screen) {
+void State::addScreen(Screen *screen) {
     _screens.insert(screen);
 }
 
-void State::RemoveScreen(Screen *screen) {
+void State::removeScreen(Screen *screen) {
     
 }
