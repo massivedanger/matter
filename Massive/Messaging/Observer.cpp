@@ -26,17 +26,11 @@ void Observer::broadcast(Message *message) {
     _messages.push(message);
 }
 
-const bool Observer::subscribe(Listener *listener, const String &messageName, ...) {
-    va_list args;
-    String name = messageName;
-    va_start(args, messageName);
-    while (!name.empty()) {
-        _subscriptions[listener].insert(name);
-        _subscribers[name].insert(listener);
-    }
-    va_end(args);
+const bool Observer::subscribe(Listener *listener, const String &messageName) {
+    _subscriptions[listener].insert(messageName);
+    std::pair<ListenerSet::iterator, bool> insertResult = _subscribers[messageName].insert(listener);
     
-    return true;
+	return insertResult.second;
 }
 
 const bool Observer::unsubscribe(Listener *listener, const String &messageName) {

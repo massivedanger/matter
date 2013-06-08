@@ -21,6 +21,7 @@ public:
     Listener* const getSender();
     
     String name;
+    String json;
     
 protected:
     Listener *_sender;

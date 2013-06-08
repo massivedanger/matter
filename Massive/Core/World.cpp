@@ -200,5 +200,5 @@ void World::resized() {
  *  Called when the World receives a message
  */
 void World::receiveMessage(Message *message) {
-    
+    log.debug("World received message: " + message->name);
 }
