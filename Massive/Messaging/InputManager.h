@@ -12,6 +12,9 @@
 #define theInput InputManager::getInstance()
 
 #include <SFML/Window.hpp>
+#include <array>
+
+#include "../Utilities/Common.h"
 
 class InputManager {
     
@@ -30,6 +33,9 @@ protected:
     InputManager();
     ~InputManager();
     static InputManager *s_InputManager;
+    
+    String mouseButtonToString(int buttonCode);
+    String keycodeToString(int keycode);
 };
 
 #endif /* defined(__Massive__InputManager__) */
