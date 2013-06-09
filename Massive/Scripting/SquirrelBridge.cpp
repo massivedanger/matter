@@ -95,11 +95,35 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .Func("getLayerByName", &Screen::getLayerByName)
                 .Func("getLayers", &Screen::getLayers));
     
+    gTable.Bind("Entity", Class<Entity>(vm)
+                .Var("layer", &Entity::layer)
+                .Func("update", &Entity::update)
+                .Func("draw", &Entity::draw)
+                .Func("setPosition", &Entity::setPosition)
+                .Func("movePosition", &Entity::movePosition)
+                .Func("getPosition", &Entity::getPosition)
+                .Func("setRotation", &Entity::setRotation)
+                .Func("rotate", &Entity::rotate)
+                .Func("getRotation", &Entity::getRotation)
+                .Func("setScale", &Entity::setScale)
+                .Func("scale", &Entity::scale)
+                .Func("getScale", &Entity::getScale)
+                .Func("setOrigin", &Entity::setOrigin)
+                .Func("getOrigin", &Entity::getOrigin));
+    
     gTable.Bind("Text", Class<Text>(vm)
                 .Func("draw", &Text::draw)
                 .Func("update", &Text::update)
                 .Var("string", &Text::string)
                 .Var("fontPath", &Text::fontPath));
+    
+    gTable.Bind("Actor", Class<Actor>(vm)
+                .Func("draw", &Actor::draw)
+                .Func("update", &Actor::update));
+    
+    gTable.Bind("Light", Class<Light>(vm)
+                .Func("draw", &Light::draw)
+                .Func("update", &Light::update));
     
     gTable.Bind("Constants", ConstTable(vm)
                 .Const("DefaultFont", MASSIVE_DEFAULT_FONT));

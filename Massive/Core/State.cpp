@@ -15,6 +15,10 @@ State::State() {
     
 }
 
+State::~State() {
+    
+}
+
 void State::draw() {
     std::set<Screen *>::iterator screenIt = _screens.begin();
     while (screenIt != _screens.end()) {

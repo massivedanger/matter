@@ -8,3 +8,19 @@
 
 #include "Light.h"
 #include "../Core/World.h"
+
+Light::Light() {
+    
+}
+
+Light::~Light() {
+    
+}
+
+void Light::update(float dt) {
+    
+}
+
+void Light::draw() {
+
+}

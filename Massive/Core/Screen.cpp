@@ -12,6 +12,10 @@ Screen::Screen() {
     
 }
 
+Screen::~Screen() {
+    
+}
+
 void Screen::update(float dt) {
     updateEntities(dt);
 }
@@ -34,6 +38,10 @@ void Screen::addEntityWithLayerName(Entity *entity, const String &layer) {
     addEntity(entity, getLayerByName(layer));
 }
 
+void Screen::removeEntity(Entity *entity) {
+    // TODO: write this
+}
+
 void Screen::updateEntities(float dt) {
     std::map<int, EntityList>::iterator layersIt = _layers.begin();
     while (layersIt != _layers.end()) {
@@ -54,6 +62,10 @@ void Screen::drawEntities() {
         }
         layersIt++;
     }
+}
+
+void Screen::nameLayer(const String &name, int layerNumber) {
+    // TODO: write this
 }
 
 const int Screen::getLayerByName(const String& name) {

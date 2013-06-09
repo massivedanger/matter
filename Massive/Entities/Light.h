@@ -15,6 +15,10 @@
 class Light : public Entity {
     
 public:
+    Light();
+    ~Light();
+    virtual void update(float dt);
+    virtual void draw();
     
 };
 
