@@ -30,7 +30,7 @@ void Screen::addEntity(Entity *entity, int layer) {
     _layers[layer].push_back(entity);
 }
 
-void Screen::addEntity(Entity *entity, const String &layer) {
+void Screen::addEntityWithLayerName(Entity *entity, const String &layer) {
     addEntity(entity, getLayerByName(layer));
 }
 

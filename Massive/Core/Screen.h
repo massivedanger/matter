@@ -21,7 +21,7 @@ public:
     virtual void update(float dt);
     
     void addEntity(Entity *entity, int layer);
-    void addEntity(Entity *entity, const String &layer);
+    void addEntityWithLayerName(Entity *entity, const String &layer);
     void removeEntity(Entity *entity);
     
     void nameLayer(const String &name, int layerNumber);

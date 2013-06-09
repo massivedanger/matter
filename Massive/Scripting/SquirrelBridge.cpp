@@ -79,6 +79,22 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .Prop("state", &World::getCurrentState, &World::setState)
                 .Func("receiveMessage", &World::receiveMessage));
     
+    gTable.Bind("State", Class<State>(vm)
+                .Func("draw", &State::draw)
+                .Func("update", &State::update)
+                .Func("addScreen", &State::addScreen)
+                .Func("removeScreen", &State::removeScreen));
+    
+    gTable.Bind("Screen", Class<Screen>(vm)
+                .Func("draw", &Screen::draw)
+                .Func("update", &Screen::update)
+                .Func("addEntity", &Screen::addEntity)
+                .Func("addEntityWithLayerName", &Screen::addEntityWithLayerName)
+                .Func("removeEntity", &Screen::removeEntity)
+                .Func("nameLayer", &Screen::nameLayer)
+                .Func("getLayerByName", &Screen::getLayerByName)
+                .Func("getLayers", &Screen::getLayers));
+    
     gTable.Bind("Text", Class<Text>(vm)
                 .Func("draw", &Text::draw)
                 .Func("update", &Text::update)
