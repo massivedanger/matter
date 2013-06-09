@@ -7,3 +7,11 @@
 //
 
 #include "Preferences.h"
+
+Preferences::Preferences() {
+    
+}
+
+Preferences::~Preferences() {
+    
+}

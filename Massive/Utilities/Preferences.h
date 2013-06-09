@@ -9,6 +9,11 @@
 #ifndef __Massive__Preferences__
 #define __Massive__Preferences__
 
-#include <iostream>
+class Preferences {
+    
+public:
+    Preferences();
+    ~Preferences();
+};
 
 #endif /* defined(__Massive__Preferences__) */
