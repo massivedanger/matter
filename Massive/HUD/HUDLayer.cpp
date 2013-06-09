@@ -7,3 +7,11 @@
 //
 
 #include "HUDLayer.h"
+
+HUDLayer::HUDLayer() {
+    
+}
+
+HUDLayer::~HUDLayer() {
+    
+}

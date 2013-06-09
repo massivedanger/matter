@@ -19,6 +19,9 @@
 class InputManager {
     
 public:
+    InputManager();
+    ~InputManager();
+    
     static InputManager &getInstance();
     
     void keyPressed(sf::Event::KeyEvent event);
@@ -30,8 +33,6 @@ public:
     void mouseButtonReleased(sf::Mouse::Button button, int x, int y);
     
 protected:
-    InputManager();
-    ~InputManager();
     static InputManager *s_InputManager;
     
     String mouseButtonToString(int buttonCode);

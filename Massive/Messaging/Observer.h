@@ -22,6 +22,9 @@ typedef std::queue<Message *> MessageQueue;
 
 class Observer {
 public:
+    Observer();
+    ~Observer();
+    
     static Observer &getInstance();
     
     void broadcast(Message *message);
@@ -34,7 +37,6 @@ public:
     void sendAll();
     
 protected:
-    Observer();
     static Observer *s_Observer;
     
 private:
@@ -42,7 +44,6 @@ private:
     std::map<Listener *, StringSet> _subscriptions;
     std::map<String, ListenerSet> _subscribers;
     bool _paused;
-    ~Observer();
 };
 
 #endif /* defined(__Massive__Observer__) */

@@ -14,6 +14,10 @@ Observer::Observer() {
     _paused = false;
 }
 
+Observer::~Observer() {
+    
+}
+
 Observer &Observer::getInstance() {
     if (s_Observer == NULL) {
         s_Observer = new Observer();
