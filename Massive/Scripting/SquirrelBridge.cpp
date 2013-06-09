@@ -132,6 +132,31 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .Func("popLayer", &HUD::popLayer)
                 .Func("shiftLayer", &HUD::shiftLayer));
     
+    gTable.Bind("InputManager", Class<InputManager>(vm)
+                .StaticFunc("getInstance", InputManager::getInstance)
+                .Func("keyPressed", &InputManager::keyPressed)
+                .Func("keyReleased", &InputManager::keyReleased)
+                .Func("mouseMoved", &InputManager::mouseMoved)
+                .Func("mouseWheelMoved", &InputManager::mouseWheelMoved)
+                .Func("mouseButtonPressed", &InputManager::mouseButtonPressed)
+                .Func("mouseButtonReleased", &InputManager::mouseButtonReleased));
+    
+    gTable.Bind("Observer", Class<Observer>(vm)
+                .StaticFunc("getInstance", &Observer::getInstance)
+                .Func("broadcast", &Observer::broadcast)
+                .Func("subscribe", &Observer::subscribe)
+                .Func("unsubscribe", &Observer::unsubscribe)
+                .Func("getSubscribersFor", &Observer::getSubscribersFor)
+                .Func("getSubscriptionsFor", &Observer::getSubscriptionsFor)
+                .Func("sendAll", &Observer::sendAll));
+        
+    gTable.Bind("Message", Class<Message>(vm)
+                .Var("name", &Message::name)
+                .Var("json", &Message::json));
+    
+    gTable.Bind("Listener", Class<Listener>(vm)
+                .Func("receiveMessage", &Listener::receiveMessage));
+    
     gTable.Bind("Constants", ConstTable(vm)
                 .Const("DefaultFont", MASSIVE_DEFAULT_FONT));
     
