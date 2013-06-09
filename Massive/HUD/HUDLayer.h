@@ -13,6 +13,7 @@ class HUDLayer {
     
 public:
     HUDLayer();
+    ~HUDLayer();
 };
 
 #endif /* defined(__Massive__HUDLayer__) */

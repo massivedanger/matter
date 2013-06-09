@@ -18,6 +18,7 @@ class HUD {
     
 public:
     HUD();
+    ~HUD();
     HUDLayerSet layers;
     bool pushLayer(HUDLayer *layer);
     bool unshiftLayer(HUDLayer *layer);

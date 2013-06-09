@@ -125,6 +125,13 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .Func("draw", &Light::draw)
                 .Func("update", &Light::update));
     
+    gTable.Bind("HUD", Class<HUD>(vm)
+                .Var("layers", &HUD::layers)
+                .Func("pushLayer", &HUD::pushLayer)
+                .Func("unshiftLayer", &HUD::unshiftLayer)
+                .Func("popLayer", &HUD::popLayer)
+                .Func("shiftLayer", &HUD::shiftLayer));
+    
     gTable.Bind("Constants", ConstTable(vm)
                 .Const("DefaultFont", MASSIVE_DEFAULT_FONT));
     
