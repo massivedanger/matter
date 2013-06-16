@@ -16,7 +16,6 @@ World::World() {
     _contextSettings = new sf::ContextSettings();
     _window = new sf::RenderWindow();
     _state = new State();
-    
     _running = false;
     _initialized = false;
 }

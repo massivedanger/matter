@@ -22,7 +22,7 @@ void Actor::update(float dt) {
 }
 
 void Actor::draw() {
-    sf::CircleShape circle(theWorld.getFPS());
+    sf::CircleShape circle(10.0);
     circle.setFillColor( sf::Color(0, 0, 0) );
     
     theWorld.getWindow().draw(circle);

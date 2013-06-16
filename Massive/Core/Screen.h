@@ -10,6 +10,7 @@
 #define __Massive__Screen__
 
 #include "../Utilities/Common.h"
+#include "../Utilities/Logger.h"
 #include "../Entities/Entity.h"
 
 class Screen {

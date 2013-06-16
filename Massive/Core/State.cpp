@@ -12,7 +12,7 @@
 #include "../Entities/Text.h"
 
 State::State() {
-    
+
 }
 
 State::~State() {
@@ -20,18 +20,14 @@ State::~State() {
 }
 
 void State::draw() {
-    std::set<Screen *>::iterator screenIt = _screens.begin();
-    while (screenIt != _screens.end()) {
-        (*screenIt)->draw();
-        screenIt++;
+    for (auto screen : _screens) {
+        screen->draw();
     }
 }
 
 void State::update(float dt) {
-    std::set<Screen *>::iterator screenIt = _screens.begin();
-    while (screenIt != _screens.end()) {
-        (*screenIt)->update(dt);
-        screenIt++;
+    for (auto screen : _screens) {
+        screen->update(dt);
     }
 }
 

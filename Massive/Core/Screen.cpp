@@ -26,7 +26,7 @@ void Screen::draw() {
 
 void Screen::addEntity(Entity *entity, int layer) {
     if (entity == NULL) {
-        // TODO: log error
+        log.error("Unable to add null entity to screen");
         return;
     }
     
