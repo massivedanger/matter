@@ -10,6 +10,11 @@
 #define __Massive__SquirrelBridge__
 
 #include <squirrel.h>
+#include <sqstdblob.h>
+#include <sqstdio.h>
+#include <sqstdstring.h>
+#include <sqstdsystem.h>
+#include <sqstdmath.h>
 #include <sqrat.h>
 
 #include "../Utilities/Common.h"

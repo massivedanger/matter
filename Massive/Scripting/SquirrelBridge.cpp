@@ -13,9 +13,16 @@ SquirrelBridge *SquirrelBridge::s_SquirrelBridge;
 
 SquirrelBridge::SquirrelBridge() {
     sqVM = sq_open(SQUIRREL_STACK_SIZE);
-    sqstd_seterrorhandlers(sqVM);
+    
     sq_setprintfunc(sqVM, print, NULL);
     sq_pushroottable(sqVM);
+    
+    sqstd_register_bloblib(sqVM);
+    sqstd_register_iolib(sqVM);
+    sqstd_register_stringlib(sqVM);
+    sqstd_register_systemlib(sqVM);
+    sqstd_register_mathlib(sqVM);
+    sqstd_seterrorhandlers(sqVM);
 }
 
 SquirrelBridge::~SquirrelBridge() {
