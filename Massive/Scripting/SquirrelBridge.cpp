@@ -122,7 +122,8 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
     gTable.Bind("Text", Class<Text>(vm)
                 .Func("draw", &Text::draw)
                 .Func("update", &Text::update)
-                .Prop("string", &Text::getString, &Text::setString));
+                .Prop("string", &Text::getString, &Text::setString)
+                .Func("setPosition", &Text::setPosition));
     
     gTable.Bind("Actor", Class<Actor>(vm)
                 .Func("draw", &Actor::draw)

@@ -10,7 +10,7 @@
 #include "../Core/World.h"
 
 Actor::Actor() {
-    _drawable = sf::CircleShape(10.0);
+    _drawable = sf::CircleShape(100.0);
     _drawable.setFillColor( sf::Color(0, 0, 0) );
 }
 
