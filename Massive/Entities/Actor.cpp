@@ -10,7 +10,9 @@
 #include "../Core/World.h"
 
 Actor::Actor() {
-
+    _drawable = sf::CircleShape(10.0);
+    _drawable.setFillColor( sf::Color(0, 0, 0) );
+    theObserver.subscribe(this, "massive:key:pressed");
 }
 
 Actor::~Actor() {
@@ -18,12 +20,13 @@ Actor::~Actor() {
 }
 
 void Actor::update(float dt) {
-    
+    _drawable.move(100 * dt, 100 * dt);
 }
 
 void Actor::draw() {
-    sf::CircleShape circle(10.0);
-    circle.setFillColor( sf::Color(0, 0, 0) );
+    theWorld.getWindow().draw(_drawable);
+}
+
+void Actor::receiveMessage(Message *message) {
     
-    theWorld.getWindow().draw(circle);
 }

@@ -19,6 +19,11 @@ public:
     ~Actor();
     virtual void update(float dt);
     virtual void draw();
+    
+    virtual void receiveMessage(Message *message);
+    
+private:
+    sf::CircleShape _drawable;
 
 };
 

@@ -10,9 +10,10 @@
 #define __Massive__Entity__
 
 #include "../Utilities/Common.h"
+#include "../Messaging/Message.h"
 #include <SFML/Graphics.hpp>
 
-class Entity {
+class Entity : public Listener {
     friend class World;
     
 public:

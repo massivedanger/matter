@@ -10,12 +10,12 @@
 #include "../Core/World.h"
 
 Text::Text() {
-    string = "";
-    fontPath = MASSIVE_DEFAULT_FONT;
+    _string = "Text";
+    _fontPath = MASSIVE_DEFAULT_FONT;
     
-    font.loadFromFile(fontPath);
+    font.loadFromFile(_fontPath);
     
-    _drawable.setString(string);
+    _drawable.setString(_string);
     _drawable.setCharacterSize(16);
     _drawable.setColor(sf::Color::Black);
     _drawable.setFont(font);
@@ -31,6 +31,14 @@ void Text::update(float dt) {
 
 void Text::draw() {
     theWorld.getWindow().draw(_drawable);
+}
+
+void Text::setString(String newString) {
+    _drawable.setString(newString);
+}
+
+String Text::getString() {
+    return _drawable.getString();
 }
 
 void Text::setPosition(int x, int y) {

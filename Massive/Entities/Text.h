@@ -25,11 +25,12 @@ public:
     virtual void update(float dt);
     virtual void draw();
     
-    String string;
-    String fontPath;
     sf::Font font;
     
     float rotation;
+    
+    void setString(String newString);
+    String getString();
     
     virtual void setPosition(int x, int y);
     virtual void movePosition(int x, int y);
@@ -47,6 +48,8 @@ public:
     virtual sf::Vector2f getOrigin();
     
 private:
+    String _string;
+    String _fontPath;
     sf::Text _drawable;
 };
 
