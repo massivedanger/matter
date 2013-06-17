@@ -19,6 +19,8 @@ Text::Text() {
     _drawable.setCharacterSize(36);
     _drawable.setColor(sf::Color::Black);
     _drawable.setFont(font);
+    
+    theObserver.subscribe(this, "massive:key:pressed");
 }
 
 Text::~Text() {
@@ -83,4 +85,12 @@ void Text::setOrigin(int x, int y) {
 
 sf::Vector2f Text::getOrigin() {
     return _drawable.getOrigin();
+}
+
+void Text::receiveMessage(Message *message) {
+    rapidjson::Document json;
+    json.Parse<0>(message->json.c_str());
+    if (message->name == "massive:key:pressed") {
+        setString(getString() + json["key"].GetString());
+    }
 }

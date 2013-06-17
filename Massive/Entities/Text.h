@@ -47,6 +47,8 @@ public:
     virtual void setOrigin(int x, int y);
     virtual sf::Vector2f getOrigin();
     
+    virtual void receiveMessage(Message *message);
+    
 private:
     String _string;
     String _fontPath;

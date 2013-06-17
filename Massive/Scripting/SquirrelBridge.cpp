@@ -127,7 +127,8 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
     
     gTable.Bind("Actor", Class<Actor>(vm)
                 .Func("draw", &Actor::draw)
-                .Func("update", &Actor::update));
+                .Func("update", &Actor::update)
+                .Func("setPosition", &Actor::setPosition));
     
     gTable.Bind("Light", Class<Light>(vm)
                 .Func("draw", &Light::draw)

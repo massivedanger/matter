@@ -32,6 +32,7 @@ InputManager &InputManager::getInstance() {
 void InputManager::keyPressed(sf::Event::KeyEvent event) {
     log.debug("Key pressed: " + keycodeToString(event.code));
     Message *keyMessage = new Message("massive:key:pressed");
+    keyMessage->json = "{\"key\": \"" + keycodeToString(event.code) + "\"}";
     theObserver.broadcast(keyMessage);
 }
 
@@ -140,7 +141,7 @@ String InputManager::keycodeToString(int keycode) {
         case 54: key = "`"; break;
         case 55: key = "="; break;
         case 56: key = "-"; break;
-        case 57: key = "space"; break;
+        case 57: key = " "; break;
         case 58: key = "return"; break;
         case 59: key = "backspace"; break;
         case 60: key = "tab"; break;

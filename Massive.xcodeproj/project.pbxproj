@@ -66,20 +66,6 @@
 		20341F5A175D85A2001FA9A3 /* squirrel.h in Headers */ = {isa = PBXBuildFile; fileRef = 20341F53175D85A2001FA9A3 /* squirrel.h */; };
 		20341F5F175D85CB001FA9A3 /* libSquirrel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20341EE1175D8387001FA9A3 /* libSquirrel.a */; };
 		20341F65175D86BB001FA9A3 /* libSquirrel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20341EE1175D8387001FA9A3 /* libSquirrel.a */; };
-		204736E11763C10B005DA9AF /* autolink.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736D91763C10B005DA9AF /* autolink.h */; };
-		204736E21763C10B005DA9AF /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736DA1763C10B005DA9AF /* config.h */; };
-		204736E31763C10B005DA9AF /* features.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736DB1763C10B005DA9AF /* features.h */; };
-		204736E41763C10B005DA9AF /* forwards.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736DC1763C10B005DA9AF /* forwards.h */; };
-		204736E51763C10B005DA9AF /* json.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736DD1763C10B005DA9AF /* json.h */; };
-		204736E61763C10B005DA9AF /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736DE1763C10B005DA9AF /* reader.h */; };
-		204736E71763C10B005DA9AF /* value.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736DF1763C10B005DA9AF /* value.h */; };
-		204736E81763C10B005DA9AF /* writer.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736E01763C10B005DA9AF /* writer.h */; };
-		204736F31763C113005DA9AF /* json_batchallocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736EA1763C113005DA9AF /* json_batchallocator.h */; };
-		204736F41763C113005DA9AF /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 204736ED1763C113005DA9AF /* json_reader.cpp */; };
-		204736F51763C113005DA9AF /* json_tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 204736EE1763C113005DA9AF /* json_tool.h */; };
-		204736F61763C113005DA9AF /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 204736EF1763C113005DA9AF /* json_value.cpp */; };
-		204736F71763C113005DA9AF /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 204736F11763C113005DA9AF /* json_writer.cpp */; };
-		204736FA1763C187005DA9AF /* libJsonCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 204736D01763C0E4005DA9AF /* libJsonCpp.a */; };
 		2048BA0D174E880B000E0DE5 /* libfreetype.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048BA0B174E8808000E0DE5 /* libfreetype.6.dylib */; };
 		2048BA0F174E88B5000E0DE5 /* libsndfile.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048BA0E174E88B5000E0DE5 /* libsndfile.1.dylib */; };
 		2055536A1732DE6900F8B2E7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553561732DD1E00F8B2E7 /* OpenGL.framework */; };
@@ -336,13 +322,6 @@
 			remoteGlobalIDString = 20341F46175D8580001FA9A3;
 			remoteInfo = Sqrat;
 		};
-		204736F81763C182005DA9AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 205552FD1732D9AF00F8B2E7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 204736CF1763C0E4005DA9AF;
-			remoteInfo = JsonCpp;
-		};
 		209E8BC7174E5A2E0043E609 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 205552FD1732D9AF00F8B2E7 /* Project object */;
@@ -434,7 +413,6 @@
 		20341F51175D85A2001FA9A3 /* sqstdstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdstring.h; sourceTree = "<group>"; };
 		20341F52175D85A2001FA9A3 /* sqstdsystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdsystem.h; sourceTree = "<group>"; };
 		20341F53175D85A2001FA9A3 /* squirrel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = squirrel.h; sourceTree = "<group>"; };
-		204736D01763C0E4005DA9AF /* libJsonCpp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJsonCpp.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		204736D91763C10B005DA9AF /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		204736DA1763C10B005DA9AF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		204736DB1763C10B005DA9AF /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -753,18 +731,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		204736CD1763C0E4005DA9AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		205553021732D9AF00F8B2E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				204736FA1763C187005DA9AF /* libJsonCpp.a in Frameworks */,
 				20341F5F175D85CB001FA9A3 /* libSquirrel.a in Frameworks */,
 				209E8BD7174E5C550043E609 /* libSFML.dylib in Frameworks */,
 				205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */,
@@ -1033,7 +1003,6 @@
 				209E89BA174E59C20043E609 /* libSFML.dylib */,
 				20341EE1175D8387001FA9A3 /* libSquirrel.a */,
 				20341F47175D8580001FA9A3 /* libSqrat.a */,
-				204736D01763C0E4005DA9AF /* libJsonCpp.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1635,23 +1604,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		204736CE1763C0E4005DA9AF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				204736E11763C10B005DA9AF /* autolink.h in Headers */,
-				204736E21763C10B005DA9AF /* config.h in Headers */,
-				204736E31763C10B005DA9AF /* features.h in Headers */,
-				204736E41763C10B005DA9AF /* forwards.h in Headers */,
-				204736E51763C10B005DA9AF /* json.h in Headers */,
-				204736E61763C10B005DA9AF /* reader.h in Headers */,
-				204736E71763C10B005DA9AF /* value.h in Headers */,
-				204736E81763C10B005DA9AF /* writer.h in Headers */,
-				204736F31763C113005DA9AF /* json_batchallocator.h in Headers */,
-				204736F51763C113005DA9AF /* json_tool.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		209E89B8174E59C20043E609 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1820,23 +1772,6 @@
 			productReference = 20341F47175D8580001FA9A3 /* libSqrat.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		204736CF1763C0E4005DA9AF /* JsonCpp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 204736D51763C0E4005DA9AF /* Build configuration list for PBXNativeTarget "JsonCpp" */;
-			buildPhases = (
-				204736CE1763C0E4005DA9AF /* Headers */,
-				204736CC1763C0E4005DA9AF /* Sources */,
-				204736CD1763C0E4005DA9AF /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JsonCpp;
-			productName = JsonCpp;
-			productReference = 204736D01763C0E4005DA9AF /* libJsonCpp.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		205553041732D9AF00F8B2E7 /* Massive */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2055530E1732D9AF00F8B2E7 /* Build configuration list for PBXNativeTarget "Massive" */;
@@ -1847,7 +1782,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				204736F91763C182005DA9AF /* PBXTargetDependency */,
 				20341F5E175D85BD001FA9A3 /* PBXTargetDependency */,
 				20341F42175D8402001FA9A3 /* PBXTargetDependency */,
 				209E8BC8174E5A2E0043E609 /* PBXTargetDependency */,
@@ -1909,7 +1843,6 @@
 				209E89B9174E59C20043E609 /* SFML */,
 				20341EE0175D8387001FA9A3 /* Squirrel */,
 				20341F46175D8580001FA9A3 /* Sqrat */,
-				204736CF1763C0E4005DA9AF /* JsonCpp */,
 			);
 		};
 /* End PBXProject section */
@@ -1946,16 +1879,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		204736CC1763C0E4005DA9AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				204736F41763C113005DA9AF /* json_reader.cpp in Sources */,
-				204736F61763C113005DA9AF /* json_value.cpp in Sources */,
-				204736F71763C113005DA9AF /* json_writer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2093,11 +2016,6 @@
 			target = 20341F46175D8580001FA9A3 /* Sqrat */;
 			targetProxy = 20341F5D175D85BD001FA9A3 /* PBXContainerItemProxy */;
 		};
-		204736F91763C182005DA9AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 204736CF1763C0E4005DA9AF /* JsonCpp */;
-			targetProxy = 204736F81763C182005DA9AF /* PBXContainerItemProxy */;
-		};
 		209E8BC8174E5A2E0043E609 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 209E89B9174E59C20043E609 /* SFML */;
@@ -2142,26 +2060,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				EXECUTABLE_PREFIX = lib;
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/Libraries/squirrel-3.0.4/include\"";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		204736D11763C0E4005DA9AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/jsoncpp-src-0.6.0-rc2/include\"";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		204736D21763C0E4005DA9AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/jsoncpp-src-0.6.0-rc2/include\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -2239,7 +2137,7 @@
 					"\"$(PROJECT_DIR)/Libraries/squirrel-3.0.4/include\"",
 					"\"$(PROJECT_DIR)/Libraries/sqrat-0.8.3/include\"",
 					"\"$(PROJECT_DIR)/Libraries/SFML-2.0/include\"",
-					"\"$(PROJECT_DIR)/Libraries/jsoncpp-src-0.6.0-rc2/include\"",
+					"\"$(PROJECT_DIR)//Libraries/rapidjson-0.11/include\"",
 				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
@@ -2268,7 +2166,7 @@
 					"\"$(PROJECT_DIR)/Libraries/squirrel-3.0.4/include\"",
 					"\"$(PROJECT_DIR)/Libraries/sqrat-0.8.3/include\"",
 					"\"$(PROJECT_DIR)/Libraries/SFML-2.0/include\"",
-					"\"$(PROJECT_DIR)/Libraries/jsoncpp-src-0.6.0-rc2/include\"",
+					"\"$(PROJECT_DIR)//Libraries/rapidjson-0.11/include\"",
 				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
@@ -2353,14 +2251,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		204736D51763C0E4005DA9AF /* Build configuration list for PBXNativeTarget "JsonCpp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				204736D11763C0E4005DA9AF /* Debug */,
-				204736D21763C0E4005DA9AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 		205553001732D9AF00F8B2E7 /* Build configuration list for PBXProject "Massive" */ = {
 			isa = XCConfigurationList;
