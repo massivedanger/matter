@@ -293,8 +293,8 @@
 -(NSPoint)position
 {
     // First, get the top left corner of the view in its own base system
-    NSPoint const origin = [m_oglView frame].origin;
-    NSSize  const size = [m_oglView frame].size;
+    NSPoint const origin = [m_oglView convertRectToBacking:[m_oglView frame]].origin;
+    NSSize  const size = [m_oglView convertRectToBacking:[m_oglView frame]].size;
     NSPoint const topLeftCornerOfView = NSMakePoint(origin.x, origin.y + size.height);
     NSPoint const positionInView = [m_oglView convertPointToBase:topLeftCornerOfView];
 
@@ -331,7 +331,7 @@
 -(NSSize)size
 {
     if (*m_fullscreenMode == sf::VideoMode()) {
-        return [m_oglView frame].size;
+        return [m_oglView convertRectToBacking:[m_oglView frame]].size;
     } else {
         return NSMakeSize(m_fullscreenMode->width, m_fullscreenMode->height);
     }

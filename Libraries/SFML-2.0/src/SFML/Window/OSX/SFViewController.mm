@@ -147,7 +147,7 @@
 ////////////////////////////////////////////////////////////
 -(NSSize)size
 {
-    return [m_oglView frame].size;
+    return [m_oglView convertRectToBacking:[m_oglView frame]].size;//return [m_oglView frame].size;
 }
 
 
