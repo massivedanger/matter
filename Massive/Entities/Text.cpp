@@ -16,7 +16,7 @@ Text::Text() {
     font.loadFromFile(_fontPath);
     
     _drawable.setString(_string);
-    _drawable.setCharacterSize(16);
+    _drawable.setCharacterSize(36);
     _drawable.setColor(sf::Color::Black);
     _drawable.setFont(font);
 }
