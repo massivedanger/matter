@@ -15,6 +15,7 @@
 #include <sqstdstring.h>
 #include <sqstdsystem.h>
 #include <sqstdmath.h>
+#include <sqstdaux.h>
 #include <sqrat.h>
 
 #include "../Utilities/Common.h"

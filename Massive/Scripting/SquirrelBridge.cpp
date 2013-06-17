@@ -54,6 +54,7 @@ void SquirrelBridge::init(String mainScriptPath) {
         mainScript.CompileFile(mainScriptPath);
         mainScript.Run();
     } catch (Sqrat::Exception e) {
+        sqstd_printcallstack(sqVM);
         printf("Script error: %s", e.Message().c_str());
     }
 }
