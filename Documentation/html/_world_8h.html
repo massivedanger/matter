@@ -93,9 +93,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_common_8h_source.html">../Utilities/Common.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_logger_8h_source.html">../Utilities/Logger.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_observer_8h_source.html">../Messaging/Observer.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="_message_8h_source.html">../Messaging/Message.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_input_manager_8h_source.html">../Messaging/InputManager.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="_entity_8h_source.html">../Entities/Entity.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="_state_8h_source.html">State.h</a>&quot;</code><br/>
+<code>#include &lt;squirrel.h&gt;</code><br/>
+<code>#include &lt;sqstdio.h&gt;</code><br/>
+<code>#include &lt;sqstdaux.h&gt;</code><br/>
+<code>#include &lt;sqrat.h&gt;</code><br/>
 <code>#include &lt;SFML/Window.hpp&gt;</code><br/>
 <code>#include &lt;SFML/Graphics.hpp&gt;</code><br/>
 <code>#include &lt;SFML/System/Clock.hpp&gt;</code><br/>
@@ -109,7 +116,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a6760d98b0723f0c049959aa2f02e74d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_world_8h.html#a6760d98b0723f0c049959aa2f02e74d4">theWorld</a>&#160;&#160;&#160;<a class="el" href="class_world.html#af5379f491df7d20c109203d5f846850c">World::GetInstance</a>()</td></tr>
+<tr class="memitem:a6760d98b0723f0c049959aa2f02e74d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_world_8h.html#a6760d98b0723f0c049959aa2f02e74d4">theWorld</a>&#160;&#160;&#160;<a class="el" href="class_world.html#a4b8dd3d034818912c1847ab8cc130d1d">World::getInstance</a>()</td></tr>
 <tr class="separator:a6760d98b0723f0c049959aa2f02e74d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -118,7 +125,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define theWorld&#160;&#160;&#160;<a class="el" href="class_world.html#af5379f491df7d20c109203d5f846850c">World::GetInstance</a>()</td>
+          <td class="memname">#define theWorld&#160;&#160;&#160;<a class="el" href="class_world.html#a4b8dd3d034818912c1847ab8cc130d1d">World::getInstance</a>()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -128,7 +135,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

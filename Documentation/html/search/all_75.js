@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['unshiftlayer',['UnshiftLayer',['../class_h_u_d.html#a5c023e2265f74a5304fe656fac47e064',1,'HUD']]],
-  ['unsubscribe',['Unsubscribe',['../class_observer.html#a1e5ccc894d1181c7e3ede66754b00726',1,'Observer']]],
-  ['update',['Update',['../class_screen.html#aaefa03c62e0712740d033e92910d2f26',1,'Screen::Update()'],['../class_state.html#a1660e74611d9e044a136bea1f96b8f8b',1,'State::Update()'],['../class_actor.html#a78a81ce3764f1b6425f07bdcd45fbd36',1,'Actor::Update()'],['../class_entity.html#a3eb49db23dd07c18648b436aa3764d46',1,'Entity::Update()'],['../class_text.html#a7e995169e7723f5185e7432175d3a194',1,'Text::Update()']]],
-  ['updatedt',['UpdateDT',['../class_world.html#af765d5d58f4d6232aa283da788ed3896',1,'World']]],
-  ['updateentities',['UpdateEntities',['../class_screen.html#a08d6efc7edeb5e7de9c874d7e5611ff1',1,'Screen']]],
-  ['updatefps',['UpdateFPS',['../class_world.html#ab1f04f8e3781615f8d62f8464a8ee852',1,'World']]],
+  ['unshiftlayer',['unshiftLayer',['../class_h_u_d.html#a63c57c3a22ead1945edb78917554d2c0',1,'HUD']]],
+  ['unsubscribe',['unsubscribe',['../class_observer.html#ab04e4f139491e793623e91eb2f320de7',1,'Observer']]],
+  ['update',['update',['../class_screen.html#a9755858858eaeca7eb9e8cf7e40c9682',1,'Screen::update()'],['../class_state.html#a489452b78c896cd273fd326e3ba8e49c',1,'State::update()'],['../class_actor.html#acc457eb9553a36bdb3e42a3865189ba5',1,'Actor::update()'],['../class_entity.html#a73cd7e77d83cacce7c321e20938e0516',1,'Entity::update()'],['../class_light.html#a4974d69013df187743e2d28126ec3f3f',1,'Light::update()'],['../class_text.html#a73204e40036f61c33d757dc8fa30424e',1,'Text::update()']]],
+  ['updatedt',['updateDT',['../class_world.html#a334d40616c9ce2e861469f3ceff27226',1,'World']]],
+  ['updateentities',['updateEntities',['../class_screen.html#a52f99169b7cd6a7a577bd6a92736b858',1,'Screen']]],
+  ['updatefps',['updateFPS',['../class_world.html#ace2bd66cffe135ae7b60ffe6c3b63beb',1,'World']]],
   ['utility',['Utility',['../class_utility.html',1,'']]]
 ];

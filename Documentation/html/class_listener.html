@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_listener-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Listener Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Listener Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -98,7 +98,11 @@ Inheritance diagram for Listener:</div>
  <div class="center">
   <img src="class_listener.png" usemap="#Listener_map" alt=""/>
   <map id="Listener_map" name="Listener_map">
-<area href="class_world.html" alt="World" shape="rect" coords="0,56,57,80"/>
+<area href="class_entity.html" alt="Entity" shape="rect" coords="33,56,90,80"/>
+<area href="class_world.html" alt="World" shape="rect" coords="100,56,157,80"/>
+<area href="class_actor.html" alt="Actor" shape="rect" coords="0,112,57,136"/>
+<area href="class_light.html" alt="Light" shape="rect" coords="67,112,124,136"/>
+<area href="class_text.html" alt="Text" shape="rect" coords="0,168,57,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -106,8 +110,8 @@ Inheritance diagram for Listener:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8946fdcfe2142e49ef4d31bd23769da0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_listener.html#a8946fdcfe2142e49ef4d31bd23769da0">~Listener</a> ()</td></tr>
 <tr class="separator:a8946fdcfe2142e49ef4d31bd23769da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bb7b81f82d27335057596c0b891ad81"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_listener.html#a5bb7b81f82d27335057596c0b891ad81">ReceiveMessage</a> (<a class="el" href="class_message.html">Message</a> *message)=0</td></tr>
-<tr class="separator:a5bb7b81f82d27335057596c0b891ad81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfea50daeca6cf45d0f4cc75bf26562d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_listener.html#abfea50daeca6cf45d0f4cc75bf26562d">receiveMessage</a> (<a class="el" href="class_message.html">Message</a> *message)</td></tr>
+<tr class="separator:abfea50daeca6cf45d0f4cc75bf26562d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8946fdcfe2142e49ef4d31bd23769da0"></a>
@@ -134,7 +138,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5bb7b81f82d27335057596c0b891ad81"></a>
+<a class="anchor" id="abfea50daeca6cf45d0f4cc75bf26562d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -142,7 +146,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Listener::ReceiveMessage </td>
+          <td class="memname">virtual void Listener::receiveMessage </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_message.html">Message</a> *&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
@@ -151,12 +155,12 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_world.html#a74fe10c00788cc189a2ab82aa0b35c01">World</a>.</p>
+<p>Reimplemented in <a class="el" href="class_world.html#a3f673c9e0ca03136c42958095c7d4d85">World</a>, and <a class="el" href="class_actor.html#a7ee9e40c7b5f3d7e8d46bc4e222369b4">Actor</a>.</p>
 
 </div>
 </div>
@@ -167,7 +171,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

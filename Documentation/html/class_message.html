@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_message-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -100,15 +101,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4fc4f717b634e66070366cb7722d7761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1a16ba17b2961f263c78797bafff502"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message.html#af1a16ba17b2961f263c78797bafff502">Message</a> (const <a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;messageName, <a class="el" href="class_listener.html">Listener</a> *sender=NULL)</td></tr>
 <tr class="separator:af1a16ba17b2961f263c78797bafff502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af261c953173ca2cf81f8d4547c9f59f9"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message.html#af261c953173ca2cf81f8d4547c9f59f9">GetName</a> ()</td></tr>
-<tr class="separator:af261c953173ca2cf81f8d4547c9f59f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5b2ca82ca9824b1d808ad03e6b85df2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_listener.html">Listener</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message.html#af5b2ca82ca9824b1d808ad03e6b85df2">GetSender</a> ()</td></tr>
-<tr class="separator:af5b2ca82ca9824b1d808ad03e6b85df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553d6f9a48faaac2026c00010181b82d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_listener.html">Listener</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message.html#a553d6f9a48faaac2026c00010181b82d">getSender</a> ()</td></tr>
+<tr class="separator:a553d6f9a48faaac2026c00010181b82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aea80e7d191c3959f29ec9f4e7412394e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message.html#aea80e7d191c3959f29ec9f4e7412394e">name</a></td></tr>
+<tr class="separator:aea80e7d191c3959f29ec9f4e7412394e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5433a6387653f046e0689b4ea5b2e11d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message.html#a5433a6387653f046e0689b4ea5b2e11d">json</a></td></tr>
+<tr class="separator:a5433a6387653f046e0689b4ea5b2e11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a57ef0d8773202e643029423d93b30b35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message.html#a57ef0d8773202e643029423d93b30b35">_messageName</a></td></tr>
-<tr class="separator:a57ef0d8773202e643029423d93b30b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22b0e8f46de65da5ad3a1aa699d05452"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_listener.html">Listener</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message.html#a22b0e8f46de65da5ad3a1aa699d05452">_sender</a></td></tr>
 <tr class="separator:a22b0e8f46de65da5ad3a1aa699d05452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -155,35 +159,12 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="af261c953173ca2cf81f8d4547c9f59f9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp; Message::GetName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af5b2ca82ca9824b1d808ad03e6b85df2"></a>
+<a class="anchor" id="a553d6f9a48faaac2026c00010181b82d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_listener.html">Listener</a> *const Message::GetSender </td>
+          <td class="memname"><a class="el" href="class_listener.html">Listener</a> *const Message::getSender </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -194,26 +175,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a57ef0d8773202e643029423d93b30b35"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> Message::_messageName</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a22b0e8f46de65da5ad3a1aa699d05452"></a>
 <div class="memitem">
 <div class="memproto">
@@ -234,6 +195,30 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5433a6387653f046e0689b4ea5b2e11d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> Message::json</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aea80e7d191c3959f29ec9f4e7412394e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> Message::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Massive/Messaging/<a class="el" href="_message_8h_source.html">Message.h</a></li>
 <li>Massive/Messaging/<a class="el" href="_message_8cpp.html">Message.cpp</a></li>
@@ -241,7 +226,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

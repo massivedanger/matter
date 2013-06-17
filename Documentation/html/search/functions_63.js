@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cleanupentities',['CleanupEntities',['../class_screen.html#af6a3bd1ff575ffca67874a6217f34468',1,'Screen']]]
+  ['cleanupentities',['cleanupEntities',['../class_screen.html#a950436f063c6da85396cd90e65df36a7',1,'Screen']]]
 ];

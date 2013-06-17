@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -100,9 +100,10 @@ Inheritance diagram for Entity:</div>
  <div class="center">
   <img src="class_entity.png" usemap="#Entity_map" alt=""/>
   <map id="Entity_map" name="Entity_map">
-<area href="class_actor.html" alt="Actor" shape="rect" coords="0,56,43,80"/>
-<area href="class_light.html" alt="Light" shape="rect" coords="53,56,96,80"/>
-<area href="class_text.html" alt="Text" shape="rect" coords="0,112,43,136"/>
+<area href="class_listener.html" alt="Listener" shape="rect" coords="33,0,90,24"/>
+<area href="class_actor.html" alt="Actor" shape="rect" coords="0,112,57,136"/>
+<area href="class_light.html" alt="Light" shape="rect" coords="67,112,124,136"/>
+<area href="class_text.html" alt="Text" shape="rect" coords="0,168,57,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -112,41 +113,42 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a980f368aa07ce358583982821533a54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf6d3f7cb1b2ba029b6b048a395cc8ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a> ()</td></tr>
 <tr class="separator:adf6d3f7cb1b2ba029b6b048a395cc8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eb49db23dd07c18648b436aa3764d46"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3eb49db23dd07c18648b436aa3764d46">Update</a> (float dt)</td></tr>
-<tr class="separator:a3eb49db23dd07c18648b436aa3764d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcba65ca0cba3a5e6aa493b1411ede3c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adcba65ca0cba3a5e6aa493b1411ede3c">Draw</a> ()</td></tr>
-<tr class="separator:adcba65ca0cba3a5e6aa493b1411ede3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dbeafe2e8a11188bb2bb772070e3af1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a4dbeafe2e8a11188bb2bb772070e3af1">SetLayer</a> (int layer)</td></tr>
-<tr class="separator:a4dbeafe2e8a11188bb2bb772070e3af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ad2d2438d0242986c03897cd766bd97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a5ad2d2438d0242986c03897cd766bd97">GetLayer</a> ()</td></tr>
-<tr class="separator:a5ad2d2438d0242986c03897cd766bd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91f3367ca4eb44a4cd7864548a63e61a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a91f3367ca4eb44a4cd7864548a63e61a">SetPosition</a> (int x, int y)</td></tr>
-<tr class="separator:a91f3367ca4eb44a4cd7864548a63e61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a333d05b20a5f3ffa08d3f1b5b11429ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a333d05b20a5f3ffa08d3f1b5b11429ae">MovePosition</a> (int x, int y)</td></tr>
-<tr class="separator:a333d05b20a5f3ffa08d3f1b5b11429ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbd68cbc330697a673a389b8fc2dbb73"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#acbd68cbc330697a673a389b8fc2dbb73">GetPosition</a> ()</td></tr>
-<tr class="separator:acbd68cbc330697a673a389b8fc2dbb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a997da5ed415d9e717bcaa1c0fcd20"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a96a997da5ed415d9e717bcaa1c0fcd20">SetRotation</a> (float rotation)</td></tr>
-<tr class="separator:a96a997da5ed415d9e717bcaa1c0fcd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b38e72ed58e1ce0420a7eef8f1f81d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6b38e72ed58e1ce0420a7eef8f1f81d2">Rotate</a> (float rotation)</td></tr>
-<tr class="separator:a6b38e72ed58e1ce0420a7eef8f1f81d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c38f1be730670c8253aa0f156dc5e32"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6c38f1be730670c8253aa0f156dc5e32">GetRotation</a> ()</td></tr>
-<tr class="separator:a6c38f1be730670c8253aa0f156dc5e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c4957613b7a59eec883b009905c17cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3c4957613b7a59eec883b009905c17cc">SetScale</a> (float scaleX, float scaleY)</td></tr>
-<tr class="separator:a3c4957613b7a59eec883b009905c17cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae30c5dc78d402dae61d168e81e0651aa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ae30c5dc78d402dae61d168e81e0651aa">Scale</a> (float scaleX, float scaleY)</td></tr>
-<tr class="separator:ae30c5dc78d402dae61d168e81e0651aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9943b4ecac37125d8a3da6a02120cda9"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a9943b4ecac37125d8a3da6a02120cda9">GetScale</a> ()</td></tr>
-<tr class="separator:a9943b4ecac37125d8a3da6a02120cda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54f37c4e43b739b9aaceb8c54b8e2496"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a54f37c4e43b739b9aaceb8c54b8e2496">SetOrigin</a> (int x, int y)</td></tr>
-<tr class="separator:a54f37c4e43b739b9aaceb8c54b8e2496"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affc99951b4c1d0f0012d7753c36bd574"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#affc99951b4c1d0f0012d7753c36bd574">GetOrigin</a> ()</td></tr>
-<tr class="separator:affc99951b4c1d0f0012d7753c36bd574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73cd7e77d83cacce7c321e20938e0516"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a73cd7e77d83cacce7c321e20938e0516">update</a> (float dt)</td></tr>
+<tr class="separator:a73cd7e77d83cacce7c321e20938e0516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e550ef5a8d44094c1c7d48978f76582"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a2e550ef5a8d44094c1c7d48978f76582">draw</a> ()</td></tr>
+<tr class="separator:a2e550ef5a8d44094c1c7d48978f76582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7aeef02f861723c642412ec7a81ea0a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab7aeef02f861723c642412ec7a81ea0a">setPosition</a> (int x, int y)</td></tr>
+<tr class="separator:ab7aeef02f861723c642412ec7a81ea0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16111b9981834bc4f7a9fc93051b525"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aa16111b9981834bc4f7a9fc93051b525">movePosition</a> (int x, int y)</td></tr>
+<tr class="separator:aa16111b9981834bc4f7a9fc93051b525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd86987df2e44d91417a16ddad4a84e"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6cd86987df2e44d91417a16ddad4a84e">getPosition</a> ()</td></tr>
+<tr class="separator:a6cd86987df2e44d91417a16ddad4a84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455e0b3055b4ed72709d49538ec99343"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a455e0b3055b4ed72709d49538ec99343">setRotation</a> (float rotation)</td></tr>
+<tr class="separator:a455e0b3055b4ed72709d49538ec99343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e72364828b253662854a0b9ba2f0b9b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6e72364828b253662854a0b9ba2f0b9b">rotate</a> (float rotation)</td></tr>
+<tr class="separator:a6e72364828b253662854a0b9ba2f0b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d8146e603451e68f98e6a726dd03a0"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a20d8146e603451e68f98e6a726dd03a0">getRotation</a> ()</td></tr>
+<tr class="separator:a20d8146e603451e68f98e6a726dd03a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb93a3962c6517ddc31fb217e59ed086"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aeb93a3962c6517ddc31fb217e59ed086">setScale</a> (float scaleX, float scaleY)</td></tr>
+<tr class="separator:aeb93a3962c6517ddc31fb217e59ed086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f3755fd9d1d36aad892e5e153ba0a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#af2f3755fd9d1d36aad892e5e153ba0a3">scale</a> (float scaleX, float scaleY)</td></tr>
+<tr class="separator:af2f3755fd9d1d36aad892e5e153ba0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb6a0da02f1a2dbd50b71b3419ae374"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a0eb6a0da02f1a2dbd50b71b3419ae374">getScale</a> ()</td></tr>
+<tr class="separator:a0eb6a0da02f1a2dbd50b71b3419ae374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6281aaa28aa73915943018f15552031"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab6281aaa28aa73915943018f15552031">setOrigin</a> (int x, int y)</td></tr>
+<tr class="separator:ab6281aaa28aa73915943018f15552031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07cc8713756fe65c14786a2e20426686"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a07cc8713756fe65c14786a2e20426686">getOrigin</a> ()</td></tr>
+<tr class="separator:a07cc8713756fe65c14786a2e20426686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_listener"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_listener')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_listener.html">Listener</a></td></tr>
+<tr class="memitem:a8946fdcfe2142e49ef4d31bd23769da0 inherit pub_methods_class_listener"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_listener.html#a8946fdcfe2142e49ef4d31bd23769da0">~Listener</a> ()</td></tr>
+<tr class="separator:a8946fdcfe2142e49ef4d31bd23769da0 inherit pub_methods_class_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfea50daeca6cf45d0f4cc75bf26562d inherit pub_methods_class_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_listener.html#abfea50daeca6cf45d0f4cc75bf26562d">receiveMessage</a> (<a class="el" href="class_message.html">Message</a> *message)</td></tr>
+<tr class="separator:abfea50daeca6cf45d0f4cc75bf26562d inherit pub_methods_class_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a7b709231823780f5aa8e87324b50bbdc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a7b709231823780f5aa8e87324b50bbdc">_layer</a></td></tr>
-<tr class="separator:a7b709231823780f5aa8e87324b50bbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a93e93a3c916d2c83ae398c3a87b5a8d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a93e93a3c916d2c83ae398c3a87b5a8d0">layer</a></td></tr>
+<tr class="separator:a93e93a3c916d2c83ae398c3a87b5a8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -185,7 +187,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="adcba65ca0cba3a5e6aa493b1411ede3c"></a>
+<a class="anchor" id="a2e550ef5a8d44094c1c7d48978f76582"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -193,7 +195,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Entity::Draw </td>
+          <td class="memname">virtual void Entity::draw </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -206,11 +208,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#af4bb084ff0f66ad827ef6b006f9b0ebd">Text</a>, and <a class="el" href="class_actor.html#a4f3a4256d6c3d5538aa9254abb0381ff">Actor</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#adedc069a9ad622bf9d2cf6d194a01b39">Text</a>, <a class="el" href="class_actor.html#ac8bc898122ba0aaa8383187525edeaf6">Actor</a>, and <a class="el" href="class_light.html#acd55e048175272a2c14db84af078a7fe">Light</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5ad2d2438d0242986c03897cd766bd97"></a>
+<a class="anchor" id="a07cc8713756fe65c14786a2e20426686"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -218,30 +220,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Entity::GetLayer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="affc99951b4c1d0f0012d7753c36bd574"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual sf::Vector2f Entity::GetOrigin </td>
+          <td class="memname">virtual sf::Vector2f Entity::getOrigin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -254,11 +233,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#a852f434ef088db5dee1aad1c0c6576b0">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#a7466da4adb2a2dc4850a665e50490f3e">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acbd68cbc330697a673a389b8fc2dbb73"></a>
+<a class="anchor" id="a6cd86987df2e44d91417a16ddad4a84e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -266,7 +245,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual sf::Vector2f Entity::GetPosition </td>
+          <td class="memname">virtual sf::Vector2f Entity::getPosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -279,11 +258,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#a857ea9d349ec871c5613d458a8b8def2">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#a28904c046aa1ef84df18c9985fa8168c">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6c38f1be730670c8253aa0f156dc5e32"></a>
+<a class="anchor" id="a20d8146e603451e68f98e6a726dd03a0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -291,7 +270,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual float Entity::GetRotation </td>
+          <td class="memname">virtual float Entity::getRotation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -304,11 +283,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#a9dfca595ed74cfd4e057b2409b2703e2">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#ae0d0239dea0a0b8dfa5f1f8ee8e7a165">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9943b4ecac37125d8a3da6a02120cda9"></a>
+<a class="anchor" id="a0eb6a0da02f1a2dbd50b71b3419ae374"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -316,7 +295,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual sf::Vector2f Entity::GetScale </td>
+          <td class="memname">virtual sf::Vector2f Entity::getScale </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -329,11 +308,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#a725331fb6a3697154ab97b1c88cbcc63">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#a7f748fd50fae51994c473f2006c7b158">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a333d05b20a5f3ffa08d3f1b5b11429ae"></a>
+<a class="anchor" id="aa16111b9981834bc4f7a9fc93051b525"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -341,7 +320,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Entity::MovePosition </td>
+          <td class="memname">virtual void Entity::movePosition </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -365,11 +344,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#ad97e02e9028452f91a79c2163f5f5993">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#ae1b3c58d8c469ffb402eb0ec264ab77b">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6b38e72ed58e1ce0420a7eef8f1f81d2"></a>
+<a class="anchor" id="a6e72364828b253662854a0b9ba2f0b9b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -377,7 +356,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Entity::Rotate </td>
+          <td class="memname">virtual void Entity::rotate </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>rotation</em></td><td>)</td>
@@ -391,11 +370,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#aa174d85d7f7ebe20228c1ec3d82cc6e7">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#adb124516e570b7bd9be6f61056b9ecc8">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae30c5dc78d402dae61d168e81e0651aa"></a>
+<a class="anchor" id="af2f3755fd9d1d36aad892e5e153ba0a3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -403,7 +382,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Entity::Scale </td>
+          <td class="memname">virtual void Entity::scale </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>scaleX</em>, </td>
@@ -427,11 +406,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#a0211a5755cff32f2a6fae1b4631c6a12">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#adaeb77c54f7f33d733e6ac100e12835d">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4dbeafe2e8a11188bb2bb772070e3af1"></a>
+<a class="anchor" id="ab6281aaa28aa73915943018f15552031"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -439,31 +418,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Entity::SetLayer </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>layer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a54f37c4e43b739b9aaceb8c54b8e2496"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Entity::SetOrigin </td>
+          <td class="memname">virtual void Entity::setOrigin </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -487,11 +442,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#a2564504c39d7c74228b24860d12ed63a">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#a2eab6743d830b1e78e39602976e00549">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a91f3367ca4eb44a4cd7864548a63e61a"></a>
+<a class="anchor" id="ab7aeef02f861723c642412ec7a81ea0a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -499,7 +454,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Entity::SetPosition </td>
+          <td class="memname">virtual void Entity::setPosition </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -523,11 +478,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#a8f4d6cc6164679821f3b20c6578a2a7b">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#a55995c22d9a3166ccd856f3b632f2354">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a96a997da5ed415d9e717bcaa1c0fcd20"></a>
+<a class="anchor" id="a455e0b3055b4ed72709d49538ec99343"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -535,7 +490,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Entity::SetRotation </td>
+          <td class="memname">virtual void Entity::setRotation </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>rotation</em></td><td>)</td>
@@ -549,11 +504,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#ae9f064a6833b507a00a6ee5d4fca9742">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#a9d3d5392102252c1a3981c6c41e4b051">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3c4957613b7a59eec883b009905c17cc"></a>
+<a class="anchor" id="aeb93a3962c6517ddc31fb217e59ed086"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -561,7 +516,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Entity::SetScale </td>
+          <td class="memname">virtual void Entity::setScale </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>scaleX</em>, </td>
@@ -585,11 +540,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#ac3e47e2920033da2f6e46407facd2fbc">Text</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#ac28e5cad0770cacb23051224fbb2db9d">Text</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3eb49db23dd07c18648b436aa3764d46"></a>
+<a class="anchor" id="a73cd7e77d83cacce7c321e20938e0516"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -597,7 +552,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Entity::Update </td>
+          <td class="memname">virtual void Entity::update </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>dt</em></td><td>)</td>
@@ -611,7 +566,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_text.html#a7e995169e7723f5185e7432175d3a194">Text</a>, and <a class="el" href="class_actor.html#a78a81ce3764f1b6425f07bdcd45fbd36">Actor</a>.</p>
+<p>Reimplemented in <a class="el" href="class_text.html#a73204e40036f61c33d757dc8fa30424e">Text</a>, <a class="el" href="class_actor.html#acc457eb9553a36bdb3e42a3865189ba5">Actor</a>, and <a class="el" href="class_light.html#a4974d69013df187743e2d28126ec3f3f">Light</a>.</p>
 
 </div>
 </div>
@@ -637,22 +592,14 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a7b709231823780f5aa8e87324b50bbdc"></a>
+<a class="anchor" id="a93e93a3c916d2c83ae398c3a87b5a8d0"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Entity::_layer</td>
+          <td class="memname">int Entity::layer</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -664,7 +611,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

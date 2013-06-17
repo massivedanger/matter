@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['destroy',['Destroy',['../class_world.html#a779bb15f108f54f275f6cf1ce6ddbfc6',1,'World']]],
-  ['draw',['Draw',['../class_screen.html#a000475fcee041242abde5dbdac27b63f',1,'Screen::Draw()'],['../class_state.html#a993e52b3e76239807b0de03526d9c1c2',1,'State::Draw()'],['../class_world.html#a9b69dbbd736dfe1725f9facec1254a68',1,'World::Draw()'],['../class_actor.html#a4f3a4256d6c3d5538aa9254abb0381ff',1,'Actor::Draw()'],['../class_entity.html#adcba65ca0cba3a5e6aa493b1411ede3c',1,'Entity::Draw()'],['../class_text.html#af4bb084ff0f66ad827ef6b006f9b0ebd',1,'Text::Draw()']]],
-  ['drawentities',['DrawEntities',['../class_screen.html#afed486b4896ba476762f8dd1e2cd6aae',1,'Screen']]]
+  ['debug',['debug',['../class_logger.html#aee0e226d7a86135bfc9127fec4ee0c88',1,'Logger']]],
+  ['destroy',['destroy',['../class_world.html#a02d69ed7161ba4b4cb07471eb1bf2ec9',1,'World']]],
+  ['draw',['draw',['../class_screen.html#a4e822bf10f57a15d43cffbf6a7cebb02',1,'Screen::draw()'],['../class_state.html#a548bbd450e95030e0582013466d71029',1,'State::draw()'],['../class_world.html#ab51a17ccbb108616daacd0c34973dc8d',1,'World::draw()'],['../class_actor.html#ac8bc898122ba0aaa8383187525edeaf6',1,'Actor::draw()'],['../class_entity.html#a2e550ef5a8d44094c1c7d48978f76582',1,'Entity::draw()'],['../class_light.html#acd55e048175272a2c14db84af078a7fe',1,'Light::draw()'],['../class_text.html#adedc069a9ad622bf9d2cf6d194a01b39',1,'Text::draw()']]],
+  ['drawentities',['drawEntities',['../class_screen.html#a41a208fba3d2306241b3ad7d8fa4d48a',1,'Screen']]]
 ];

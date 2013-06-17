@@ -115,17 +115,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="class_utility.html#a6bd9a4bd669060dc0466d2da7ee4fd83">   28</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="class_utility.html#a6bd9a4bd669060dc0466d2da7ee4fd83" title="Get String representation of a float.">floatToString</a>(<span class="keywordtype">float</span> number) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        std::ostringstream stream;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        stream &lt;&lt; number;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> stream.str();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> std::to_string(number);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_utility.html#a487ae89da3edd890635b45c72c81f0c7">   32</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="class_utility.html#a487ae89da3edd890635b45c72c81f0c7">intToString</a>(<span class="keywordtype">int</span> number) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> std::to_string(number);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

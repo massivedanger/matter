@@ -156,7 +156,7 @@ void World::draw() {
 
 //! Convenience function for getting current FPS as a String
 const String World::getFPSString() {
-    return M::floatToString(getFPS());
+    return std::to_string(getFPS());
 }
 
 /*!

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['receivemessage',['ReceiveMessage',['../class_world.html#a74fe10c00788cc189a2ab82aa0b35c01',1,'World::ReceiveMessage()'],['../class_listener.html#a5bb7b81f82d27335057596c0b891ad81',1,'Listener::ReceiveMessage()']]],
-  ['removeentity',['RemoveEntity',['../class_screen.html#a914b4e8f200068263d532ae398d08a52',1,'Screen']]],
-  ['removescreen',['RemoveScreen',['../class_state.html#a0147b0b48960e5f47661bc992f89c908',1,'State']]],
-  ['rotate',['Rotate',['../class_entity.html#a6b38e72ed58e1ce0420a7eef8f1f81d2',1,'Entity::Rotate()'],['../class_text.html#aa174d85d7f7ebe20228c1ec3d82cc6e7',1,'Text::Rotate()']]]
+  ['receivemessage',['receiveMessage',['../class_world.html#a3f673c9e0ca03136c42958095c7d4d85',1,'World::receiveMessage()'],['../class_actor.html#a7ee9e40c7b5f3d7e8d46bc4e222369b4',1,'Actor::receiveMessage()'],['../class_listener.html#abfea50daeca6cf45d0f4cc75bf26562d',1,'Listener::receiveMessage()']]],
+  ['removeentity',['removeEntity',['../class_screen.html#aca589f4b8d0c42cba467ee0b164b0417',1,'Screen']]],
+  ['removescreen',['removeScreen',['../class_state.html#a1ea9aab27febd13aa848f030503d3a54',1,'State']]],
+  ['resized',['resized',['../class_world.html#a23f80915e4c59b61d484a99ec28fffe6',1,'World']]],
+  ['rotate',['rotate',['../class_entity.html#a6e72364828b253662854a0b9ba2f0b9b',1,'Entity::rotate()'],['../class_text.html#adb124516e570b7bd9be6f61056b9ecc8',1,'Text::rotate()']]]
 ];

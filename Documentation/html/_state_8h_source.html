@@ -101,30 +101,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __Massive__State__</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../Utilities/Common.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_screen_8h.html">Screen.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_state.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_state.html">State</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_state.html#ab91bb1dd5aa6260ab2a456581daf9ec2">State</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state.html#a993e52b3e76239807b0de03526d9c1c2">Draw</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state.html#a1660e74611d9e044a136bea1f96b8f8b">Update</a>(<span class="keywordtype">float</span> dt);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_state.html#a7f088144e1a535577167869dc5d7f2c3">AddScreen</a>(<a class="code" href="class_screen.html">Screen</a> *screen);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_state.html#a0147b0b48960e5f47661bc992f89c908">RemoveScreen</a>(<a class="code" href="class_screen.html">Screen</a> *screen);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::set&lt;Screen *&gt; _screens;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Massive__State__) */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../Messaging/Observer.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../Messaging/Message.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_screen_8h.html">Screen.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="class_state.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_state.html">State</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_state.html#ab91bb1dd5aa6260ab2a456581daf9ec2">State</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state.html#a548bbd450e95030e0582013466d71029">draw</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state.html#a489452b78c896cd273fd326e3ba8e49c">update</a>(<span class="keywordtype">float</span> dt);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_state.html#a7f67e53e9458c9d8e2fa02388d1088f6">addScreen</a>(<a class="code" href="class_screen.html">Screen</a> *screen);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_state.html#a1ea9aab27febd13aa848f030503d3a54">removeScreen</a>(<a class="code" href="class_screen.html">Screen</a> *screen);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::set&lt;Screen *&gt; _screens;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Massive__State__) */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['namelayer',['NameLayer',['../class_screen.html#a7f67d16f68f24ebac0ff045e2ecf5822',1,'Screen']]]
+  ['name',['name',['../class_message.html#aea80e7d191c3959f29ec9f4e7412394e',1,'Message']]],
+  ['namelayer',['nameLayer',['../class_screen.html#af5e075ebc525045ee917506d37265f54',1,'Screen']]]
 ];

@@ -22,16 +22,7 @@ typedef std::set<String>	StringSet; //! Shorthand for a Set of Strings. What did
 
 //! Class used to store little functions that are useful everywhere
 class Utility {
-    
-public:
-    //! Get String representation of a float
-    static String floatToString(float number) {
-        return std::to_string(number);
-    }
-    
-    static String intToString(int number) {
-        return std::to_string(number);
-    }
+
 };
 
 #endif

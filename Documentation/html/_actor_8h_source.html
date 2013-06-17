@@ -108,16 +108,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_actor.html#a2a0ff4335a1ee9096df90f288c026c8b">Actor</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_actor.html#ad807fe8f85e72ab263a0c05e3231cb39">~Actor</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_actor.html#a78a81ce3764f1b6425f07bdcd45fbd36">Update</a>(<span class="keywordtype">float</span> dt);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_actor.html#a4f3a4256d6c3d5538aa9254abb0381ff">Draw</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Massive__Actor__) */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_actor.html#acc457eb9553a36bdb3e42a3865189ba5">update</a>(<span class="keywordtype">float</span> dt);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_actor.html#ac8bc898122ba0aaa8383187525edeaf6">draw</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_actor.html#a7ee9e40c7b5f3d7e8d46bc4e222369b4">receiveMessage</a>(<a class="code" href="class_message.html">Message</a> *message);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    sf::CircleShape _drawable;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Massive__Actor__) */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

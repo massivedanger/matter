@@ -110,49 +110,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_text.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_text.html">Text</a> : <span class="keyword">public</span> <a class="code" href="class_actor.html">Actor</a> {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_text.html#a49db1ed8feb7884896f91fb25fb00d88">Text</a>(</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;         <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <span class="keywordtype">string</span> = <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;         <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> fontPath = <a class="code" href="_text_8h.html#acc8c4c3825dc938cdbbe585924ab2700">MASSIVE_DEFAULT_FONT</a>,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;         <span class="keywordtype">int</span> size = 16</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        );</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_text.html#a2d49e5c280e205125b149f7777ae30c7">~Text</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#a7e995169e7723f5185e7432175d3a194">Update</a>(<span class="keywordtype">float</span> dt);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#af4bb084ff0f66ad827ef6b006f9b0ebd">Draw</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_text.html#ab3e26143fccc52699bcc5149cae852bc">Text</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_text.html#a2d49e5c280e205125b149f7777ae30c7">~Text</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#a73204e40036f61c33d757dc8fa30424e">update</a>(<span class="keywordtype">float</span> dt);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#adedc069a9ad622bf9d2cf6d194a01b39">draw</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="class_text.html#a04c2ae991434d41249615e720c52c58f">   28</a></span>&#160;    sf::Font <a class="code" href="class_text.html#a04c2ae991434d41249615e720c52c58f">font</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="class_text.html#a7c2ade3e64fe39c4e2b7c16aabb6d9a7">   30</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_text.html#a7c2ade3e64fe39c4e2b7c16aabb6d9a7">rotation</a>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_text.html#a20294cb1fca57d82fd9c5e0c07ce8956">   32</a></span>&#160;    <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="class_text.html#a20294cb1fca57d82fd9c5e0c07ce8956">GetString</a>() { <span class="keywordflow">return</span> _string; }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_text.html#ac257ee9e6c3231865317767fd306627b">SetString</a>(<a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_text.html#a343ba8987a9540f24b3169b19cb88470">setString</a>(<a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> newString);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="class_text.html#a8bf00226c3e4faefcd8e31ac6c66a589">getString</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="class_text.html#af18ed755072fa561ed5d84590df8da4b">   35</a></span>&#160;    sf::Font <a class="code" href="class_text.html#af18ed755072fa561ed5d84590df8da4b">GetFont</a>() { <span class="keywordflow">return</span> _font; }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_text.html#a184d82f616c5e58ff341c5dfcdce48d3">SetFont</a>(sf::Font font);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#a8f4d6cc6164679821f3b20c6578a2a7b">SetPosition</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#ad97e02e9028452f91a79c2163f5f5993">MovePosition</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> sf::Vector2f <a class="code" href="class_text.html#a857ea9d349ec871c5613d458a8b8def2">GetPosition</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#ae9f064a6833b507a00a6ee5d4fca9742">SetRotation</a>(<span class="keywordtype">float</span> rotation);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#aa174d85d7f7ebe20228c1ec3d82cc6e7">Rotate</a>(<span class="keywordtype">float</span> rotation);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_text.html#a9dfca595ed74cfd4e057b2409b2703e2">GetRotation</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#ac3e47e2920033da2f6e46407facd2fbc">SetScale</a>(<span class="keywordtype">float</span> scaleX, <span class="keywordtype">float</span> scaleY);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#a0211a5755cff32f2a6fae1b4631c6a12">Scale</a>(<span class="keywordtype">float</span> scaleX, <span class="keywordtype">float</span> scaleY);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> sf::Vector2f <a class="code" href="class_text.html#a725331fb6a3697154ab97b1c88cbcc63">GetScale</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#a55995c22d9a3166ccd856f3b632f2354">setPosition</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#ae1b3c58d8c469ffb402eb0ec264ab77b">movePosition</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> sf::Vector2f <a class="code" href="class_text.html#a28904c046aa1ef84df18c9985fa8168c">getPosition</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#a9d3d5392102252c1a3981c6c41e4b051">setRotation</a>(<span class="keywordtype">float</span> <a class="code" href="class_text.html#a7c2ade3e64fe39c4e2b7c16aabb6d9a7">rotation</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#adb124516e570b7bd9be6f61056b9ecc8">rotate</a>(<span class="keywordtype">float</span> <a class="code" href="class_text.html#a7c2ade3e64fe39c4e2b7c16aabb6d9a7">rotation</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_text.html#ae0d0239dea0a0b8dfa5f1f8ee8e7a165">getRotation</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#ac28e5cad0770cacb23051224fbb2db9d">setScale</a>(<span class="keywordtype">float</span> scaleX, <span class="keywordtype">float</span> scaleY);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#adaeb77c54f7f33d733e6ac100e12835d">scale</a>(<span class="keywordtype">float</span> scaleX, <span class="keywordtype">float</span> scaleY);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">virtual</span> sf::Vector2f <a class="code" href="class_text.html#a7f748fd50fae51994c473f2006c7b158">getScale</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#a2eab6743d830b1e78e39602976e00549">setOrigin</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> sf::Vector2f <a class="code" href="class_text.html#a7466da4adb2a2dc4850a665e50490f3e">getOrigin</a>();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_text.html#a2564504c39d7c74228b24860d12ed63a">SetOrigin</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> sf::Vector2f <a class="code" href="class_text.html#a852f434ef088db5dee1aad1c0c6576b0">GetOrigin</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> _string;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> _fontPath;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    sf::Font _font;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    sf::Text _drawable;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Massive__Text__) */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> _string;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> _fontPath;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    sf::Text _drawable;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Massive__Text__) */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

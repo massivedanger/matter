@@ -106,41 +106,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../Utilities/Common.h&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_message_8h.html">Message.h</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="_observer_8h.html#a0a33a588eedd6e7d3ff0929b3b315a49">   18</a></span>&#160;<span class="preprocessor">#define theObserver Observer::GetInstance()</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="_observer_8h.html#a0a33a588eedd6e7d3ff0929b3b315a49">   18</a></span>&#160;<span class="preprocessor">#define theObserver Observer::getInstance()</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="_observer_8h.html#aa48b256b61f6d172c1b7794ff19ef948">   20</a></span>&#160;<span class="keyword">typedef</span> std::set&lt;Listener *&gt; <a class="code" href="_observer_8h.html#aa48b256b61f6d172c1b7794ff19ef948">ListenerSet</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="_observer_8h.html#a706bfee7aba8ce88a982c07721ab4650">   21</a></span>&#160;<span class="keyword">typedef</span> std::queue&lt;Message *&gt; <a class="code" href="_observer_8h.html#a706bfee7aba8ce88a982c07721ab4650">MessageQueue</a>; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="class_observer.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_observer.html">Observer</a> {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_observer.html">Observer</a> &amp;<a class="code" href="class_observer.html#a42f93629daa5c611c464819cad7f6030">GetInstance</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer.html#adb01e07a39466bb7bc3dbfe3b07a06a3">Broadcast</a>(<a class="code" href="class_message.html">Message</a> *message);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="class_observer.html#afa354abb83998a4ccc93e22228b792ff">Subscribe</a>(<a class="code" href="class_listener.html">Listener</a> *listener, <span class="keyword">const</span> <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;messageName);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="class_observer.html#a1e5ccc894d1181c7e3ede66754b00726">Unsubscribe</a>(<a class="code" href="class_listener.html">Listener</a> *listener, <span class="keyword">const</span> <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;messageName);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <a class="code" href="_observer_8h.html#aa48b256b61f6d172c1b7794ff19ef948">ListenerSet</a> <a class="code" href="class_observer.html#ab9d8f8fc73b5d31e1de0b2d9d6bdc2bb">GetSubscribersFor</a>(<span class="keyword">const</span> <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;messageName);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <a class="code" href="_common_8h.html#a546d2f30f76096fbe0a4bc79ddb067ea" title="Shorthand for std::string. Simple as that.">StringSet</a> <a class="code" href="class_observer.html#a89dff1dcbe5500cab4f5550f46b50524">GetSubscriptionsFor</a>(<a class="code" href="class_listener.html">Listener</a> *listener);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_observer.html#a19c43f80a38a332a6f694783df3c9835">Observer</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_observer.html#a450645e61c136826f09940a1334c7f34">~Observer</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_observer.html">Observer</a> &amp;<a class="code" href="class_observer.html#a49e45f1d20845034dc06f9385413a48c">getInstance</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer.html#a232486f616e01d6614c835087ef4eb83">broadcast</a>(<a class="code" href="class_message.html">Message</a> *message);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="class_observer.html#a548c72d7171bb630e6b4ab1c91d4441e">subscribe</a>(<a class="code" href="class_listener.html">Listener</a> *listener, <span class="keyword">const</span> <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;messageName);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="class_observer.html#ab04e4f139491e793623e91eb2f320de7">unsubscribe</a>(<a class="code" href="class_listener.html">Listener</a> *listener, <span class="keyword">const</span> <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;messageName);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer.html#ac0b27571965a50cfa2b07262de3f40f1">SendAll</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_observer.html#a19c43f80a38a332a6f694783df3c9835">Observer</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="class_observer.html#a1d758dc9504e6ff615392b052c696a0e">   38</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_observer.html">Observer</a> *<a class="code" href="class_observer.html#a1d758dc9504e6ff615392b052c696a0e">s_Observer</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="_observer_8h.html#a706bfee7aba8ce88a982c07721ab4650">MessageQueue</a> _messages;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::map&lt;Listener *, StringSet&gt; _subscriptions;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::map&lt;String, ListenerSet&gt; _subscribers;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> _paused;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ~<a class="code" href="class_observer.html">Observer</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Massive__Observer__) */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">const</span> <a class="code" href="_observer_8h.html#aa48b256b61f6d172c1b7794ff19ef948">ListenerSet</a> <a class="code" href="class_observer.html#a9fa90bff40fcd12280d7bbaad9afa855">getSubscribersFor</a>(<span class="keyword">const</span> <a class="code" href="_common_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;messageName);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> <a class="code" href="_common_8h.html#a546d2f30f76096fbe0a4bc79ddb067ea" title="Shorthand for std::string. Simple as that.">StringSet</a> <a class="code" href="class_observer.html#ac041c30382ca09d02e6cc36a25517e20">getSubscriptionsFor</a>(<a class="code" href="class_listener.html">Listener</a> *listener);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer.html#a1ab4fca869ea572e448158d8610947e5">sendAll</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="class_observer.html#a1d758dc9504e6ff615392b052c696a0e">   40</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_observer.html">Observer</a> *<a class="code" href="class_observer.html#a1d758dc9504e6ff615392b052c696a0e">s_Observer</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="_observer_8h.html#a706bfee7aba8ce88a982c07721ab4650">MessageQueue</a> _messages;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::map&lt;Listener *, StringSet&gt; _subscriptions;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::map&lt;String, ListenerSet&gt; _subscribers;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> _paused;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Massive__Observer__) */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 2 2013 09:18:48 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 17 2013 12:56:28 for Massive by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
