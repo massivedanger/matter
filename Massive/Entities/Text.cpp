@@ -88,9 +88,5 @@ sf::Vector2f Text::getOrigin() {
 }
 
 void Text::receiveMessage(Message *message) {
-    rapidjson::Document json;
-    json.Parse<0>(message->json.c_str());
-    if (message->name == "massive:key:pressed") {
-        setString(getString() + json["key"].GetString());
-    }
+    
 }
