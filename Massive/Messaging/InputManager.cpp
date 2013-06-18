@@ -30,38 +30,38 @@ InputManager &InputManager::getInstance() {
 }
 
 void InputManager::keyPressed(sf::Event::KeyEvent event) {
-    log.debug("Key pressed: " + keycodeToString(event.code));
     Message *keyMessage = new Message("massive:key:pressed");
     keyMessage->json = "{\"key\": \"" + keycodeToString(event.code) + "\"}";
     theObserver.broadcast(keyMessage);
 }
 
 void InputManager::keyReleased(sf::Event::KeyEvent event) {
-    log.debug("Key released: " + keycodeToString(event.code));
     Message *keyMessage = new Message("massive:key:released");
+    keyMessage->json = "{\"key\": \"" + keycodeToString(event.code) + "\"}";
     theObserver.broadcast(keyMessage);
 }
 
 void InputManager::mouseMoved(int x, int y) {
     Message *mouseMessage = new Message("massive:mouse:moved");
+    mouseMessage->json = "{\"x\": \"" + std::to_string(x) + "\", \"y\": \"" + std::to_string(y) + "\"}";
     theObserver.broadcast(mouseMessage);
 }
 
 void InputManager::mouseWheelMoved(int delta, int x, int y) {
-    log.debug("Mouse wheel moved by " + std::to_string(delta));
     Message *mouseMessage = new Message("massive:mouse:wheel-moved");
+    mouseMessage->json = "{\"x\": " + std::to_string(x) + ", \"y\": " + std::to_string(y) + ", \"delta\": " + std::to_string(delta) + "}";
     theObserver.broadcast(mouseMessage);
 }
 
 void InputManager::mouseButtonPressed(sf::Mouse::Button button, int x, int y) {
-    log.debug("Mouse button pressed: " + mouseButtonToString(button));
     Message *mouseMessage = new Message("massive:mouse:pressed");
+    mouseMessage->json = "{\"button\": \"" + mouseButtonToString(button) + "\", \"x\": \"" + std::to_string(x) + "\", \"y\": \"" + std::to_string(y) + "\"}";
     theObserver.broadcast(mouseMessage);
 }
 
 void InputManager::mouseButtonReleased(sf::Mouse::Button button, int x, int y) {
-    log.debug("Mouse button released: " + mouseButtonToString(button));
     Message *mouseMessage = new Message("massive:mouse:released");
+    mouseMessage->json = "{\"button\": \"" + mouseButtonToString(button) + "\", \"x\": \"" + std::to_string(x) + "\", \"y\": \"" + std::to_string(y) + "\"}";
     theObserver.broadcast(mouseMessage);
 }
 
