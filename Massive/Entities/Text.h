@@ -32,6 +32,9 @@ public:
     void setString(String newString);
     String getString();
     
+    void setFontPath(String newPath);
+    String getFontPath();
+    
     virtual void setPosition(int x, int y);
     virtual void movePosition(int x, int y);
     virtual sf::Vector2f getPosition();

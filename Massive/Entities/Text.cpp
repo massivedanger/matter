@@ -43,6 +43,16 @@ String Text::getString() {
     return _drawable.getString();
 }
 
+void Text::setFontPath(String newPath) {
+    _fontPath = newPath;
+    font.loadFromFile(_fontPath);
+    _drawable.setFont(font);
+}
+
+String Text::getFontPath() {
+    return _fontPath;
+}
+
 void Text::setPosition(int x, int y) {
     _drawable.setPosition(x, y);
 }
