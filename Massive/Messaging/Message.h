@@ -28,6 +28,8 @@ public:
     String name;
     String json;
     
+    rapidjson::Document getParsedJSON();
+    
 protected:
     Listener *_sender;
 };

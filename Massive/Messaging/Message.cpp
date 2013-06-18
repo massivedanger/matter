@@ -19,6 +19,13 @@ Message::Message(const String& messageName, Listener *sender) {
     _sender = sender;
 }
 
+rapidjson::Document Message::getParsedJSON() {
+    rapidjson::Document doc;
+    doc.Parse<0>(this->json.c_str());
+    
+    return doc;
+}
+
 Listener* const Message::getSender() {
 	return _sender;
 }
