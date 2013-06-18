@@ -141,7 +141,7 @@ String InputManager::keycodeToString(int keycode) {
         case 54: key = "`"; break;
         case 55: key = "="; break;
         case 56: key = "-"; break;
-        case 57: key = " "; break;
+        case 57: key = "space"; break;
         case 58: key = "return"; break;
         case 59: key = "backspace"; break;
         case 60: key = "tab"; break;
