@@ -34,6 +34,7 @@ public:
     
     void init(String path);
     void reload();
+    void runScript(String scriptPath);
     
     String mainScriptPath;
     

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Massive Danger. All rights reserved.
 //
 
+#include <fstream>
+#include <iostream>
 #include "SquirrelBridge.h"
 #include "../Massive.h"
 
@@ -51,19 +53,25 @@ void SquirrelBridge::init(String path) {
     Sqrat::Script mainScript(sqVM);
     
     setupBindings(sqVM);
-    
-    try {
-        mainScript.CompileFile(mainScriptPath);
-        mainScript.Run();
-    } catch (Sqrat::Exception e) {
-        sqstd_printcallstack(sqVM);
-        printf("Script error: %s", e.Message().c_str());
-    }
+    runScript("main.nut");
 }
 
 void SquirrelBridge::reload() {
     log.todo("Actually implement script reloading");
     log.script("Reloaded.");
+}
+
+void SquirrelBridge::runScript(String scriptPath) {
+    if (mainScriptPath != "") {
+        Sqrat::Script script(sqVM);
+        try {
+            script.CompileFile(mainScriptPath + "/" + scriptPath);
+            script.Run();
+        } catch (Sqrat::Exception e) {
+            sqstd_printcallstack(sqVM);
+            printf("Script error: %s", e.Message().c_str());
+        }
+    }
 }
 
 void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
@@ -174,6 +182,10 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
     
     gTable.Bind("Listener", Class<Listener>(vm)
                 .Func("receiveMessage", &Listener::receiveMessage));
+    
+    gTable.Bind("SquirrelBridge", Class<SquirrelBridge>(vm)
+                .StaticFunc("getInstance", SquirrelBridge::getInstance)
+                .Func("runScript", &SquirrelBridge::runScript));
     
     gTable.Bind("Constants", ConstTable(vm)
                 .Const("DefaultFont", MASSIVE_DEFAULT_FONT));
