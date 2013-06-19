@@ -62,6 +62,7 @@ void SquirrelBridge::init(String path) {
 }
 
 void SquirrelBridge::reload() {
+    log.todo("Actually implement script reloading");
     log.script("Reloaded.");
 }
 

@@ -54,6 +54,13 @@ void Logger::debug(String string) {
 }
 
 /*!
+ *  Print todo line to console
+ */
+void Logger::todo(String string) {
+    withPrefix("TODO", string);
+}
+
+/*!
  *  Print info line to console
  */
 void Logger::info(String string) {

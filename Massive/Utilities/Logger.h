@@ -29,6 +29,7 @@ public:
     void printToFile(String string);
     
     void debug(String string);
+    void todo(String string);
     void info(String string);
     void error(String string);
     void script(String string);
