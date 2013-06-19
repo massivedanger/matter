@@ -44,7 +44,9 @@ void SquirrelBridge::print(HSQUIRRELVM vm, const SQChar *string, ...) {
     va_end(args);
 }
 
-void SquirrelBridge::init(String mainScriptPath) {
+void SquirrelBridge::init(String path) {
+    mainScriptPath = path;
+    
     String error;
     Sqrat::Script mainScript(sqVM);
     
@@ -59,6 +61,10 @@ void SquirrelBridge::init(String mainScriptPath) {
     }
 }
 
+void SquirrelBridge::reload() {
+    log.script("Reloaded.");
+}
+
 void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
     using namespace Sqrat;
     
@@ -70,7 +76,9 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .StaticFunc("getInstance", &Logger::getInstance)
                 .Func("debug", &Logger::debug)
                 .Func("info", &Logger::info)
-                .Func("error", &Logger::error));
+                .Func("error", &Logger::error)
+                .Func("script", &Logger::script)
+                .Func("withPrefix", &Logger::withPrefix));
     
     gTable.Bind("World", Class<World>(vm)
                 .StaticFunc("getInstance", &World::getInstance)

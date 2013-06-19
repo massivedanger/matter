@@ -31,6 +31,9 @@ public:
     void debug(String string);
     void info(String string);
     void error(String string);
+    void script(String string);
+    
+    void withPrefix(String logPrefix, String string);
     
     String prefix;
     

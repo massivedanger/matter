@@ -50,23 +50,35 @@ void Logger::printToFile(String string) {
  *  Print debug line to console
  */
 void Logger::debug(String string) {
-    prefix = "[DEBUG]";
-    printToConsole(string);
+    withPrefix("DEBUG", string);
 }
 
 /*!
  *  Print info line to console
  */
 void Logger::info(String string) {
-    prefix = "[INFO]";
-    printToConsole(string);
+    withPrefix("INFO", string);
 }
 
 /*!
  *  Print error line to console
  */
 void Logger::error(String string) {
-    prefix = "[ERROR]";
+    withPrefix("ERROR", string);
+}
+
+/*!
+ *  Print script line to console
+ */
+void Logger::script(String string) {
+    withPrefix("SCRIPT", string);
+}
+
+/*!
+ *  Print line with a prefix to the console
+ */
+void Logger::withPrefix(String logPrefix, String string) {
+    prefix = "[" + logPrefix + "]";
     printToConsole(string);
 }
 

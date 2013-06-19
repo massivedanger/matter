@@ -32,7 +32,10 @@ public:
     
     HSQUIRRELVM sqVM;
     
-    void init(String mainScriptPath);
+    void init(String path);
+    void reload();
+    
+    String mainScriptPath;
     
 protected:
     static SquirrelBridge *s_SquirrelBridge;

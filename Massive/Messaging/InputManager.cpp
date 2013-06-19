@@ -9,6 +9,7 @@
 #include "InputManager.h"
 #include "../Utilities/Common.h"
 #include "../Utilities/Logger.h"
+#include "../Scripting/SquirrelBridge.h"
 #include "Observer.h"
 
 InputManager *InputManager::s_InputManager;
@@ -39,6 +40,10 @@ void InputManager::keyReleased(sf::Event::KeyEvent event) {
     Message *keyMessage = new Message("massive:key:released");
     keyMessage->json = "{\"key\": \"" + keycodeToString(event.code) + "\"}";
     theObserver.broadcast(keyMessage);
+    if (keycodeToString(event.code) == "escape") {
+        log.script("Reloading main script...");
+        sqBridge.reload();
+    }
 }
 
 void InputManager::mouseMoved(int x, int y) {
