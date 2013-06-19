@@ -14,6 +14,7 @@
 #include <map>
 #include <vector>
 #include <sstream>
+#include <fstream>
 
 typedef std::string			String; //! Shorthand for std::string. Simple as that.
 typedef std::set<String>	StringSet; //! Shorthand for a Set of Strings. What did you expect?
@@ -22,7 +23,11 @@ typedef std::set<String>	StringSet; //! Shorthand for a Set of Strings. What did
 
 //! Class used to store little functions that are useful everywhere
 class Utility {
-
+public:
+    static bool fileExists(String fileName) {
+        std::ifstream file(fileName);
+        return file.good();
+    }
 };
 
 #endif

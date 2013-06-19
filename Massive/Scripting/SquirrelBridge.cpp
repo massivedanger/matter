@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Massive Danger. All rights reserved.
 //
 
-#include <fstream>
-#include <iostream>
 #include "SquirrelBridge.h"
 #include "../Massive.h"
 
@@ -64,12 +62,14 @@ void SquirrelBridge::reload() {
 void SquirrelBridge::runScript(String scriptPath) {
     if (mainScriptPath != "") {
         Sqrat::Script script(sqVM);
-        try {
-            script.CompileFile(mainScriptPath + "/" + scriptPath);
-            script.Run();
-        } catch (Sqrat::Exception e) {
-            sqstd_printcallstack(sqVM);
-            printf("Script error: %s", e.Message().c_str());
+        if (M::fileExists(mainScriptPath + "/" + scriptPath)) {
+            try {
+                script.CompileFile(mainScriptPath + "/" + scriptPath);
+                script.Run();
+            } catch (Sqrat::Exception e) {
+                sqstd_printcallstack(sqVM);
+                printf("Script error: %s", e.Message().c_str());
+            }
         }
     }
 }
