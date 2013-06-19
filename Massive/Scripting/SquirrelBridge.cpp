@@ -51,6 +51,7 @@ void SquirrelBridge::init(String path) {
     Sqrat::Script mainScript(sqVM);
     
     setupBindings(sqVM);
+    runScript("ext.nut");
     runScript("main.nut");
 }
 
