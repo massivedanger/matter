@@ -16,6 +16,7 @@
 #include "../Messaging/InputManager.h"
 #include "../Entities/Entity.h"
 #include "State.h"
+#include "Camera.h"
 
 #include <squirrel.h>
 #include <sqstdio.h>
