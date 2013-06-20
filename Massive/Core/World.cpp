@@ -49,6 +49,8 @@ bool World::init(unsigned int windowWidth, unsigned int windowHeight, String win
     
     _window->create(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Default, *_contextSettings);
     
+    _window->setView(theCamera.getView());
+    
     _initialized = true;
     
     return _initialized;
