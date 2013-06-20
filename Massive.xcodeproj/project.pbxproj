@@ -297,6 +297,7 @@
 		209E8BD7174E5C550043E609 /* libSFML.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 209E89BA174E59C20043E609 /* libSFML.dylib */; };
 		20A3F45C173ABEC400811687 /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20A3F45A173ABEC400811687 /* Text.cpp */; };
 		20E4758617623C29004DA941 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20E4758417623C29004DA941 /* InputManager.cpp */; };
+		20E523C0177262920022856A /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20E523BE177262920022856A /* Camera.cpp */; };
 		20ED6899174D77B4001D43EC /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20262E0B174D760600FC67E2 /* OpenAL.framework */; };
 /* End PBXBuildFile section */
 
@@ -712,6 +713,8 @@
 		20E4180917396C5C0030799D /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = System/Library/Frameworks/AGL.framework; sourceTree = SDKROOT; };
 		20E4758417623C29004DA941 /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
 		20E4758517623C29004DA941 /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
+		20E523BE177262920022856A /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		20E523BF177262920022856A /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		20E951E517356CB500A388F0 /* Common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -777,6 +780,8 @@
 				201EB24317334B8C0061138C /* State.h */,
 				201EB2501733509E0061138C /* Screen.cpp */,
 				201EB2511733509E0061138C /* Screen.h */,
+				20E523BE177262920022856A /* Camera.cpp */,
+				20E523BF177262920022856A /* Camera.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1901,6 +1906,7 @@
 				20A3F45C173ABEC400811687 /* Text.cpp in Sources */,
 				20592519175E67BC00554A81 /* SquirrelBridge.cpp in Sources */,
 				20E4758617623C29004DA941 /* InputManager.cpp in Sources */,
+				20E523C0177262920022856A /* Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
