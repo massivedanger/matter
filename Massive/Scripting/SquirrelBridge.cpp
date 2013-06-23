@@ -63,12 +63,11 @@ void SquirrelBridge::reload() {
 void SquirrelBridge::runScript(String scriptPath) {
     if (mainScriptPath != "") {
         Sqrat::Script script(sqVM);
-        if (M::fileExists(mainScriptPath + "/" + scriptPath)) {
+        if (MD::fileExists(mainScriptPath + "/" + scriptPath)) {
             try {
                 script.CompileFile(mainScriptPath + "/" + scriptPath);
                 script.Run();
             } catch (Sqrat::Exception e) {
-                sqstd_printcallstack(sqVM);
                 printf("Script error: %s", e.Message().c_str());
             }
         }
@@ -104,7 +103,8 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .Func("draw", &World::draw)
                 .Prop("state", &World::getCurrentState, &World::setState)
                 .Func("receiveMessage", &World::receiveMessage)
-                .Func("updateCamera", &World::updateCamera));
+                .Func("updateViewWithCamera", &World::updateViewWithCamera)
+                .Var("camera", &World::camera));
     
     gTable.Bind("Camera", Class<Camera>(vm)
                 .StaticFunc("getInstance", &Camera::getInstance)
