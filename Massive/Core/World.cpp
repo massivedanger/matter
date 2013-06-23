@@ -17,6 +17,7 @@ World::World() {
     _window = new sf::RenderWindow();
     _state = new State();
     _running = false;
+    _highRes = false;
     _initialized = false;
 }
 
@@ -48,6 +49,14 @@ bool World::init(unsigned int windowWidth, unsigned int windowHeight, String win
     }
     
     _window->create(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Default, *_contextSettings);
+    
+    if ( (_window->getSize().x / windowWidth == 2) && (_window->getSize().y / windowHeight == 2) ) {
+        _highRes = true;
+    }
+    
+    theCamera.scale = scaleFactor();
+    theCamera.setSize(windowWidth, windowHeight);
+    theCamera.setCenter(windowWidth / 2, windowHeight / 2);
     
     camera = &theCamera;
     _initialized = true;
@@ -187,6 +196,10 @@ void World::updateFPS() {
 
 void World::updateViewWithCamera(Camera *camera) {
     _window->setView(camera->view);
+}
+
+int World::scaleFactor() {
+    return _highRes ? 2 : 1;
 }
 
 void World::lostFocus() {

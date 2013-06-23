@@ -58,6 +58,8 @@ public:
     sf::ContextSettings &getContextSettings() { return *_contextSettings; } //! Get SFML ContextSettings
     
     void updateViewWithCamera(Camera *camera);
+    bool isHighRes() { return _highRes; } //! Returns `true` if the display is HiDPI
+    int scaleFactor();
     
     void lostFocus();
     void gainedFocus();
@@ -74,6 +76,7 @@ protected:
     
 private:
     State *_state;
+    bool _highRes;
     
     sf::RenderWindow *_window;
     sf::Clock _clock;

@@ -10,6 +10,7 @@
 #define __Massive__Camera__
 
 #include <SFML/Graphics.hpp>
+//#include "World.h"
 
 #define theCamera Camera::getInstance()
 
@@ -20,6 +21,7 @@ public:
     ~Camera();
     static Camera &getInstance();
     
+    void setSize(int width, int height);
     void setCenter(int x, int y);
     void move(int x, int y);
     
@@ -29,6 +31,7 @@ public:
     void zoom(float newZoom);
     
     sf::View view;
+    int scale;
     
 protected:
     static Camera *s_Camera;
