@@ -11,9 +11,7 @@
 Camera *Camera::s_Camera;
 
 Camera::Camera() {
-    _view = new sf::View();
-    _view->setSize(960 * 2, 540 * 2);
-    _view->setCenter(480 * 2, 270 * 2);
+    view = sf::View(sf::Vector2f(480.f * 2, 270.f * 2), sf::Vector2f(960.f * 2, 540.f * 2));
 }
 
 Camera::~Camera() {
@@ -27,3 +25,24 @@ Camera &Camera::getInstance() {
     
     return *s_Camera;
 }
+
+void Camera::setCenter(int x, int y) {
+    view.setCenter(x, y);
+}
+
+void Camera::move(int x, int y) {
+    view.move(x, y);
+}
+
+void Camera::setRotation(float newRotation) {
+    view.setRotation(newRotation);
+}
+
+void Camera::rotate(float rotateBy) {
+    view.rotate(rotateBy);
+}
+
+void Camera::zoom(float newZoom) {
+    view.zoom(newZoom);
+}
+

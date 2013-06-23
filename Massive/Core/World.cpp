@@ -49,7 +49,7 @@ bool World::init(unsigned int windowWidth, unsigned int windowHeight, String win
     
     _window->create(sf::VideoMode(windowWidth, windowHeight), windowTitle, sf::Style::Default, *_contextSettings);
     
-    _window->setView(theCamera.getView());
+    _window->setView(theCamera.view);
     
     _initialized = true;
     
@@ -141,6 +141,7 @@ void World::tick() {
     updateFPS();
     
     theObserver.sendAll();
+    updateCamera(&theCamera);
     
     if (_state) {
         _state->update(frameDT);
@@ -183,6 +184,14 @@ void World::updateFPS() {
     }
     
     _fps++;
+}
+
+void World::setCamera(Camera *camera) {
+    _camera = camera;
+}
+
+void World::updateCamera(Camera *camera) {
+    _window->setView(theCamera.view);
 }
 
 void World::lostFocus() {

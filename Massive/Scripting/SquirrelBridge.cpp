@@ -103,7 +103,16 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .Func("tick", &World::tick)
                 .Func("draw", &World::draw)
                 .Prop("state", &World::getCurrentState, &World::setState)
-                .Func("receiveMessage", &World::receiveMessage));
+                .Func("receiveMessage", &World::receiveMessage)
+                .Func("updateCamera", &World::updateCamera));
+    
+    gTable.Bind("Camera", Class<Camera>(vm)
+                .StaticFunc("getInstance", &Camera::getInstance)
+                .Func("setCenter", &Camera::setCenter)
+                .Func("move", &Camera::move)
+                .Func("setRotation", &Camera::setRotation)
+                .Func("rotate", &Camera::rotate)
+                .Func("zoom", &Camera::zoom));
     
     gTable.Bind("State", Class<State>(vm)
                 .Func("draw", &State::draw)

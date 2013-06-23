@@ -20,13 +20,19 @@ public:
     ~Camera();
     static Camera &getInstance();
     
-    sf::View getView() { return *_view; }
+    void setCenter(int x, int y);
+    void move(int x, int y);
+    
+    void setRotation(float newRotation);
+    void rotate(float rotateBy);
+    
+    void zoom(float newZoom);
+    
+    sf::View view;
     
 protected:
     static Camera *s_Camera;
-    
-private:
-    sf::View *_view;
+
 };
 
 #endif /* defined(__Massive__Camera__) */

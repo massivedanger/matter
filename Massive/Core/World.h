@@ -57,6 +57,9 @@ public:
     sf::RenderWindow &getWindow() { return *_window; } //! Get SFML RenderWindow
     sf::ContextSettings &getContextSettings() { return *_contextSettings; } //! Get SFML ContextSettings
     
+    void setCamera(Camera *camera);
+    void updateCamera(Camera *camera);
+    
     void lostFocus();
     void gainedFocus();
     void resized();
@@ -70,6 +73,7 @@ protected:
     
 private:
     State *_state;
+    Camera *_camera;
     
     sf::RenderWindow *_window;
     sf::Clock _clock;
