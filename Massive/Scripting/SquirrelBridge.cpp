@@ -44,8 +44,9 @@ void SquirrelBridge::print(HSQUIRRELVM vm, const SQChar *string, ...) {
     va_end(args);
 }
 
-void SquirrelBridge::init(String path) {
-    mainScriptPath = path;
+void SquirrelBridge::init(String gameScriptPath, String gamePrefsPath) {
+    scriptPath = gameScriptPath;
+    preferencesPath = gamePrefsPath;
     
     String error;
     Sqrat::Script mainScript(sqVM);
@@ -60,12 +61,12 @@ void SquirrelBridge::reload() {
     log.script("Reloaded.");
 }
 
-void SquirrelBridge::runScript(String scriptPath) {
-    if (mainScriptPath != "") {
+void SquirrelBridge::runScript(String scriptToRun) {
+    if (scriptPath != "") {
         Sqrat::Script script(sqVM);
-        if (MD::fileExists(mainScriptPath + "/" + scriptPath)) {
+        if (MD::fileExists(scriptPath + "/" + scriptToRun)) {
             try {
-                script.CompileFile(mainScriptPath + "/" + scriptPath);
+                script.CompileFile(scriptPath + "/" + scriptToRun);
                 script.Run();
             } catch (Sqrat::Exception e) {
                 printf("Script error: %s", e.Message().c_str());
@@ -195,7 +196,9 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
     
     gTable.Bind("SquirrelBridge", Class<SquirrelBridge>(vm)
                 .StaticFunc("getInstance", SquirrelBridge::getInstance)
-                .Func("runScript", &SquirrelBridge::runScript));
+                .Func("runScript", &SquirrelBridge::runScript)
+                .Var("scriptPath", &SquirrelBridge::scriptPath)
+                .Var("preferencesPath", &SquirrelBridge::preferencesPath));
     
     gTable.Bind("Constants", ConstTable(vm)
                 .Const("DefaultFont", MASSIVE_DEFAULT_FONT));
