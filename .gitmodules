@@ -1,0 +1,3 @@
+[submodule "Libraries/micro-ini"]
+	path = Libraries/micro-ini
+	url = https://github.com/kimci86/MicroIni.git
