@@ -8,10 +8,20 @@
 
 #include "Preferences.h"
 
+Preferences *Preferences::s_Preferences;
+
 Preferences::Preferences() {
     
 }
 
 Preferences::~Preferences() {
     
+}
+
+Preferences &Preferences::getInstance() {
+    if (s_Preferences == NULL) {
+        s_Preferences = new Preferences();
+    }
+    
+    return *s_Preferences;
 }
