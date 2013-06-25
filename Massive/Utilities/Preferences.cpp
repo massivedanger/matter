@@ -11,7 +11,8 @@
 Preferences *Preferences::s_Preferences;
 
 Preferences::Preferences() {
-    
+    _file = sqBridge.preferencesPath + "/config.json";
+    MD::createFile(_file);
 }
 
 Preferences::~Preferences() {
@@ -19,7 +20,7 @@ Preferences::~Preferences() {
 }
 
 Preferences &Preferences::getInstance() {
-    if (s_Preferences == NULL) {
+    if (s_Preferences == 0) {
         s_Preferences = new Preferences();
     }
     

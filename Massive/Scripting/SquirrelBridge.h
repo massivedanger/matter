@@ -39,6 +39,10 @@ public:
     String scriptPath;
     String preferencesPath;
     
+    static void registerGlobalFunc(HSQUIRRELVM vm, SQFUNCTION function, const char *functionName);
+    static int jsonizeInternal(HSQUIRRELVM vm, String &result);
+    static SQInteger jsonize(HSQUIRRELVM vm);
+    
 protected:
     static SquirrelBridge *s_SquirrelBridge;
     void setupBindings(HSQUIRRELVM vm);

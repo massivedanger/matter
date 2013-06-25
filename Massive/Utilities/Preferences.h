@@ -11,6 +11,10 @@
 
 #define thePrefs Preferences::getInstance()
 
+#include "Common.h"
+#include "Logger.h"
+#include "../Scripting/SquirrelBridge.h"
+
 class Preferences {
     
 public:
@@ -20,6 +24,9 @@ public:
     
 protected:
     static Preferences *s_Preferences;
+    
+private:
+    String _file;
 };
 
 #endif /* defined(__Massive__Preferences__) */

@@ -11,6 +11,7 @@
 
 #include "../Utilities/Common.h"
 #include "../Utilities/Logger.h"
+#include "../Utilities/Preferences.h"
 #include "../Messaging/Observer.h"
 #include "../Messaging/Message.h"
 #include "../Messaging/InputManager.h"
