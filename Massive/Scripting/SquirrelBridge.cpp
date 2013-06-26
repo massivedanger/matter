@@ -80,6 +80,7 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
     using namespace Sqrat;
     
     Table gTable(vm);
+    RootTable root(vm);
     
     gTable.Bind("Logger", Class<Logger>(vm)
                 .Var("prefix", &Logger::prefix)
@@ -205,20 +206,16 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .StaticFunc("readFile", &Utility::readFile));
     
     gTable.Bind("Preferences", Class<Preferences>(vm)
-                .StaticFunc("getInstance", Preferences::getInstance));
+                .StaticFunc("getInstance", &Preferences::getInstance)
+                .Func("read", &Preferences::read)
+                .Func("write", &Preferences::write));
     
     gTable.Bind("Constants", ConstTable(vm)
                 .Const("DefaultFont", MASSIVE_DEFAULT_FONT));
     
-    Sqrat::RootTable(vm).Bind("Massive", gTable);
-}
-
-void registerGlobalFunc(HSQUIRRELVM vm, SQFUNCTION function, const char *functionName) {
-    sq_pushroottable(vm);
-    sq_pushstring(vm, functionName, -1);
-    sq_newclosure(vm, function, 0); //create a new function
-    sq_createslot(vm, -3);
-    sq_pop(vm, 1); //pops the root table
+    root.Bind("Massive", gTable);
+    
+    root.SquirrelFunc("jsonize", &jsonize);
 }
 
 int SquirrelBridge::jsonizeInternal(HSQUIRRELVM v, String &result) {
@@ -276,7 +273,7 @@ int SquirrelBridge::jsonizeInternal(HSQUIRRELVM v, String &result) {
             
         case OT_ARRAY:
         {
-            result = " [ ";
+            result = "[";
             std::string estr;
             sq_pushnull(v);
             just_begin = true;
@@ -295,7 +292,7 @@ int SquirrelBridge::jsonizeInternal(HSQUIRRELVM v, String &result) {
                     result += estr;
                 sq_pop(v,2); //pops key and val before the nex iteration
             }
-            result += " ] ";
+            result += "]";
             sq_pop(v, 1);
             break;
             
@@ -303,13 +300,13 @@ int SquirrelBridge::jsonizeInternal(HSQUIRRELVM v, String &result) {
             
         case OT_TABLE:
         {
-            result = " { ";
+            result = "{\n";
             sq_pushnull(v);
             just_begin = true;
             while (SQ_SUCCEEDED(sq_next(v, -2)))
             {
                 if (just_begin == false)
-                    result += ", ";
+                    result += ",\n";
                 else just_begin = false;
                 
                 /* top of stack is the value */
@@ -329,7 +326,7 @@ int SquirrelBridge::jsonizeInternal(HSQUIRRELVM v, String &result) {
                 
                 result += key + ": " + value;
             }
-            result += " } ";
+            result += "\n}";
             sq_pop(v, 1);
             break;
             

@@ -75,7 +75,6 @@
 		2055536F1732DE8300F8B2E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2055536E1732DE8300F8B2E7 /* Foundation.framework */; };
 		205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205553701732DE8A00F8B2E7 /* AppKit.framework */; };
 		20592519175E67BC00554A81 /* SquirrelBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20592517175E67BC00554A81 /* SquirrelBridge.cpp */; };
-		209BA265177888070078D39F /* libMicroIni.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 209BA2411777E70C0078D39F /* libMicroIni.a */; };
 		209E8AD5174E59E90043E609 /* Export.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C1174E59E90043E609 /* Export.hpp */; };
 		209E8AD6174E59E90043E609 /* Listener.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C2174E59E90043E609 /* Listener.hpp */; };
 		209E8AD7174E59E90043E609 /* Music.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 209E89C3174E59E90043E609 /* Music.hpp */; };
@@ -432,7 +431,6 @@
 		2091BBE3173D63AF008D6FC3 /* glew.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glew.c; sourceTree = "<group>"; };
 		2091BBE4173D63AF008D6FC3 /* glewinfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glewinfo.c; sourceTree = "<group>"; };
 		2091BBE5173D63AF008D6FC3 /* visualinfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = visualinfo.c; sourceTree = "<group>"; };
-		209BA2411777E70C0078D39F /* libMicroIni.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMicroIni.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		209E89B2174E4F650043E609 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = "Libraries/SFML-2.0/extlibs/libs-osx/lib/libGLEW.a"; sourceTree = "<group>"; };
 		209E89B3174E4F650043E609 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = "Libraries/SFML-2.0/extlibs/libs-osx/lib/libjpeg.a"; sourceTree = "<group>"; };
 		209E89BA174E59C20043E609 /* libSFML.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSFML.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -723,7 +721,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				209BA265177888070078D39F /* libMicroIni.a in Frameworks */,
 				20341F5F175D85CB001FA9A3 /* libSquirrel.a in Frameworks */,
 				209E8BD7174E5C550043E609 /* libSFML.dylib in Frameworks */,
 				205553711732DE8A00F8B2E7 /* AppKit.framework in Frameworks */,
@@ -733,13 +730,6 @@
 				2055536B1732DE6E00F8B2E7 /* CoreFoundation.framework in Frameworks */,
 				2055536A1732DE6900F8B2E7 /* OpenGL.framework in Frameworks */,
 				20ED6899174D77B4001D43EC /* OpenAL.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		209BA23E1777E70C0078D39F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,7 +941,6 @@
 				209E89BA174E59C20043E609 /* libSFML.dylib */,
 				20341EE1175D8387001FA9A3 /* libSquirrel.a */,
 				20341F47175D8580001FA9A3 /* libSqrat.a */,
-				209BA2411777E70C0078D39F /* libMicroIni.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1552,13 +1541,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		209BA23F1777E70C0078D39F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		209E89B8174E59C20043E609 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1746,23 +1728,6 @@
 			productReference = 205553051732D9AF00F8B2E7 /* libMassive.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		209BA2401777E70C0078D39F /* MicroIni */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 209BA2421777E70C0078D39F /* Build configuration list for PBXNativeTarget "MicroIni" */;
-			buildPhases = (
-				209BA23D1777E70C0078D39F /* Sources */,
-				209BA23E1777E70C0078D39F /* Frameworks */,
-				209BA23F1777E70C0078D39F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MicroIni;
-			productName = MicroIni;
-			productReference = 209BA2411777E70C0078D39F /* libMicroIni.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		209E89B9174E59C20043E609 /* SFML */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 209E89BB174E59C30043E609 /* Build configuration list for PBXNativeTarget "SFML" */;
@@ -1815,7 +1780,6 @@
 				209E89B9174E59C20043E609 /* SFML */,
 				20341EE0175D8387001FA9A3 /* Squirrel */,
 				20341F46175D8580001FA9A3 /* Sqrat */,
-				209BA2401777E70C0078D39F /* MicroIni */,
 			);
 		};
 /* End PBXProject section */
@@ -1875,13 +1839,6 @@
 				20592519175E67BC00554A81 /* SquirrelBridge.cpp in Sources */,
 				20E4758617623C29004DA941 /* InputManager.cpp in Sources */,
 				20E523C0177262920022856A /* Camera.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		209BA23D1777E70C0078D39F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2160,47 +2117,6 @@
 			};
 			name = Release;
 		};
-		209BA2431777E70C0078D39F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/micro-ini/include\"";
-				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		209BA2441777E70C0078D39F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				ENABLE_NS_ASSERTIONS = NO;
-				EXECUTABLE_PREFIX = lib;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/micro-ini/include\"";
-				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		209E89BC174E59C30043E609 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2288,15 +2204,6 @@
 			buildConfigurations = (
 				2055530F1732D9AF00F8B2E7 /* Debug */,
 				205553101732D9AF00F8B2E7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		209BA2421777E70C0078D39F /* Build configuration list for PBXNativeTarget "MicroIni" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				209BA2431777E70C0078D39F /* Debug */,
-				209BA2441777E70C0078D39F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,6 +11,8 @@
 
 #define thePrefs Preferences::getInstance()
 
+#include <rapidjson/document.h>
+#include <rapidjson/prettywriter.h>
 #include "Common.h"
 #include "Logger.h"
 #include "../Scripting/SquirrelBridge.h"
@@ -22,11 +24,14 @@ public:
     ~Preferences();
     static Preferences &getInstance();
     
+    void write(String json);
+    String read();
+    
+    String fileName;
+    
 protected:
     static Preferences *s_Preferences;
-    
-private:
-    String _file;
+
 };
 
 #endif /* defined(__Massive__Preferences__) */
