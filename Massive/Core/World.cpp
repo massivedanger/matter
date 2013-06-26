@@ -54,6 +54,8 @@ bool World::init(unsigned int windowWidth, unsigned int windowHeight, String win
         _highRes = true;
     }
     
+    Preferences::getInstance();
+    
     theCamera.scale = scaleFactor();
     theCamera.setSize(windowWidth, windowHeight);
     theCamera.setCenter(windowWidth / 2, windowHeight / 2);

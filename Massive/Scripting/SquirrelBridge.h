@@ -45,6 +45,11 @@ protected:
 
 private:
     static void print(HSQUIRRELVM vm, const SQChar *string, ...);
+    
+    static int jsonizeInternal(HSQUIRRELVM vm, String &result);
+    static SQInteger jsonize(HSQUIRRELVM vm);
+
+    StringSet _required;
 
 };
 

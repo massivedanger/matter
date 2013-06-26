@@ -28,6 +28,35 @@ public:
         std::ifstream file(fileName);
         return file.good();
     }
+    
+    static void createFile(String fileName) {
+        if (fileExists(fileName) == false) {
+            fopen(fileName.c_str(), "w");
+        }
+    }
+    
+    static String readFile(String fileName) {
+        if (fileExists(fileName)) {
+            std::ifstream file(fileName);
+            String content((std::istreambuf_iterator<char>(file)), (std::istreambuf_iterator<char>()));
+            return content;
+        }
+        else {
+            return "";
+        }
+    }
+    
+    static void writeToFile(String fileName, String output) {
+        std::ofstream file(fileName, std::ios::trunc);
+        file << output;
+        file.close();
+    }
+    
+    static void appendToFile(String fileName, String output) {
+        std::ofstream file(fileName, std::ios::app);
+        file << output;
+        file.close();
+    }
 };
 
 #endif
