@@ -16,6 +16,7 @@ SquirrelBridge::SquirrelBridge() {
     
     sq_setprintfunc(sqVM, print, NULL);
     sq_pushroottable(sqVM);
+//    registerGlobalFunc(sqVM, jsonize, "jsonize");
     
     sqstd_register_bloblib(sqVM);
     sqstd_register_iolib(sqVM);
@@ -69,7 +70,7 @@ void SquirrelBridge::runScript(String scriptToRun) {
                 script.CompileFile(scriptPath + "/" + scriptToRun);
                 script.Run();
             } catch (Sqrat::Exception e) {
-                printf("Script error: %s", e.Message().c_str());
+                log.script("Error: " + e.Message());
             }
         }
     }
@@ -79,6 +80,7 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
     using namespace Sqrat;
     
     Table gTable(vm);
+    RootTable root(vm);
     
     gTable.Bind("Logger", Class<Logger>(vm)
                 .Var("prefix", &Logger::prefix)
@@ -200,8 +202,154 @@ void SquirrelBridge::setupBindings(HSQUIRRELVM vm) {
                 .Var("scriptPath", &SquirrelBridge::scriptPath)
                 .Var("preferencesPath", &SquirrelBridge::preferencesPath));
     
+    gTable.Bind("Utility", Class<Utility>(vm)
+                .StaticFunc("readFile", &Utility::readFile));
+    
+    gTable.Bind("Preferences", Class<Preferences>(vm)
+                .StaticFunc("getInstance", &Preferences::getInstance)
+                .Func("read", &Preferences::read)
+                .Func("write", &Preferences::write));
+    
     gTable.Bind("Constants", ConstTable(vm)
                 .Const("DefaultFont", MASSIVE_DEFAULT_FONT));
     
-    Sqrat::RootTable(vm).Bind("Massive", gTable);
+    root.Bind("Massive", gTable);
+    
+    root.SquirrelFunc("jsonize", &jsonize);
 }
+
+int SquirrelBridge::jsonizeInternal(HSQUIRRELVM v, String &result) {
+    int r = 1;
+    bool just_begin ;
+    const size_t RESERVE_SIZE = 30;
+    char buf[RESERVE_SIZE];
+    result = "";
+    int i;
+    /* top of the stack is the object to be jsonized */
+    switch(sq_gettype(v, -1))
+    {
+        case OT_STRING:
+        {
+            const SQChar *t;
+            sq_getstring(v, -1, &t); /* now t will be zero terminated */
+            result = std::string("\"") + t + "\"";
+            break;
+        }
+            
+        case OT_INTEGER:
+        {
+            SQInteger i2;
+            sq_getinteger(v, -1, &i2);
+            snprintf(buf, sizeof(buf), "%d", (int) i2);
+            buf[sizeof(buf) - 1] = 0;
+            result = buf;
+            break;
+        }
+        case OT_FLOAT:
+        {
+            SQFloat f;
+            sq_getfloat(v, -1, &f);
+            snprintf(buf, sizeof(buf), "%f", f);
+            buf[sizeof(buf) - 1] = 0;
+            result = buf;
+            break;
+        }
+        case OT_BOOL:
+        {
+            SQBool b;
+            sq_getbool(v, -1, &b);
+            if (b)
+                strncpy(buf, "true", sizeof(buf));
+            else
+                strncpy(buf, "false", sizeof(buf));
+            buf[sizeof(buf) - 1] = 0;
+            result = buf;
+            break;
+        }
+            
+        case OT_NULL:
+            result = "null";
+            break;
+            
+        case OT_ARRAY:
+        {
+            result = "[";
+            std::string estr;
+            sq_pushnull(v);
+            just_begin = true;
+            while (SQ_SUCCEEDED(sq_next(v, -2)))
+            {
+                if (just_begin == false)
+                    result += ", ";
+                else just_begin = false;
+                
+                /* top of stack is the array element */
+                if (!jsonizeInternal(v, estr))
+                {
+                    r = 0;
+                }
+                else
+                    result += estr;
+                sq_pop(v,2); //pops key and val before the nex iteration
+            }
+            result += "]";
+            sq_pop(v, 1);
+            break;
+            
+        }
+            
+        case OT_TABLE:
+        {
+            result = "{\n";
+            sq_pushnull(v);
+            just_begin = true;
+            while (SQ_SUCCEEDED(sq_next(v, -2)))
+            {
+                if (just_begin == false)
+                    result += ",\n";
+                else just_begin = false;
+                
+                /* top of stack is the value */
+                /* below the value in the stack is the key */
+                std::string value, key;
+                i = jsonizeInternal(v, value);
+                if (i == 0)
+                    r = 0;
+                sq_pop(v, 1); // pop value
+                if (r)
+                {
+                    i = jsonizeInternal(v, key);
+                    if (i == 0)
+                        r = 0;
+                }
+                sq_pop(v, 1); //pops key
+                
+                result += key + ": " + value;
+            }
+            result += "\n}";
+            sq_pop(v, 1);
+            break;
+            
+        }
+            
+        default:
+            r = 0;/* jsonize failed; cannot convert */
+            break;
+    }
+    return r;
+}
+
+SQInteger SquirrelBridge::jsonize(HSQUIRRELVM vm) {
+    std::string result;
+    int nargs = sq_gettop(vm);
+    if (nargs != 2)
+    /* invalid pamameters sent into function */
+        return sq_throwerror(vm, "invalid number of parameters");
+    int r = jsonizeInternal(vm, result);
+    if (r)
+        sq_pushstring(vm, result.c_str(), result.length());
+    else sq_pushnull(vm);
+    return 1;
+    
+}
+
